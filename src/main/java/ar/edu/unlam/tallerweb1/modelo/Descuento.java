@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Descuento {
@@ -14,6 +16,9 @@ public class Descuento {
 	private float porcentaje;
 	private String fechaDesde;
 	private String fechaHasta;
+	@ManyToOne
+	@JoinColumn(name = "PRECIO")
+	private Precio precio;
 	
 	public Long getID(){
 		return id;
@@ -38,5 +43,11 @@ public class Descuento {
 	}
 	public void setFechaHasta(String fechaHasta) {
 		this.fechaHasta = fechaHasta;
+	}
+	public Precio getPrecio(){
+		return precio;
+	}
+	public void setPrecio (Precio precio){
+		this.precio=precio;
 	}
 }
