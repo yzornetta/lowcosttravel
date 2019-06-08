@@ -14,6 +14,7 @@ public class Departamento {
 	private Long id;
 	@OneToOne
 	private Direccion direccion;
+	private float precio;
 	
 	public Long getId(){
 		return id;
@@ -27,6 +28,14 @@ public class Departamento {
 	public void getDireccion(Direccion direccion){
 		this.direccion=direccion;
 	}
+	
+	public float getPrecio(){
+		return precio;
+	}
+	public void setPrecio(float precio){
+		this.precio=precio;
+	}
+	
 	
 	
 }
