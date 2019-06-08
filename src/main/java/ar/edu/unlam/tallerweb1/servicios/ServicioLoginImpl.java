@@ -1,11 +1,7 @@
 package ar.edu.unlam.tallerweb1.servicios;
 
-import javax.inject.Inject;
-
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import ar.edu.unlam.tallerweb1.dao.UsuarioDao;
 import ar.edu.unlam.tallerweb1.modelo.Usuario;
 
 // Implelemtacion del Servicio de usuarios, la anotacion @Service indica a Spring que esta clase es un componente que debe
@@ -18,12 +14,19 @@ import ar.edu.unlam.tallerweb1.modelo.Usuario;
 @Transactional
 public class ServicioLoginImpl implements ServicioLogin {
 
-	@Inject
-	private UsuarioDao servicioLoginDao;
-
+	
 	@Override
-	public Usuario consultarUsuario (Usuario usuario) {
-		return servicioLoginDao.consultarUsuario(usuario);
+	public boolean consultarUsuario (Usuario usuario) {
+		
+		String pass = usuario.getPassword();
+		String user = usuario.getEmail();
+		System.out.println("Pass: " +pass);
+		System.out.println("usuario :" +user);
+		//return servicioLoginDao.consultarUsuario(usuario);
+		if(pass.equals("test") && user.equals("test@test.com")) {
+			return true;
+		}else return false;
+		
 	}
 
 }
