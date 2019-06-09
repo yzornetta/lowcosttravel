@@ -1,11 +1,11 @@
-INSERT INTO `db`.`ciudad` (`id`, `nombre`) VALUES ('1', 'Calafate');
-INSERT INTO `db`.`ciudad` (`id`, `nombre`) VALUES ('2', 'Cordoba');
+INSERT INTO `db`.`ciudad` (`id`, `nombre`, `latitud`, `longitud`) VALUES ('1', 'Calafate', -50.339549, -72.264926);
+INSERT INTO `db`.`ciudad` (`id`, `nombre`, `latitud`, `longitud`) VALUES ('2', 'Cordoba', -31.416667, -64.183333);
 
-INSERT INTO `db`.`ciudad` (`id`, `nombre`) VALUES ('3', 'Neuquen');
+INSERT INTO `db`.`ciudad` (`id`, `nombre`, `latitud`, `longitud`) VALUES ('3', 'Neuquen', -38.95735, -68.045533);
 
-INSERT INTO `db`.`ciudad` (`id`, `nombre`) VALUES ('4', 'Misiones');
-
-INSERT INTO `db`.`ciudad` (`id`, `nombre`) VALUES ('5', 'Mendoza');
+INSERT INTO `db`.`ciudad` (`id`, `nombre`, `latitud`, `longitud`) VALUES ('4', 'Posadas', -27.366667, -55.896944);
+--La capital de Misiones se llama Posadas
+INSERT INTO `db`.`ciudad` (`id`, `nombre`, `latitud`, `longitud`) VALUES ('5', 'Mendoza', -32.883333, -68.833333);
 
 INSERT INTO `db`.`direccion` (`id`, `barrio`, `calle`, `entreCalle1`, `entreCalle2`, `numero`, `ciudad_id`) 
 VALUES ('1', 'Calafate', 'Martin Fierro', 'Tucuman', 'Peron', '1111', '1');
@@ -14,7 +14,7 @@ VALUES ('2', 'Cordoba', 'Martin Fierro', 'Tucuman', 'Peron', '1111', '2');
 INSERT INTO `db`.`direccion` (`id`, `barrio`, `calle`, `entreCalle1`, `entreCalle2`, `numero`, `ciudad_id`) 
 VALUES ('3', 'Neuquen', 'Martin Fierro', 'Tucuman', 'Peron', '1111', '3');
 INSERT INTO `db`.`direccion` (`id`, `barrio`, `calle`, `entreCalle1`, `entreCalle2`, `numero`, `ciudad_id`) 
-VALUES ('4', 'Misiones', 'Martin Fierro', 'Tucuman', 'Peron', '1111', '4');
+VALUES ('4', 'Posadas', 'Martin Fierro', 'Tucuman', 'Peron', '1111', '4');
 INSERT INTO `db`.`direccion` (`id`, `barrio`, `calle`, `entreCalle1`, `entreCalle2`, `numero`, `ciudad_id`) 
 VALUES ('5', 'Mendoza', 'Martin Fierro', 'Tucuman', 'Peron', '1111', '5');
 
