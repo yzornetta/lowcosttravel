@@ -11,16 +11,15 @@
 	<body>
 		<div class = "container">
 			<div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-				<form:form action="validar-busqueda" method="POST" modelAttribute="ciudad">
-			    	<h3 class="form-signin-heading">Bienvenido a Low Cost Travel</h3>
-					<hr class="colorgraph"><br>
-					<br>Ingresar ciudad
-					<form:input path="nombre" id="nombre" type="nombre" class="form-control" />    		  
-					
-					<button class="btn btn-lg btn-primary btn-block" Type="Submit">Buscar</button>
-				</form:form>
-
-				<%--Bloque que es visible si el elemento error no está vacío	--%>
+				
+			    	<h3 class="form-signin-heading">Encontraste los siguientes departamentos</h3>
+				
+				<h4><span>Departamento</span><span>-</span></span>Precio</h4>
+					<c:forEach items="${departamentos}" var="departamentos"> 
+			        <h4><span>${departamentos.id}</span><span>-</span><span>-</span><span>${departamentos.precio}</span></h4>
+			        
+			        </c:forEach>
+							
 				<c:if test="${not empty error}">
 			        <h4><span>${error}</span></h4>
 			        <br>
