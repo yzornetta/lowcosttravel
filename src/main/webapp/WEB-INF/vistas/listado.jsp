@@ -19,10 +19,10 @@
 			<div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
 				
 			    	<h3 class="form-signin-heading">Encontraste los siguientes departamentos</h3>
-				
+					<span>${ciudad.nombre}</span>
 				<h4><span>Departamento</span><span>-</span>Precio<span>-</span>Latitud</span><span></h4>
 					<c:forEach items="${departamentos}" var="departamentos"> 
-			        <h4><span>${departamentos.id}</span><span>-</span><span>-</span><span>${departamentos.precio}</span><span>-</span><span>${departamentos.direccion.latitud}</span></h4>
+			        <h4><span>${departamentos.id}</span><span></span><span>-</span><span>${departamentos.precio}</span><span>-</span><span>${departamentos.direccion.latitud}</span></h4>
 			        
 			        </c:forEach>
 					

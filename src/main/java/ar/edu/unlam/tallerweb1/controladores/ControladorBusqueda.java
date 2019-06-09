@@ -43,6 +43,7 @@ public class ControladorBusqueda {
 		
 		if (departamentos.size()!= 0) {
 			
+			model.put("ciudad", ciudad);
 			model.put("departamentos", departamentos);
 			return new ModelAndView("listado",model);
 			

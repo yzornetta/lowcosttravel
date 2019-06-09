@@ -341,7 +341,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- other services -->
 <section class="other_services py-5" id="why">
 	<div class="container py-lg-5 py-3">
-		<h3 class="heading mb-sm-5 mb-4">Why Choose Us </h3>
+		<h3 class="heading mb-sm-5 mb-4">Hospedajes en</h3> 
 		<div class="row">
 			<div class="col-lg-4 col-md-6">
 				<div class="grid">
