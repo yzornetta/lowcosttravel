@@ -17,6 +17,8 @@ public class Direccion {
 	private String entreCalle1;
 	private String entreCalle2;
 	private String barrio;
+	private float latitud;
+	private float longitud;
 	@ManyToOne
 	private Ciudad ciudad;
 	
@@ -56,6 +58,20 @@ public class Direccion {
 	public void setBarrio(String barrio) {
 		this.barrio = barrio;
 	}
+	
+	public float getLatitud() {
+		return latitud;
+	}
+	public void setLatitud(float latitud) {
+		this.latitud = latitud;
+	}
+	public float getLongitud() {
+		return longitud;
+	}
+	public void setLongitud(float longitud) {
+		this.longitud = longitud;
+	}
+	
 	public Ciudad getCiudad() {
 		return ciudad;
 	}
