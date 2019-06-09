@@ -53,8 +53,13 @@ public class ControladorBusqueda {
 	}
 
 	@RequestMapping(path = "/listado", method = RequestMethod.GET)
-	public ModelAndView irAHome() {
+	public ModelAndView irAResultado() {
 		return new ModelAndView("listado");
+	}
+	
+	@RequestMapping(path = "/listadoTest", method = RequestMethod.GET)
+	public ModelAndView irAResultado2() {
+		return new ModelAndView("listadoTest");
 	}
 
 }

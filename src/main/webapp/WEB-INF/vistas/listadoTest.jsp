@@ -54,13 +54,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </header>
 <!-- //header -->
 
-<!-- banner -->
+<!-- banner 
 <div class="banner" id="home">
 	<div class="layer">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7 banner-text-w3pvt">
-					<!-- banner slider-->
+					<!-- banner slider
 					<div class="csslider infinity" id="slider1">
 						<input type="radio" name="slides" checked="checked" id="slides_1" />
 						<input type="radio" name="slides" id="slides_2" />
@@ -72,7 +72,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<h3 class="b-w3ltxt text-capitalize mt-md-4"></h3>
 										<h4 class="b-w3ltxt text-capitalize mt-md-2">Encuentra alojamientos en todas partes</h4>
 										<p class="w3ls_pvt-title my-3">Descubre casas enteras y habitaciones privadas, perfectas para cualquier viaje</p>
-										<!-- <a href="#about" class="btn btn-banner my-3">Read More</a> -->
+										<!-- <a href="#about" class="btn btn-banner my-3">Read More</a> 
 									</div>
 								</div>
 							</li>
@@ -82,7 +82,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<h3 class="b-w3ltxt text-capitalize mt-md-4"></h3>
 										<h4 class="b-w3ltxt text-capitalize mt-md-2">Encuentra alojamientos en todas partes</h4>
 										<p class="w3ls_pvt-title my-3">Descubre casas enteras y habitaciones privadas, perfectas para cualquier viaje</p>
-										<!-- <a href="#about" class="btn btn-banner my-3">Read More</a> -->
+										<!-- <a href="#about" class="btn btn-banner my-3">Read More</a> 
 									</div>
 								</div>
 							</li>
@@ -92,7 +92,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<h3 class="b-w3ltxt text-capitalize mt-md-4"></h3>
 										<h4 class="b-w3ltxt text-capitalize mt-md-2">Encuentra alojamientos en todas partes</h4>
 										<p class="w3ls_pvt-title my-3">Descubre casas enteras y habitaciones privadas, perfectas para cualquier viaje</p>
-										<!-- <a href="#about" class="btn btn-banner my-3">Read More</a> -->
+										<!-- <a href="#about" class="btn btn-banner my-3">Read More</a> 
 									</div>
 								</div>
 							</li>
@@ -105,12 +105,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 						</div>
 					</div>
-					<!-- //banner slider-->
+					<!-- //banner slider
 				</div>
 				<div class="col-lg-5 col-md-8 px-lg-3 px-0">
 					<div class="banner-form-w3 ml-lg-5">
 						<div class="padding">
-							<!-- banner form -->
+							<!-- banner form 
 							
 							<form:form action="validar-busqueda" method="POST" modelAttribute="ciudad">
 								<h5 class="mb-3">Reserva alojamientos</h5>
@@ -128,7 +128,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			        			<br>
 		        			</c:if>	
 							
-							<!-- //banner form -->
+							<!-- //banner form 
 						</div>
 					</div>
 				</div>
@@ -338,7 +338,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </section>
 <!-- //stats section -->
 
-<!-- other services 
+<!-- other services -->
 <section class="other_services py-5" id="why">
 	<div class="container py-lg-5 py-3">
 		<h3 class="heading mb-sm-5 mb-4">Why Choose Us </h3>
