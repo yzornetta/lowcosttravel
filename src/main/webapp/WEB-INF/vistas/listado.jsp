@@ -11,16 +11,10 @@
    	  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
   			integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
    			crossorigin=""></script>
-	<!-- Bootstrap core CSS -->
-	    <link href="css/bootstrap.min.css" rel="stylesheet" >
-	    <!-- Bootstrap theme -->
-	    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Child Learn Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<meta charset="utf-8" />
 
     <script>
         addEventListener("load", function () {
@@ -354,9 +348,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <section class="other_services py-5" id="why">
 	<div class="container py-lg-5 py-3">
 		<h3 class="heading mb-sm-5 mb-4">Hospedajes en <span>${ciudad.nombre}</span></h3> 
-		<c:forEach items="${departamentos}" var="departamentos">
+		
 		<div class="row"> 
-			<div class="col-lg-4 col-md-6">
+			<div class="col-12 col-lg-6">
+				<c:forEach items="${departamentos}" var="departamentos">
 				<div class="grid">
 					<img src="images/choose1.jpg" alt="" class="img-fluid" />
 					<div class="info p-4">
@@ -366,6 +361,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<p class="mt-3"><span>Precio por noche: $</span>${departamentos.precio}</p>
 					</div>
 				</div>
+				</c:forEach>
+			</div>
+			<div class="col-12 col-lg-6">
+				<div id="mapid" style="width: 100%; height: 400px;"></div>
 			</div>
 			<!--
 			<div class="col-lg-4 col-md-6 mt-md-0 mt-4">
@@ -387,8 +386,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 			</div> -->
 		</div>
-		</c:forEach>
-		<div id="mapid" style="width: 600px; height: 400px;"></div>	
+
+	
 	</div>
 </section>
 <!-- //other services -->
