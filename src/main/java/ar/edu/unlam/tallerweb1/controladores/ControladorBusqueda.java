@@ -57,10 +57,6 @@ public class ControladorBusqueda {
 	public ModelAndView irAResultado() {
 		return new ModelAndView("listado");
 	}
-	
-	@RequestMapping(path = "/listadoTest", method = RequestMethod.GET)
-	public ModelAndView irAResultado2() {
-		return new ModelAndView("listadoTest");
-	}
+
 
 }
