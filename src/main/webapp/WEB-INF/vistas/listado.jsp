@@ -209,8 +209,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </section>
  //what we Serve -->
 
-<!-- services 
-<section class="services py-5" id="services">
+<!-- services -->
+<!-- <section class="services py-5" id="services">
 	<div class="container">
 		<h3 class="heading mb-5">Our Services</h3>
 		<div class="row ml-sm-5">
@@ -292,14 +292,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 				</div>
 			</div>
-		</div>
-		 positioned image -->
-		<div class="position-image">
+		</div> -->
+		<!-- positioned image -->
+<!-- 		<div class="position-image">
 			<img src="images/services.png" alt="" class="img-fluid">
-		</div>
+		</div> -->
 		<!-- //positioned image -->
-	</div>
-</section>
+<!-- 	</div>
+</section> -->
 <!-- //services -->
 
 <!-- stats section 
@@ -363,7 +363,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 						<h4 class=""><img src="images/s1.png" class="img-fluid" alt=""> ${departamentos.nombre}</h4>
 						<p class="mt-3">${departamentos.descripcion}</p>
-						<p class="mt-3"><spam>Precio por noche: $</spam>${departamentos.precio}</p>
+						<p class="mt-3"><span>Precio por noche: $</span>${departamentos.precio}</p>
 					</div>
 				</div>
 			</div>

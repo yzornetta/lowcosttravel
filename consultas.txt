@@ -4,19 +4,19 @@ INSERT INTO `db`.`ciudad` (`id`, `nombre`, `latitud`, `longitud`) VALUES ('2', '
 INSERT INTO `db`.`ciudad` (`id`, `nombre`, `latitud`, `longitud`) VALUES ('3', 'Neuquen', -38.95735, -68.045533);
 
 INSERT INTO `db`.`ciudad` (`id`, `nombre`, `latitud`, `longitud`) VALUES ('4', 'Posadas', -27.366667, -55.896944);
---La capital de Misiones se llama Posadas
+
 INSERT INTO `db`.`ciudad` (`id`, `nombre`, `latitud`, `longitud`) VALUES ('5', 'Mendoza', -32.883333, -68.833333);
 
-INSERT INTO `db`.`direccion` (`id`, `barrio`, `calle`, `entreCalle1`, `entreCalle2`, `numero`, `ciudad_id`) 
-VALUES ('1', 'Calafate', 'Martin Fierro', 'Tucuman', 'Peron', '1111', '1');
-INSERT INTO `db`.`direccion` (`id`, `barrio`, `calle`, `entreCalle1`, `entreCalle2`, `numero`, `ciudad_id`) 
-VALUES ('2', 'Cordoba', 'Martin Fierro', 'Tucuman', 'Peron', '1111', '2');
-INSERT INTO `db`.`direccion` (`id`, `barrio`, `calle`, `entreCalle1`, `entreCalle2`, `numero`, `ciudad_id`) 
-VALUES ('3', 'Neuquen', 'Martin Fierro', 'Tucuman', 'Peron', '1111', '3');
-INSERT INTO `db`.`direccion` (`id`, `barrio`, `calle`, `entreCalle1`, `entreCalle2`, `numero`, `ciudad_id`) 
-VALUES ('4', 'Posadas', 'Martin Fierro', 'Tucuman', 'Peron', '1111', '4');
-INSERT INTO `db`.`direccion` (`id`, `barrio`, `calle`, `entreCalle1`, `entreCalle2`, `numero`, `ciudad_id`) 
-VALUES ('5', 'Mendoza', 'Martin Fierro', 'Tucuman', 'Peron', '1111', '5');
+INSERT INTO `db`.`direccion` (`id`, `barrio`, `calle`, `entreCalle1`, `entreCalle2`, `numero`, `ciudad_id`, `latitud`, `longitud`) 
+VALUES ('1', 'Calafate', 'Martin Fierro', 'Tucuman', 'Peron', '1111', '1', -50.339549, -72.264926);
+INSERT INTO `db`.`direccion` (`id`, `barrio`, `calle`, `entreCalle1`, `entreCalle2`, `numero`, `ciudad_id`, `latitud`, `longitud`) 
+VALUES ('2', 'Cordoba', 'Martin Fierro', 'Tucuman', 'Peron', '1111', '2', -31.416667, -64.183333);
+INSERT INTO `db`.`direccion` (`id`, `barrio`, `calle`, `entreCalle1`, `entreCalle2`, `numero`, `ciudad_id`, `latitud`, `longitud`) 
+VALUES ('3', 'Neuquen', 'Martin Fierro', 'Tucuman', 'Peron', '1111', '3', -38.95735, -68.045533);
+INSERT INTO `db`.`direccion` (`id`, `barrio`, `calle`, `entreCalle1`, `entreCalle2`, `numero`, `ciudad_id`, `latitud`, `longitud`) 
+VALUES ('4', 'Posadas', 'Martin Fierro', 'Tucuman', 'Peron', '1111', '4', -27.366667, -55.896944);
+INSERT INTO `db`.`direccion` (`id`, `barrio`, `calle`, `entreCalle1`, `entreCalle2`, `numero`, `ciudad_id`, `latitud`, `longitud`) 
+VALUES ('5', 'Mendoza', 'Martin Fierro', 'Tucuman', 'Peron', '1111', '5', -32.883333, -68.833333);
 
 INSERT INTO `db`.`departamento` (`id`, `precio`, `direccion_id`) VALUES ('1', '3000', '1');
 
@@ -32,12 +32,12 @@ INSERT INTO `db`.`departamento` (`id`, `precio`, `direccion_id`) VALUES ('7', '5
 INSERT INTO `db`.`departamento` (`id`, `precio`, `direccion_id`) VALUES ('8', '6500', '6');
 
 
-INSERT INTO `db`.`direccion` (`id`, `barrio`, `calle`, `entreCalle1`, `entreCalle2`, `numero`, `ciudad_id`) 
-VALUES ('6', 'Cordoba', 'Del Campillo', 'Tucuman', 'Peron', '1111', '2');
-INSERT INTO `db`.`direccion` (`id`, `barrio`, `calle`, `entreCalle1`, `entreCalle2`, `numero`, `ciudad_id`) 
-VALUES ('7', 'Cordoba', 'Dias Velez', 'Tucuman', 'Thames', '101', '2');
-INSERT INTO `db`.`direccion` (`id`, `barrio`, `calle`, `entreCalle1`, `entreCalle2`, `numero`, `ciudad_id`) 
-VALUES ('8', 'Cordoba', 'Arieta', 'Tucuman', 'Thames', '809', '2');
+INSERT INTO `db`.`direccion` (`id`, `barrio`, `calle`, `entreCalle1`, `entreCalle2`, `numero`, `ciudad_id`, `latitud`, `longitud`) 
+VALUES ('6', 'Cordoba', 'Del Campillo', 'Tucuman', 'Peron', '1111', '2', -31.416667, -64.183333);
+INSERT INTO `db`.`direccion` (`id`, `barrio`, `calle`, `entreCalle1`, `entreCalle2`, `numero`, `ciudad_id`, `latitud`, `longitud`) 
+VALUES ('7', 'Cordoba', 'Dias Velez', 'Tucuman', 'Thames', '101', '2', -31.416667, -64.183333);
+INSERT INTO `db`.`direccion` (`id`, `barrio`, `calle`, `entreCalle1`, `entreCalle2`, `numero`, `ciudad_id`, `latitud`, `longitud`) 
+VALUES ('8', 'Cordoba', 'Arieta', 'Tucuman', 'Thames', '809', '2', -31.416667, -64.183333);
 
 
 

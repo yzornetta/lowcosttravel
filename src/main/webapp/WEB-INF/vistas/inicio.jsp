@@ -115,17 +115,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<form:form action="validar-busqueda" method="POST" modelAttribute="ciudad">
 								<h5 class="mb-3">Reserva alojamientos</h5>
 								<div class="form-style-w3ls">
-									<input placeholder="Ingresar ciudad"  path="nombre" id="nombre" name="nombre" type="text" />
-									<input placeholder="Cantidad de huespedes"  path="" id="" name="" type="text" />	
+									<form:input placeholder="Ingresar ciudad"  path="nombre" id="nombre" name="nombre" type="text" />
+									<form:input placeholder="Cantidad de huespedes"  path="" id="" name="" type="text" />	
 									<button class="btn btn-lg btn-primary btn-block" Type="Submit">Buscar</button>
-									<span></a></span>
 								</div>
 							</form:form>
 							
 							<%--Bloque que es visible si el elemento error no está vacío	--%>
 							<c:if test="${not empty error}">
-			        			<h4><span>${error}</span></h4>
-			        			<br>
+			        			<h4>${error}</h4>
 		        			</c:if>	
 							
 							<!-- //banner form -->
@@ -197,7 +195,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </section>
  //what we Serve -->
 
-<!-- services 
+<!-- services -->
+<!--
 <section class="services py-5" id="services">
 	<div class="container">
 		<h3 class="heading mb-5">Our Services</h3>
@@ -281,13 +280,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 			</div>
 		</div>
-		 positioned image -->
+		-->
+		<!-- positioned image -->
+		<!--
 		<div class="position-image">
 			<img src="images/services.png" alt="" class="img-fluid">
 		</div>
+		 -->
 		<!-- //positioned image -->
+<!-- 
 	</div>
 </section>
+ -->
 <!-- //services -->
 
 <!-- stats section 
