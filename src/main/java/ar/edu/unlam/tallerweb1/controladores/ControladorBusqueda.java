@@ -32,6 +32,7 @@ public class ControladorBusqueda {
 	}
 	
 	
+	
 	@RequestMapping(path = "/validar-busqueda", method = RequestMethod.POST)
 	public ModelAndView validarBusqueda(@ModelAttribute("ciudad") Ciudad ciudad, HttpServletRequest request) {
 		ModelMap model = new ModelMap();
