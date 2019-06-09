@@ -22,6 +22,11 @@ public class ControladorBusqueda {
 	@Inject
 	private ServicioBuscar servicioBuscar;
 	
+	@RequestMapping(path = "/", method = RequestMethod.GET)
+	public ModelAndView irAPagPrincipal() {
+		return new ModelAndView("redirect:inicio");
+	}
+		
 	@RequestMapping("/inicio")
 	public ModelAndView irAInicio() {
 
@@ -30,8 +35,6 @@ public class ControladorBusqueda {
 		modelo.put("ciudad", ciudad);
 		return new ModelAndView("inicio", modelo);
 	}
-	
-	
 	
 	@RequestMapping(path = "/validar-busqueda", method = RequestMethod.POST)
 	public ModelAndView validarBusqueda(@ModelAttribute("ciudad") Ciudad ciudad, HttpServletRequest request) {
