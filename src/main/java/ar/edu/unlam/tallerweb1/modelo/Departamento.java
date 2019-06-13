@@ -1,5 +1,7 @@
 package ar.edu.unlam.tallerweb1.modelo;
 
+import java.awt.TextArea;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,7 +20,7 @@ public class Departamento {
 	private String nombre;
 	private String descripcion;
 	private String habitacion;
-
+	private String masInfo;
 	
 	public Long getId(){
 		return id;
@@ -57,7 +59,12 @@ public class Departamento {
 	public void setHabitacion(String habitacion) {
 		this.habitacion = habitacion;
 	}
-
+	public String getMasInfo() {
+		return masInfo;
+	}
+	public void setMasInfo(String masInfo) {
+		this.masInfo = masInfo;
+	}
 	
 	
 	

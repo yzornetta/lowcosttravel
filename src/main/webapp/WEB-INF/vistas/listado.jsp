@@ -357,7 +357,7 @@
 					<!-- <img src="images/choose1.jpg" alt="" class="img-fluid" /> -->
 					<div class="info p-4">
 
-						<h4 class=""> ${departamentos.nombre}</h4>
+						<a href="/proyecto-limpio-spring/detalle?id=${departamentos.id}"><h4 class=""> ${departamentos.nombre}</h4></a>
 						<p class="mt-3">${departamentos.descripcion}</p>
 						<p class="mt-3"><span>Precio por noche: $</span>${departamentos.precio}</p>
 					</div>
