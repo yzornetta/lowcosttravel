@@ -18,6 +18,7 @@ public class Departamento {
 	private String nombre;
 	private String descripcion;
 	private String habitacion;
+
 	
 	public Long getId(){
 		return id;
@@ -56,6 +57,7 @@ public class Departamento {
 	public void setHabitacion(String habitacion) {
 		this.habitacion = habitacion;
 	}
+
 	
 	
 	

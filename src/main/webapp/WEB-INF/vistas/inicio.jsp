@@ -43,7 +43,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<!-- nav -->
 		<nav class="py-3 d-lg-flex">
 			<div id="logo">
-				<h1> <a href="index.html"><img src="images/s2.png" alt=""> Low Cost Travel </a></h1>
+				<h1> <a href="/proyecto-limpio-spring/inicio"><img src="images/icono.jpg" alt=""> Low Cost Travel </a></h1>
 			</div>
 			<label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
 			<input type="checkbox" id="drop" />
@@ -80,8 +80,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="container-fluid">
 									<div class="w3ls_banner_txt">
 										<h3 class="b-w3ltxt text-capitalize mt-md-4"></h3>
-										<h4 class="b-w3ltxt text-capitalize mt-md-2">Encuentra alojamientos en todas partes</h4>
-										<p class="w3ls_pvt-title my-3">Descubre casas enteras y habitaciones privadas, perfectas para cualquier viaje</p>
+										<h4 class="b-w3ltxt text-capitalize mt-md-2">Tómate un descanso en una ciudad de Europa</h4>
+										<p class="w3ls_pvt-title my-3">Encuentra un lugar para hospedarte evaluado con 5 estrellas de familias que ofrecen características básicas como cocina y televisión.</p>
 										<!-- <a href="#about" class="btn btn-banner my-3">Read More</a> -->
 									</div>
 								</div>
@@ -90,8 +90,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="container-fluid">
 									<div class="w3ls_banner_txt">
 										<h3 class="b-w3ltxt text-capitalize mt-md-4"></h3>
-										<h4 class="b-w3ltxt text-capitalize mt-md-2">Encuentra alojamientos en todas partes</h4>
-										<p class="w3ls_pvt-title my-3">Descubre casas enteras y habitaciones privadas, perfectas para cualquier viaje</p>
+										<h4 class="b-w3ltxt text-capitalize mt-md-2">Alojamientos para tu tipo de viaje</h4>
+										<p class="w3ls_pvt-title my-3">Encuentra alojamientos con las mejores calificaciones y los servicios que tú necesitas</p>
 										<!-- <a href="#about" class="btn btn-banner my-3">Read More</a> -->
 									</div>
 								</div>
@@ -116,7 +116,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<h5 class="mb-3">Reserva alojamientos</h5>
 								<div class="form-style-w3ls">
 									<form:input placeholder="Ingresar ciudad"  path="nombre" id="nombre" name="nombre" type="text" />
-									<form:input placeholder="Cantidad de huespedes"  path="" id="" name="" type="text" />	
+									<!-- <form:input placeholder="Cantidad de huespedes"  path="" id="" name="" type="text" />	-->
 									<button class="btn btn-lg btn-primary btn-block" Type="Submit">Buscar</button>
 								</div>
 							</form:form>

@@ -49,7 +49,7 @@
 		<!-- nav -->
 		<nav class="py-3 d-lg-flex">
 			<div id="logo">
-				<h1> <a href="index.html"><img src="images/s2.png" alt=""> Low Cost Travel </a></h1>
+				<h1> <a href="/proyecto-limpio-spring/inicio"><img src="images/icono.jpg" alt=""> Low Cost Travel </a></h1>
 			</div>
 			<label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
 			<input type="checkbox" id="drop" />
@@ -353,10 +353,11 @@
 			<div class="col-12 col-lg-6">
 				<c:forEach items="${departamentos}" var="departamentos">
 				<div class="grid">
-					<img src="images/choose1.jpg" alt="" class="img-fluid" />
+					<br>
+					<!-- <img src="images/choose1.jpg" alt="" class="img-fluid" /> -->
 					<div class="info p-4">
 
-						<h4 class=""><img src="images/s1.png" class="img-fluid" alt=""> ${departamentos.nombre}</h4>
+						<h4 class=""> ${departamentos.nombre}</h4>
 						<p class="mt-3">${departamentos.descripcion}</p>
 						<p class="mt-3"><span>Precio por noche: $</span>${departamentos.precio}</p>
 					</div>
