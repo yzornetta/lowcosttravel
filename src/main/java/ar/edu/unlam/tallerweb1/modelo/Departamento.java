@@ -1,7 +1,6 @@
 package ar.edu.unlam.tallerweb1.modelo;
 
-import java.awt.TextArea;
-
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,6 +19,7 @@ public class Departamento {
 	private String nombre;
 	private String descripcion;
 	private String habitacion;
+	@Column(columnDefinition="LONGTEXT")
 	private String masInfo;
 	
 	public Long getId(){
