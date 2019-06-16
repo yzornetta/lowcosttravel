@@ -31,7 +31,7 @@ public class Departamento {
 	public Direccion getDireccion(){
 		return direccion;
 	}
-	public void getDireccion(Direccion direccion){
+	public void setDireccion(Direccion direccion){
 		this.direccion=direccion;
 	}
 	
