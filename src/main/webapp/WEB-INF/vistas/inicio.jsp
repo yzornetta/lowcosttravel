@@ -25,8 +25,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link href="css/style.css" rel='stylesheet' type='text/css' /><!-- custom css -->
 	<link href="css/css_slider.css" type="text/css" rel="stylesheet" media="all">
     <link href="css/font-awesome.min.css" rel="stylesheet"><!-- fontawesome css -->
-	<!-- //css files -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="css/custom-calendario.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/flick/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
 	
+
+ 
+	<!-- //css files -->
+		
 	<!-- google fonts -->
 	<link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
 	<!-- //google fonts -->
@@ -36,8 +43,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <!-- header -->
 <header>
-	<div class="top-head container">
-		
+	<div class="top-head container">		
 	</div>
 	<div class="container">
 		<!-- nav -->
@@ -51,6 +57,36 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</nav>
 		<!-- //nav -->
 	</div>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  	<script>
+  	
+  	$( function() {
+    		$( "#fecha1" ).datepicker(
+    				{
+    					dateformat:"dd/mm/yy",
+    					firstDay: 1,
+    					dayNames: ["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"],
+    					dayNamesMin: ["Do","Lu","Ma","Mi","Ju","Vi","Sa"],
+    					monthNames: ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"],
+    					monthNamesShort: ["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"],
+    					
+    				});
+    		$( "#fecha2" ).datepicker(
+    				{
+    					dateformat:"dd/mm/yy",
+    					firstDay: 1,
+    					dayNames: ["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"],
+    					dayNamesMin: ["Do","Lu","Ma","Mi","Ju","Vi","Sa"],
+    					monthNames: ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"],
+    					monthNamesShort: ["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"],
+    					
+    				});
+    		
+  		} );
+  	
+  	
+  	</script>
 </header>
 <!-- //header -->
 
@@ -117,6 +153,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="form-style-w3ls">
 									<form:input placeholder="Ingresar ciudad"  path="nombre" id="nombre" name="nombre" type="text" />
 									<!-- <form:input placeholder="Cantidad de huespedes"  path="" id="" name="" type="text" />	-->
+									<form:input placeholder="Fecha de ingreso" path="" type="text" id="fecha1"/>
+									<form:input placeholder="Fecha de salida"  path="" type="text" id="fecha2"/>
+									
 									<button class="btn btn-lg btn-primary btn-block" Type="Submit">Buscar</button>
 								</div>
 							</form:form>
