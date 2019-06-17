@@ -62,7 +62,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   	<script>
   	
   	$( function() {
-    		$( "#fecha1" ).datepicker(
+    		$( "#fechaIngreso" ).datepicker(
     				{
     					dateformat:"dd/mm/yy",
     					firstDay: 1,
@@ -72,7 +72,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     					monthNamesShort: ["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"],
     					
     				});
-    		$( "#fecha2" ).datepicker(
+    		$( "#fechaSalida" ).datepicker(
     				{
     					dateformat:"dd/mm/yy",
     					firstDay: 1,
@@ -147,18 +147,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="banner-form-w3 ml-lg-5">
 						<div class="padding">
 							<!-- banner form -->
-							
-							<form:form action="validar-busqueda" method="POST" modelAttribute="ciudad">
+												
+							<form action="validar-busqueda" method="POST">
 								<h5 class="mb-3">Reserva alojamientos</h5>
 								<div class="form-style-w3ls">
-									<form:input placeholder="Ingresar ciudad"  path="nombre" id="nombre" name="nombre" type="text" />
-									<!-- <form:input placeholder="Cantidad de huespedes"  path="" id="" name="" type="text" />	-->
-									<form:input placeholder="Fecha de ingreso" path="" type="text" id="fecha1"/>
-									<form:input placeholder="Fecha de salida"  path="" type="text" id="fecha2"/>
+									<input placeholder="Ingresar ciudad"   id="nombre" name="nombre" type="text" />
+									<input placeholder="Fecha de ingreso"  type="text" id="fechaIngreso" name="fechaIngreso"/>
+									<input placeholder="Fecha de salida"   type="text" id="fechaSalida" name="fechaSalida"/>
 									
 									<button class="btn btn-lg btn-primary btn-block" Type="Submit">Buscar</button>
 								</div>
-							</form:form>
+							</form>
 							
 							<%--Bloque que es visible si el elemento error no está vacío	--%>
 							<c:if test="${not empty error}">

@@ -1,5 +1,7 @@
 package ar.edu.unlam.tallerweb1.modelo;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,6 +16,7 @@ public class Ciudad {
 	private String nombre;
 	private Float latitud;
 	private Float longitud;
+
 	/*@ManyToOne
 	private Provincia provincia;*/
 	
@@ -53,4 +56,6 @@ public class Ciudad {
 	public void setLongitud(Float longitud) {
 		this.longitud = longitud;
 	}
+
+	
 }

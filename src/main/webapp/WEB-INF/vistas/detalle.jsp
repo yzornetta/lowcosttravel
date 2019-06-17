@@ -69,8 +69,8 @@
 			
 			<div class="col-lg-5">
 				<p class="mt-4">${deptoSeleccionado.masInfo}</p>
-				<p class="mt-4"><span>Precio por noche: $</span>${deptoSeleccionado.precio}</p>
-				<p class="mt-4"><span>Tipo de habitación: </span>${deptoSeleccionado.habitacion}</p>
+				<p class="mt-4"><span>Precio por noche: $</span></p>
+				<p class="mt-4"><span>Tipo de habitación: </span></p>
 			</div>
 			<!-- <div class="col-lg-1 col-sm-4 col-5 ser-img">
 				<img src="images/s1.png" class="mt-4" alt="">

@@ -63,19 +63,19 @@
 <!-- other services -->
 <section class="other_services py-5" id="why">
 	<div class="container py-lg-5 py-3">
-		<h3 class="heading mb-sm-5 mb-4">Hospedajes en <span>${ciudad.nombre}</span></h3> 
+		<h3 class="heading mb-sm-5 mb-4">Hospedajes en <span>${ciudad}</span></h3> 
 		
 		<div class="row"> 
 			<div class="col-12 col-lg-6">
-				<c:forEach items="${departamentos}" var="departamentos">
+				<c:forEach items="${cama}" var="cama">
 				<div class="grid">
 					<br>
 					<!-- <img src="images/choose1.jpg" alt="" class="img-fluid" /> -->
 					<div class="info p-4">
 
-						<a href="/proyecto-limpio-spring/detalle?id=${departamentos.id}"><h4 class=""> ${departamentos.nombre}</h4></a>
-						<p class="mt-3">${departamentos.descripcion}</p>
-						<p class="mt-3"><span>Precio por noche: $</span>${departamentos.precio}</p>
+						<a href="/proyecto-limpio-spring/detalle?id=${cama.id}"><h4 class=""> ${cama.id}</h4></a>
+						<p class="mt-3"></p>
+						
 					</div>
 				</div>
 				</c:forEach>

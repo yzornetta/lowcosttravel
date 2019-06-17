@@ -1,5 +1,6 @@
 package ar.edu.unlam.tallerweb1.servicios;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -7,7 +8,7 @@ import javax.inject.Inject;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ar.edu.unlam.tallerweb1.dao.CiudadDao;
-import ar.edu.unlam.tallerweb1.modelo.Ciudad;
+import ar.edu.unlam.tallerweb1.modelo.Cama;
 import ar.edu.unlam.tallerweb1.modelo.Departamento;
 
 
@@ -19,8 +20,8 @@ public class ServicioBuscarImpl implements ServicioBuscar {
 	private CiudadDao servicioCiudadDao;
 
 	@Override
-	public List<Departamento> consultarCiudad (Ciudad ciudad) {
-		return servicioCiudadDao.consultarCiudad(ciudad);
+	public List<Cama> consultarCiudad (String ciudad, Date fechaIngreso, Date fechaSalida) {
+		return servicioCiudadDao.consultarCiudad(ciudad,fechaIngreso,fechaSalida);
 	}
 
 }
