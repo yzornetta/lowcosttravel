@@ -31,6 +31,10 @@
     <link href="css/style.css" rel='stylesheet' type='text/css' /><!-- custom css -->
 	<link href="css/css_slider.css" type="text/css" rel="stylesheet" media="all">
     <link href="css/font-awesome.min.css" rel="stylesheet"><!-- fontawesome css -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<!-- //css files -->
 	
 	<!-- google fonts -->
@@ -68,16 +72,14 @@
 		<div class="row"> 
 			<div class="col-12 col-lg-6">
 				<c:forEach items="${departamentos}" var="departamentos">
-				<div class="grid">
-					<br>
-					<!-- <img src="images/choose1.jpg" alt="" class="img-fluid" /> -->
-					<div class="info p-4">
-
-						<a href="/proyecto-limpio-spring/detalle?id=${departamentos.id}"><h4 class=""> ${departamentos.nombre}</h4></a>
-						<p class="mt-3">${departamentos.descripcion}</p>
-						<p class="mt-3"><span>Precio por noche: $</span>${departamentos.precio}</p>
+				<div class="card">
+					<div class="card-body">
+						<a href="/proyecto-limpio-spring/detalle?id=${departamentos.id}"  target="_blank" class="stretched-link" style="color:#000; text-decoration:none;"><h4>${departamentos.nombre}</h4></a>
+						<p class="card-text">${departamentos.descripcion}</p>
+						<p class="card-text"><span>Precio por noche: $</span>${departamentos.precio}</p>
 					</div>
 				</div>
+					<br>
 				</c:forEach>
 			</div>
 			<div class="col-12 col-lg-6">
