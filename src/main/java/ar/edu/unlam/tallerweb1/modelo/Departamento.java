@@ -1,10 +1,14 @@
 package ar.edu.unlam.tallerweb1.modelo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -15,12 +19,12 @@ public class Departamento {
 	private Long id;
 	@OneToOne
 	private Direccion direccion;
-	private float precio;
 	private String nombre;
 	private String descripcion;
-	private String habitacion;
 	@Column(columnDefinition="LONGTEXT")
 	private String masInfo;
+	@OneToMany(mappedBy = "departamento")
+	private List<Habitacion> habitacion = new ArrayList<>();
 	
 	public Long getId(){
 		return id;
@@ -28,6 +32,7 @@ public class Departamento {
 	public void setId(Long id){
 		this.id=id;
 	}
+	
 	public Direccion getDireccion(){
 		return direccion;
 	}
@@ -35,12 +40,13 @@ public class Departamento {
 		this.direccion=direccion;
 	}
 	
-	public float getPrecio(){
-		return precio;
+	public List<Habitacion> getHabitacion(){
+		return habitacion;
 	}
-	public void setPrecio(float precio){
-		this.precio=precio;
+	public void setHabitacion(List<Habitacion> habitacion){
+		this.habitacion=habitacion;
 	}
+	
 	public String getNombre() {
 		return nombre;
 	}
@@ -52,12 +58,6 @@ public class Departamento {
 	}
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
-	}
-	public String getHabitacion() {
-		return habitacion;
-	}
-	public void setHabitacion(String habitacion) {
-		this.habitacion = habitacion;
 	}
 	public String getMasInfo() {
 		return masInfo;

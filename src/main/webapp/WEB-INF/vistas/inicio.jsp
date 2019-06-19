@@ -25,8 +25,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link href="css/style.css" rel='stylesheet' type='text/css' /><!-- custom css -->
 	<link href="css/css_slider.css" type="text/css" rel="stylesheet" media="all">
     <link href="css/font-awesome.min.css" rel="stylesheet"><!-- fontawesome css -->
-	<!-- //css files -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="css/custom-calendario.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/flick/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
 	
+
+ 
+	<!-- //css files -->
+		
 	<!-- google fonts -->
 	<link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
 	<!-- //google fonts -->
@@ -36,8 +43,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <!-- header -->
 <header>
-	<div class="top-head container">
-		
+	<div class="top-head container">		
 	</div>
 	<div class="container">
 		<!-- nav -->
@@ -51,8 +57,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</nav>
 		<!-- //nav -->
 	</div>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  	<script src="js/jquery.ui.datepicker-es.js"></script>
+  	<script>
+  	
+  	
+  	$(function () {
+  		$.datepicker.setDefaults($.datepicker.regional["es"]);
+  			$("#fechaIngreso").datepicker({
+  	  		firstDay: 1
+  	  			});  		
+  		});
+  	
+  	$(function () {
+  		$.datepicker.setDefaults($.datepicker.regional["es"]);
+  			$("#fechaSalida").datepicker({
+  	  		firstDay: 1
+  	  			});  		
+  		});
+  	
+  	
+  	</script>
 </header>
 <!-- //header -->
+
 
 <!-- banner -->
 <div class="banner" id="home">
@@ -111,15 +140,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="banner-form-w3 ml-lg-5">
 						<div class="padding">
 							<!-- banner form -->
-							
-							<form:form action="validar-busqueda" method="POST" modelAttribute="ciudad">
+												
+							<form action="validar-busqueda" method="POST">
 								<h5 class="mb-3">Reserva alojamientos</h5>
 								<div class="form-style-w3ls">
-									<form:input placeholder="Ingresar ciudad"  path="nombre" id="nombre" name="nombre" type="text" />
-									<!-- <form:input placeholder="Cantidad de huespedes"  path="" id="" name="" type="text" />	-->
+									<input placeholder="Ingresar ciudad"   id="nombre" name="nombre" type="text" />
+									<input placeholder="Fecha de ingreso"  type="text" id="fechaIngreso" name="fechaIngreso"/>
+									<input placeholder="Fecha de salida"   type="text" id="fechaSalida" name="fechaSalida"/>
+									
 									<button class="btn btn-lg btn-primary btn-block" Type="Submit">Buscar</button>
 								</div>
-							</form:form>
+							</form>
 							
 							<%--Bloque que es visible si el elemento error no está vacío	--%>
 							<c:if test="${not empty error}">

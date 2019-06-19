@@ -23,9 +23,9 @@ public class ControladorDetalleDepto {
 		
 		ModelMap modelo = new ModelMap();
 		
-		Departamento deptoSeleccionado = servicioBuscarDetalle.consultarDepartamentoDetalle(id);
+		Departamento deptoSeleccionada = servicioBuscarDetalle.consultarDepartamentoDetalle(id);
 		
-		modelo.put("deptoSeleccionado", deptoSeleccionado);
+		modelo.put("deptoSeleccionado", deptoSeleccionada);
 		modelo.put("id", id);
 		return new ModelAndView("detalle", modelo);
 		

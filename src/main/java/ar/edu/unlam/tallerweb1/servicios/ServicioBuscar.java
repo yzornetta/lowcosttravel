@@ -1,11 +1,12 @@
 package ar.edu.unlam.tallerweb1.servicios;
 
+import java.util.Date;
 import java.util.List;
 
-import ar.edu.unlam.tallerweb1.modelo.Ciudad;
+import ar.edu.unlam.tallerweb1.modelo.Cama;
 import ar.edu.unlam.tallerweb1.modelo.Departamento;
 
 public interface ServicioBuscar {
 	
-	List<Departamento> consultarCiudad(Ciudad ciudad);
+	List<Cama> consultarCiudad(String ciudad, Date fechaIngreso, Date fechaSalida);
 }

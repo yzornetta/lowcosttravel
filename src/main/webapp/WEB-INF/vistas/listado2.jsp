@@ -60,34 +60,37 @@
 </header>
 <!-- //header -->
 
+<!-- other services -->
+<section class="other_services py-5" id="why">
+	<div class="container py-lg-5 py-3">
+		<h3 class="heading mb-sm-5 mb-4">Hospedajes en <span>${ciudad}</span></h3> 
+		
+		<div class="row"> 
+			<div class="col-12 col-lg-6">
+				<c:forEach items="${cama}" var="cama">
+				<div class="grid">
+					<br>
+					<!-- <img src="images/choose1.jpg" alt="" class="img-fluid" /> -->
+					<div class="info p-4">
 
-<!-- what we Serve -->
-<section class="banner-bottom py-5" id="about">
-	<div class="container py-lg-5">
-		<h2 class="heading mb-sm-5 mb-4"> ${deptoSeleccionado.nombre}</h2>
-		<div class="row bottom-grids">
-			
-			<div class="col-lg-5">
-				<p class="mt-4">${deptoSeleccionado.masInfo}</p>
+						<a href="/proyecto-limpio-spring/detalle?id=${cama.habitacion.departamento.id}" target="_blank" class="stretched-link" style="color:#000; text-decoration:none;"><h4 class=""> ${cama.habitacion.departamento.nombre}</h4></a>
+						<p class="mt-3">${cama.habitacion.departamento.descripcion}</p>
+						<p class="mt-3"><span>Tipo de habitacion: </span>${cama.habitacion.tipo}</p>
+						<p class="mt-3"><span>Precio por noche: $</span>${cama.precio}</p>
+						
+					</div>
+				</div>
+				</c:forEach>
 			</div>
-			<!-- <div class="col-lg-1 col-sm-4 col-5 ser-img">
-				<img src="images/s1.png" class="mt-4" alt="">
-				<img src="images/s2.png" class="mt-4" alt="">
-			</div>
-			<div class="col-lg-1 col-sm-4 col-5 ser-img">
-				<img src="images/s3.png" class="mt-4" alt="">
-				<img src="images/s5.png" class="mt-4" alt="">
-			</div>
-			<div class="col-lg-5">
-				<p class="mt-4"> Vivamus efficitur ur vitae tempus aliquam. Proin aliquet dictum est, molestie maximus sapien maximus a.
-				Fuscer eleifend. convallis vitae enim eu egestas. Quisque placi rati enim nibh, vitae faucibus odio vestibulum pretium. Sed malesuada
-				libero sed commodo varius. </p>-->
+			<div class="col-12 col-lg-6">
+				<div id="mapid" style="width: 100%; height: 400px;"></div>
 			</div>
 		</div>
+
+	
 	</div>
 </section>
-<!--  //what we Serve -->
-
+<!-- //other services -->
 
 
 		<script src="js/mapa.js"></script>
