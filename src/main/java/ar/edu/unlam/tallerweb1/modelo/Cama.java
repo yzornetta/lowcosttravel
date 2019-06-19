@@ -17,6 +17,7 @@ public class Cama {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	private boolean plazaSimple;
+	private String status;
 	@ManyToOne
 	private Habitacion habitacion;
 	@OneToMany(mappedBy = "camaReservada")
@@ -55,6 +56,12 @@ public class Cama {
 	}
 	public void setPrecio(float precio) {
 		this.precio = precio;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
 	}
 	
 }

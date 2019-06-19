@@ -59,31 +59,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  	<script src="js/jquery.ui.datepicker-es.js"></script>
   	<script>
   	
-  	$( function() {
-    		$( "#fechaIngreso" ).datepicker(
-    				{
-    					dateformat:"dd/mm/yy",
-    					firstDay: 1,
-    					dayNames: ["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"],
-    					dayNamesMin: ["Do","Lu","Ma","Mi","Ju","Vi","Sa"],
-    					monthNames: ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"],
-    					monthNamesShort: ["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"],
-    					
-    				});
-    		$( "#fechaSalida" ).datepicker(
-    				{
-    					dateformat:"dd/mm/yy",
-    					firstDay: 1,
-    					dayNames: ["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"],
-    					dayNamesMin: ["Do","Lu","Ma","Mi","Ju","Vi","Sa"],
-    					monthNames: ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"],
-    					monthNamesShort: ["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"],
-    					
-    				});
-    		
-  		} );
+  	
+  	$(function () {
+  		$.datepicker.setDefaults($.datepicker.regional["es"]);
+  			$("#fechaIngreso").datepicker({
+  	  		firstDay: 1
+  	  			});  		
+  		});
+  	
+  	$(function () {
+  		$.datepicker.setDefaults($.datepicker.regional["es"]);
+  			$("#fechaSalida").datepicker({
+  	  		firstDay: 1
+  	  			});  		
+  		});
   	
   	
   	</script>

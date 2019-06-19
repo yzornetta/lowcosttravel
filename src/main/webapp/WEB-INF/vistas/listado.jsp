@@ -73,8 +73,10 @@
 					<!-- <img src="images/choose1.jpg" alt="" class="img-fluid" /> -->
 					<div class="info p-4">
 
-						<a href="/proyecto-limpio-spring/detalle?id=${cama.id}"><h4 class=""> ${cama.id}</h4></a>
-						<p class="mt-3"></p>
+						<a href="/proyecto-limpio-spring/detalle?id=${cama.habitacion.departamento.id}"><h4 class=""> ${cama.habitacion.departamento.nombre}</h4></a>
+						<p class="mt-3">${cama.habitacion.departamento.descripcion}</p>
+						<p class="mt-3"><span>Tipo de habitacion: </span>${cama.habitacion.tipo}</p>
+						<p class="mt-3"><span>Precio por noche: $</span>${cama.precio}</p>
 						
 					</div>
 				</div>
