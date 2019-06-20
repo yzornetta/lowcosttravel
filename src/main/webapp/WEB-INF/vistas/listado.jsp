@@ -33,6 +33,11 @@
     <link href="css/font-awesome.min.css" rel="stylesheet"><!-- fontawesome css -->
 	<!-- //css files -->
 	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">	
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>	
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>	
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	
 	<!-- google fonts -->
 	<link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
 	<!-- //google fonts -->
@@ -68,18 +73,18 @@
 		<div class="row"> 
 			<div class="col-12 col-lg-6">
 				<c:forEach items="${cama}" var="cama">
-				<div class="grid">
+				<div class="card">
 					<br>
 					<!-- <img src="images/choose1.jpg" alt="" class="img-fluid" /> -->
-					<div class="info p-4">
+					<div class="card-body">
 
 						<a href="/proyecto-limpio-spring/detalle?id=${cama.habitacion.departamento.id}" target="_blank" class="stretched-link" style="color:#000; text-decoration:none;"><h4 class=""> ${cama.habitacion.departamento.nombre}</h4></a>
-						<p class="mt-3">${cama.habitacion.departamento.descripcion}</p>
-						<p class="mt-3"><span>Tipo de habitacion: </span>${cama.habitacion.tipo}</p>
-						<p class="mt-3"><span>Precio por noche: $</span>${cama.precio}</p>
+						<p class="card-text">${cama.habitacion.departamento.descripcion}</p>
+						<p class="card-text"><span>Tipo de habitacion: </span>${cama.habitacion.tipo}</p>
+						<p class="card-text"><span>Precio por noche: $</span>${cama.precio}</p>
 						
 					</div>
-				</div>
+				</div><br>
 				</c:forEach>
 			</div>
 			<div class="col-12 col-lg-6">
