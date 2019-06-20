@@ -63,11 +63,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   	
   	  <script>
   	$(function () {
-  		$.datepicker.setDefaults($.datepicker.regional["es"]);
-  			$("#fechaIngreso,#fechaSalida").datepicker({
-  				minDate: 0
-  	  			});  		
-  		}); 	
+  		
+  			var $fechaSalida = $("#fechaSalida");
+  			$.datepicker.setDefaults($.datepicker.regional["es"]);
+  			
+  				$("#fechaIngreso").datepicker({
+  					minDate: 0,
+  	  	      		onSelect: function(selectedDate) {
+  	  	      			$fechaSalida.datepicker({          
+  	  	                //maxDate: new Date()
+  	  	      		});
+  	  	      			
+  	  	      	  $fechaSalida.datepicker("option", "disabled", false);
+  	  	          $fechaSalida.datepicker('setDate', null);
+  	  	          $fechaSalida.datepicker("option", "minDate", selectedDate);
+  	  	      	}  	  	      	
+  					
+  	  	     });  		
+  	
+  	});	
   	</script>
   	
   	
@@ -139,7 +153,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<input placeholder="Ingresar ciudad"   id="nombre" name="nombre" type="text" />
 									<input placeholder="Ingresar huespedes"   id="huespedes" name="huespedes" type="text" />
 									<input placeholder="Fecha de ingreso"  type="text" id="fechaIngreso" name="fechaIngreso"/>								
-									<input placeholder="Fecha de salida"   type="text" id="fechaSalida" name="fechaSalida"/>
+									<input placeholder="Fecha de salida"   type="text" id="fechaSalida" name="fechaSalida" disabled/>
 									
 									<button class="btn btn-lg btn-primary btn-block" Type="Submit">Buscar</button>
 								</div>
