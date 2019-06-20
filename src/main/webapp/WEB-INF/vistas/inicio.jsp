@@ -60,25 +60,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   	<script src="js/jquery.ui.datepicker-es.js"></script>
-  	<script>
   	
-  	
+  	  <script>
   	$(function () {
   		$.datepicker.setDefaults($.datepicker.regional["es"]);
   			$("#fechaIngreso").datepicker({
   	  		firstDay: 1
   	  			});  		
-  		});
+  		}); 	
+  	</script>
   	
+  	<script>
   	$(function () {
   		$.datepicker.setDefaults($.datepicker.regional["es"]);
   			$("#fechaSalida").datepicker({
   	  		firstDay: 1
   	  			});  		
   		});
-  	
-  	
   	</script>
+  	
 </header>
 <!-- //header -->
 
@@ -141,11 +141,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="padding">
 							<!-- banner form -->
 												
-							<form action="validar-busqueda" method="POST">
+							<form action="validar-busqueda" method="POST" autocomplete="off">
 								<h5 class="mb-3">Reserva alojamientos</h5>
 								<div class="form-style-w3ls">
 									<input placeholder="Ingresar ciudad"   id="nombre" name="nombre" type="text" />
-									<input placeholder="Fecha de ingreso"  type="text" id="fechaIngreso" name="fechaIngreso"/>
+									<input placeholder="Ingresar huespedes"   id="huespedes" name="huespedes" type="text" />
+									<input placeholder="Fecha de ingreso"  type="text" id="fechaIngreso" name="fechaIngreso"/>								
 									<input placeholder="Fecha de salida"   type="text" id="fechaSalida" name="fechaSalida"/>
 									
 									<button class="btn btn-lg btn-primary btn-block" Type="Submit">Buscar</button>
