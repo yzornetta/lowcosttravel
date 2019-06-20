@@ -16,36 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `direccion`
+-- Table structure for table `habitacion`
 --
 
-DROP TABLE IF EXISTS `direccion`;
+DROP TABLE IF EXISTS `habitacion`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `direccion` (
+CREATE TABLE `habitacion` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `barrio` varchar(255) DEFAULT NULL,
-  `calle` varchar(255) DEFAULT NULL,
-  `entreCalle1` varchar(255) DEFAULT NULL,
-  `entreCalle2` varchar(255) DEFAULT NULL,
-  `latitud` float NOT NULL,
-  `longitud` float NOT NULL,
-  `numero` int(11) DEFAULT NULL,
-  `ciudad_id` bigint(20) DEFAULT NULL,
+  `tipo` varchar(255) DEFAULT NULL,
+  `departamento_id` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `FKpiyo67yak2l613uqf0brnqe6j` (`ciudad_id`),
-  CONSTRAINT `FKpiyo67yak2l613uqf0brnqe6j` FOREIGN KEY (`ciudad_id`) REFERENCES `ciudad` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+  KEY `FK2ohnxd1j8lbdluk6v94f0i4gl` (`departamento_id`),
+  CONSTRAINT `FK2ohnxd1j8lbdluk6v94f0i4gl` FOREIGN KEY (`departamento_id`) REFERENCES `departamento` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `direccion`
+-- Dumping data for table `habitacion`
 --
 
-LOCK TABLES `direccion` WRITE;
-/*!40000 ALTER TABLE `direccion` DISABLE KEYS */;
-INSERT INTO `direccion` VALUES (1,'Londres','Prescot',NULL,NULL,51.5214,-0.0750907,45,1),(4,'Rotherhithe','Bywater Pl',NULL,NULL,51.5052,-0.0387584,49,1),(5,'Canary Wharf','Westferry Circus',NULL,NULL,51.5065,-0.0326787,46,1),(18,'Paris','Avenue George V',NULL,NULL,48.8698,2.30184,31,12),(19,'Paris','Avenue Hoche',NULL,NULL,48.8761,2.28822,37,12);
-/*!40000 ALTER TABLE `direccion` ENABLE KEYS */;
+LOCK TABLES `habitacion` WRITE;
+/*!40000 ALTER TABLE `habitacion` DISABLE KEYS */;
+INSERT INTO `habitacion` VALUES (1,'Compartido',1),(5,'Privada',4),(6,'Privada',4),(7,'Privada',5),(26,'Privada',18),(27,'Privada',19),(28,'Compartida',19);
+/*!40000 ALTER TABLE `habitacion` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -57,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-19 21:37:56
+-- Dump completed on 2019-06-19 21:37:55
