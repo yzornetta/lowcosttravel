@@ -16,36 +16,32 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `direccion`
+-- Table structure for table `cama`
 --
 
-DROP TABLE IF EXISTS `direccion`;
+DROP TABLE IF EXISTS `cama`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `direccion` (
+CREATE TABLE `cama` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `barrio` varchar(255) DEFAULT NULL,
-  `calle` varchar(255) DEFAULT NULL,
-  `entreCalle1` varchar(255) DEFAULT NULL,
-  `entreCalle2` varchar(255) DEFAULT NULL,
-  `latitud` float NOT NULL,
-  `longitud` float NOT NULL,
-  `numero` int(11) DEFAULT NULL,
-  `ciudad_id` bigint(20) DEFAULT NULL,
+  `plazaSimple` bit(1) NOT NULL,
+  `precio` float NOT NULL,
+  `habitacion_id` bigint(20) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `FKpiyo67yak2l613uqf0brnqe6j` (`ciudad_id`),
-  CONSTRAINT `FKpiyo67yak2l613uqf0brnqe6j` FOREIGN KEY (`ciudad_id`) REFERENCES `ciudad` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+  KEY `FK8r10rv4ngoxkxbhvufjt5maps` (`habitacion_id`),
+  CONSTRAINT `FK8r10rv4ngoxkxbhvufjt5maps` FOREIGN KEY (`habitacion_id`) REFERENCES `habitacion` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `direccion`
+-- Dumping data for table `cama`
 --
 
-LOCK TABLES `direccion` WRITE;
-/*!40000 ALTER TABLE `direccion` DISABLE KEYS */;
-INSERT INTO `direccion` VALUES (1,'Londres','Prescot',NULL,NULL,51.5214,-0.0750907,45,1),(4,'Rotherhithe','Bywater Pl',NULL,NULL,51.5052,-0.0387584,49,1),(5,'Canary Wharf','Westferry Circus',NULL,NULL,51.5065,-0.0326787,46,1),(18,'Paris','Avenue George V',NULL,NULL,48.8698,2.30184,31,12),(19,'Paris','Avenue Hoche',NULL,NULL,48.8761,2.28822,37,12);
-/*!40000 ALTER TABLE `direccion` ENABLE KEYS */;
+LOCK TABLES `cama` WRITE;
+/*!40000 ALTER TABLE `cama` DISABLE KEYS */;
+INSERT INTO `cama` VALUES (1,'',900,1,'Ocupado'),(2,'',700,1,'Ocupado'),(3,'',750,1,NULL),(10,'\0',1000,5,NULL),(11,'',500,6,NULL),(12,'',500,6,NULL),(13,'\0',1500,7,NULL),(38,'\0',4500,26,NULL),(39,'\0',5000,27,NULL),(40,'',4500,28,NULL),(41,'',4500,28,NULL);
+/*!40000 ALTER TABLE `cama` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -57,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-19 21:37:56
+-- Dump completed on 2019-06-19 21:37:54

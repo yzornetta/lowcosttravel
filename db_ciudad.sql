@@ -24,11 +24,11 @@ DROP TABLE IF EXISTS `ciudad`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `ciudad` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(255) DEFAULT NULL,
   `latitud` float DEFAULT NULL,
   `longitud` float DEFAULT NULL,
+  `nombre` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `ciudad` (
 
 LOCK TABLES `ciudad` WRITE;
 /*!40000 ALTER TABLE `ciudad` DISABLE KEYS */;
-INSERT INTO `ciudad` VALUES (1,'Calafate',NULL,NULL),(2,'Cordoba',NULL,NULL),(3,'Neuquen',NULL,NULL),(4,'Misiones',NULL,NULL),(5,'Mendoza',NULL,NULL);
+INSERT INTO `ciudad` VALUES (1,51.5072,-0.1275,'Londres'),(12,48.8588,2.20698,'Paris');
 /*!40000 ALTER TABLE `ciudad` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-13 12:09:46
+-- Dump completed on 2019-06-19 21:37:49
