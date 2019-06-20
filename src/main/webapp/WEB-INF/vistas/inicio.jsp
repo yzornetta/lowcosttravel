@@ -64,20 +64,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   	  <script>
   	$(function () {
   		$.datepicker.setDefaults($.datepicker.regional["es"]);
-  			$("#fechaIngreso").datepicker({
-  	  		firstDay: 1
+  			$("#fechaIngreso,#fechaSalida").datepicker({
+  				minDate: 0
   	  			});  		
   		}); 	
   	</script>
   	
-  	<script>
-  	$(function () {
-  		$.datepicker.setDefaults($.datepicker.regional["es"]);
-  			$("#fechaSalida").datepicker({
-  	  		firstDay: 1
-  	  			});  		
-  		});
-  	</script>
   	
 </header>
 <!-- //header -->
