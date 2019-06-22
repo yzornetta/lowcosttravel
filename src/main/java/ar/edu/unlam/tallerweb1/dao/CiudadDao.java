@@ -4,7 +4,6 @@ import java.util.Date;
 import java.util.List;
 
 import ar.edu.unlam.tallerweb1.modelo.Cama;
-import ar.edu.unlam.tallerweb1.modelo.Departamento;
 
 
 public interface CiudadDao {

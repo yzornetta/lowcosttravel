@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ar.edu.unlam.tallerweb1.dao.CiudadDao;
 import ar.edu.unlam.tallerweb1.modelo.Cama;
-import ar.edu.unlam.tallerweb1.modelo.Departamento;
 
 
 @Service("servicioBuscar")

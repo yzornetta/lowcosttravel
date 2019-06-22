@@ -42,9 +42,11 @@ public class CiudadDaoImpl implements CiudadDao {
 		 
 		 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		 String fechaIngresoS = sdf.format(fechaIngreso);
-		 String fechaSalidaS = sdf.format(fechaSalida);
+		 SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy-MM-dd");
+		 String fechaSalidaS = sdf2.format(fechaSalida);
 		 
-		 SQLQuery query = session.createSQLQuery("SELECT T0.id FROM cama as T0 JOIN reservacion as T1 ON T1.camaReservada_id = T0.id WHERE '"+ fechaIngresoS +"' BETWEEN fechaIngreso AND fechaSalida or '"+ fechaSalidaS +"' BETWEEN fechaIngreso AND fechaSalida");
+		 
+		 SQLQuery query = session.createSQLQuery("SELECT ca.id FROM cama as ca JOIN reservacion as re ON re.camaReservada_id = ca.id WHERE '"+ fechaIngresoS +"' BETWEEN fechaIngreso AND fechaSalida or '"+ fechaSalidaS +"' BETWEEN fechaIngreso AND fechaSalida or '"+ fechaIngresoS +"' < fechaIngreso AND '"+ fechaSalidaS +"' > fechaSalida");
 		 query.addEntity(Cama.class);		 
 		 List listaCamasReservadasQuery = query.list(); 
 		 

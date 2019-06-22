@@ -1,5 +1,8 @@
 package ar.edu.unlam.tallerweb1.controladores;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -39,11 +42,32 @@ public class ControladorBusqueda {
 	
 	@RequestMapping(path = "/validar-busqueda", method = RequestMethod.POST)
 	public ModelAndView validarBusqueda(@RequestParam(value="nombre")  String ciudad, 
-										@RequestParam(value="fechaIngreso") Date fechaIngreso,
-										@RequestParam(value="fechaSalida")  Date fechaSalida,
+										@RequestParam(value="fechaIngreso") String fechaIngreso,
+										@RequestParam(value="fechaSalida")  String fechaSalida,
 										HttpServletRequest request) {
+		
+
+		DateFormat fechaFormato = new SimpleDateFormat("dd/MM/yyyy");
+		Date fechaIngresoD = null;
+		try {
+			fechaIngresoD = fechaFormato.parse(fechaIngreso);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		DateFormat fechaFormato2 = new SimpleDateFormat("dd/MM/yyyy");
+		Date fechaSalidaD = null;
+		try {
+			fechaSalidaD = fechaFormato2.parse(fechaSalida);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
 		ModelMap model = new ModelMap();
-		List<Cama> cama = servicioBuscar.consultarCiudad(ciudad,fechaIngreso,fechaSalida);	
+		List<Cama> cama = servicioBuscar.consultarCiudad(ciudad,fechaIngresoD,fechaSalidaD);	
 		
 		if (cama.size()!= 0) {
 			

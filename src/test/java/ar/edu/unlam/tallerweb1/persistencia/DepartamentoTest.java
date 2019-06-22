@@ -20,7 +20,7 @@ import java.text.SimpleDateFormat;
 
 public class DepartamentoTest extends SpringTest {
 
-	@Test@Transactional@Rollback
+	@Test@Transactional@Rollback(false)
 	public void departamentoDaoTest() throws ParseException {
 		
 		Session session = getSession();
