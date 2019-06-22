@@ -82,6 +82,7 @@
 						<p class="card-text">${cama.habitacion.departamento.descripcion}</p>
 						<p class="card-text"><span>Tipo de habitacion: </span>${cama.habitacion.tipo}</p>
 						<p class="card-text"><span>Precio por noche: $</span>${cama.precio}</p>
+						<p class="card-text"><span>ID: </span>${cama.id}</p>
 						
 					</div>
 				</div><br>

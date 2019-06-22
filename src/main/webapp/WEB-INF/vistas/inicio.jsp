@@ -61,7 +61,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   	<script src="js/jquery.ui.datepicker-es.js"></script>
   	
-  	  <script>
+	<script>
   	$(function () {
   		
   			var $fechaSalida = $("#fechaSalida");
@@ -69,14 +69,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   			
   				$("#fechaIngreso").datepicker({
   					minDate: 0,
-  	  	      		onSelect: function(selectedDate) {
+  	  	      		onSelect: function(Date) {
   	  	      			$fechaSalida.datepicker({          
-  	  	                //maxDate: new Date()
+  	  	                
   	  	      		});
   	  	      			
   	  	      	  $fechaSalida.datepicker("option", "disabled", false);
   	  	          $fechaSalida.datepicker('setDate', null);
-  	  	          $fechaSalida.datepicker("option", "minDate", selectedDate);
+  	  	          $fechaSalida.datepicker("option", "minDate", Date);
   	  	      	}  	  	      	
   					
   	  	     });  		
@@ -153,13 +153,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<input placeholder="Ingresar ciudad"   id="nombre" name="nombre" type="text" />
 									<input placeholder="Ingresar huespedes"   id="huespedes" name="huespedes" type="text" />
 									<input placeholder="Fecha de ingreso"  type="text" id="fechaIngreso" name="fechaIngreso"/>								
-									<input placeholder="Fecha de salida"   type="text" id="fechaSalida" name="fechaSalida" disabled/>
+									<input placeholder="Fecha de salida"   type="text" id="fechaSalida" name="fechaSalida" disabled	/>
 									
 									<button class="btn btn-lg btn-primary btn-block" Type="Submit">Buscar</button>
 								</div>
 							</form>
 							
-							<%--Bloque que es visible si el elemento error no está vacío	--%>
+							<%--Bloque que es visible si el elemento error no está vacío disabled disabled	--%>
 							<c:if test="${not empty error}">
 			        			<h4>${error}</h4>
 		        			</c:if>	
