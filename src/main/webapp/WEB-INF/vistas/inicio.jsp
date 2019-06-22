@@ -152,8 +152,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="form-style-w3ls">
 									<input placeholder="Ingresar ciudad"   id="nombre" name="nombre" type="text" />
 									<input placeholder="Ingresar huespedes"   id="huespedes" name="huespedes" type="text" />
-									<input placeholder="Fecha de ingreso"  type="text" id="fechaIngreso" name="fechaIngreso"/>								
-									<input placeholder="Fecha de salida"   type="text" id="fechaSalida" name="fechaSalida" disabled	/>
+									<input placeholder="Fecha de ingreso"  type="text" id="fechaIngreso" name="fechaIngreso" readonly="readonly"/>								
+									<input placeholder="Fecha de salida"   type="text" id="fechaSalida" name="fechaSalida" readonly="readonly" disabled	/>
 									
 									<button class="btn btn-lg btn-primary btn-block" Type="Submit">Buscar</button>
 								</div>
