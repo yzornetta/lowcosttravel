@@ -19,7 +19,8 @@ public class FotosPorDepartamentoDaoImpl implements FotosPorDepartamentoDao {
 	public List<Foto> consultarFotosPorDepartamento(Long id) {
 		final Session sesion = sf.getCurrentSession();
 		List<Foto> lista = sesion.createCriteria(Foto.class)
-				.add(Restrictions.eq("departamento", id))
+				.createAlias("Departamento", "dep")
+				.add(Restrictions.eq("dep.id", id))
 				.list();
 		return lista;
 	}
