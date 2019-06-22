@@ -25,6 +25,8 @@ public class Departamento {
 	private String masInfo;
 	@OneToMany(mappedBy = "departamento")
 	private List<Habitacion> habitacion = new ArrayList<>();
+	@OneToMany(mappedBy = "departamento")
+	private List<Foto> foto = new ArrayList<>();
 	
 	public Long getId(){
 		return id;
@@ -64,6 +66,12 @@ public class Departamento {
 	}
 	public void setMasInfo(String masInfo) {
 		this.masInfo = masInfo;
+	}
+	public List<Foto> getFoto() {
+		return foto;
+	}
+	public void setFoto(List<Foto> foto) {
+		this.foto = foto;
 	}
 	
 	
