@@ -10,7 +10,7 @@
 <body>
 	<ul>
 <c:forEach items="${fotos}" var="fotos">
-		<li>${fotos.id}</li>
+		<li>${fotos.archivo}</li>
 </c:forEach>
 	</ul>
 </body>
