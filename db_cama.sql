@@ -25,13 +25,11 @@ DROP TABLE IF EXISTS `cama`;
 CREATE TABLE `cama` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `plazaSimple` bit(1) NOT NULL,
-  `precio` float NOT NULL,
   `habitacion_id` bigint(20) DEFAULT NULL,
-  `status` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK8r10rv4ngoxkxbhvufjt5maps` (`habitacion_id`),
   CONSTRAINT `FK8r10rv4ngoxkxbhvufjt5maps` FOREIGN KEY (`habitacion_id`) REFERENCES `habitacion` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +38,7 @@ CREATE TABLE `cama` (
 
 LOCK TABLES `cama` WRITE;
 /*!40000 ALTER TABLE `cama` DISABLE KEYS */;
-INSERT INTO `cama` VALUES (1,'',900,1,'Ocupado'),(2,'',700,1,'Ocupado'),(3,'',750,1,NULL),(10,'\0',1000,5,NULL),(11,'',500,6,NULL),(12,'',500,6,NULL),(13,'\0',1500,7,NULL),(38,'\0',4500,26,NULL),(39,'\0',5000,27,NULL),(40,'',4500,28,NULL),(41,'',4500,28,NULL);
+INSERT INTO `cama` VALUES (1,'',1),(2,'\0',2),(3,'\0',3);
 /*!40000 ALTER TABLE `cama` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-19 21:37:54
+-- Dump completed on 2019-06-23 18:01:57

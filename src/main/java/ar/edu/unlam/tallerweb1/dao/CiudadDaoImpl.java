@@ -14,7 +14,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
-import ar.edu.unlam.tallerweb1.modelo.Cama;
+import ar.edu.unlam.tallerweb1.modelo.Habitacion;
 
 
 @Repository("ciudadDao")
@@ -27,14 +27,13 @@ public class CiudadDaoImpl implements CiudadDao {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Cama> consultarCiudad(String ciudad, Date fechaIngreso, Date fechaSalida) {
+	public List<Habitacion> consultarCiudad(String ciudad, Date fechaIngreso, Date fechaSalida) {
 
 		
 		 final Session session = sessionFactory.getCurrentSession();
 		 
-		 List<Cama> listaCamas = (List<Cama>) session.createCriteria(Cama.class)
-				 				.createAlias("habitacion", "hab")
-				 				.createAlias("hab.departamento", "dep")
+		 List<Habitacion> listaHabCiudad = (List<Habitacion>) session.createCriteria(Habitacion.class)
+				 				.createAlias("departamento", "dep")
 				 				.createAlias("dep.direccion", "dir")
 				 				.createAlias("dir.ciudad", "ciu")
 				 				.add(Restrictions.eq("ciu.nombre", ciudad))
@@ -42,30 +41,29 @@ public class CiudadDaoImpl implements CiudadDao {
 		 
 		 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		 String fechaIngresoS = sdf.format(fechaIngreso);
-		 SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy-MM-dd");
-		 String fechaSalidaS = sdf2.format(fechaSalida);
+		 String fechaSalidaS = sdf.format(fechaSalida);
 		 
 		 
-		 SQLQuery query = session.createSQLQuery("SELECT ca.id FROM cama as ca JOIN reservacion as re ON re.camaReservada_id = ca.id WHERE '"+ fechaIngresoS +"' BETWEEN fechaIngreso AND fechaSalida or '"+ fechaSalidaS +"' BETWEEN fechaIngreso AND fechaSalida or '"+ fechaIngresoS +"' < fechaIngreso AND '"+ fechaSalidaS +"' > fechaSalida");
-		 query.addEntity(Cama.class);		 
-		 List listaCamasReservadasQuery = query.list(); 
+		 SQLQuery query = session.createSQLQuery("SELECT ha.id FROM habitacion as ha JOIN reservacion as re ON re.habitacionReservada_id = ha.id WHERE '"+ fechaIngresoS +"' BETWEEN fechaIngreso AND fechaSalida or '"+ fechaSalidaS +"' BETWEEN fechaIngreso AND fechaSalida or '"+ fechaIngresoS +"' < fechaIngreso AND '"+ fechaSalidaS +"' > fechaSalida");
+		 query.addEntity(Habitacion.class);		 
+		 List listaHabReservadasQuery = query.list(); 
 		 
 		 
-		 List<Cama> listaCamasReservadas = new ArrayList<>();
+		 List<Habitacion> listaHabReservadas = new ArrayList<>();
 		 
-		 for (Iterator iterator = listaCamasReservadasQuery.iterator(); iterator.hasNext();){
-			 Cama camas = (Cama) iterator.next();
-			 listaCamasReservadas.add(camas);
+		 for (Iterator iterator = listaHabReservadasQuery.iterator(); iterator.hasNext();){
+			 Habitacion habitaciones = (Habitacion) iterator.next();
+			 listaHabReservadas.add(habitaciones);
 			 
 		 }
 		 
-		 List<Cama> listaCamasDisponibles = new ArrayList<>();
+		 List<Habitacion> listaHabDisponibles = new ArrayList<>();
 		 
 		 
-		 for (Cama i : listaCamas) {
+		 for (Habitacion i : listaHabCiudad) {
 			 
 			 
-			for (Cama y : listaCamasReservadas) {
+			for (Habitacion y : listaHabReservadas) {
 				 
 				 if(i.getId()==y.getId()) {
 						
@@ -74,15 +72,14 @@ public class CiudadDaoImpl implements CiudadDao {
 					 	 
 			 }
 			
-			if(i.getStatus()!="Ocupado" || listaCamasReservadas.size()==0) {
+			if(i.getStatus()!="Ocupado" || listaHabReservadas.size()==0) {
 				
-				listaCamasDisponibles.add(i); 
+				listaHabDisponibles.add(i); 
 			}		 
 		 }
 		 
-		 return listaCamasDisponibles;		
+		 return listaHabDisponibles;		
 		 
-		
 	}
-	
+
 }

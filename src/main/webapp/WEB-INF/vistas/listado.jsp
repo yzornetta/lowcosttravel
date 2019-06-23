@@ -72,17 +72,15 @@
 		
 		<div class="row"> 
 			<div class="col-12 col-lg-6">
-				<c:forEach items="${cama}" var="cama">
+				<c:forEach items="${habitacion}" var="habitacion">
 				<div class="card">
 					<br>
 					<!-- <img src="images/choose1.jpg" alt="" class="img-fluid" /> -->
 					<div class="card-body">
 
-						<a href="/proyecto-limpio-spring/detalle?id=${cama.habitacion.departamento.id}" target="_blank" class="stretched-link" style="color:#000; text-decoration:none;"><h4 class=""> ${cama.habitacion.departamento.nombre}</h4></a>
-						<p class="card-text">${cama.habitacion.departamento.descripcion}</p>
-						<p class="card-text"><span>Tipo de habitacion: </span>${cama.habitacion.tipo}</p>
-						<p class="card-text"><span>Precio por noche: $</span>${cama.precio}</p>
-						<p class="card-text"><span>ID: </span>${cama.id}</p>
+						<a href="/proyecto-limpio-spring/detalle?id=${habitacion.id}" target="_blank" class="stretched-link" style="color:#000; text-decoration:none;"><h4 class=""> ${habitacion.descripcionHab}</h4></a>
+						<p class="card-text">${habitacion.departamento.descripcion}</p>
+						<p class="card-text"><span>Precio por noche: $</span>${habitacion.precio}</p>
 						
 					</div>
 				</div><br>

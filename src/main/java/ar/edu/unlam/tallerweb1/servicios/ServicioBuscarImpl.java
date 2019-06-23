@@ -8,7 +8,7 @@ import javax.inject.Inject;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ar.edu.unlam.tallerweb1.dao.CiudadDao;
-import ar.edu.unlam.tallerweb1.modelo.Cama;
+import ar.edu.unlam.tallerweb1.modelo.Habitacion;
 
 
 @Service("servicioBuscar")
@@ -19,7 +19,7 @@ public class ServicioBuscarImpl implements ServicioBuscar {
 	private CiudadDao servicioCiudadDao;
 
 	@Override
-	public List<Cama> consultarCiudad (String ciudad, Date fechaIngreso, Date fechaSalida) {
+	public List<Habitacion> consultarCiudad (String ciudad, Date fechaIngreso, Date fechaSalida) {
 		return servicioCiudadDao.consultarCiudad(ciudad,fechaIngreso,fechaSalida);
 	}
 

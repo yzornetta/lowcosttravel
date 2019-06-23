@@ -20,8 +20,13 @@ public class Habitacion {
 	private Departamento departamento;
 	@OneToMany(mappedBy = "habitacion")
 	private List<Cama> cama = new ArrayList<>();
+	@OneToMany(mappedBy = "habitacionReservada")
+	private List<Reservacion> reservacion;
+	private String status;
+	private float precio;
+	private String descripcionHab;
+	private String masInfoHab;
 	
-	private String tipo;
 	
 	public Long getId(){
 		return id;
@@ -41,11 +46,36 @@ public class Habitacion {
 	public void setCama(List<Cama> cama){
 		this.cama=cama;
 	}
-	public String getTipo() {
-		return tipo;
+	
+	public List<Reservacion> getReservacion(){
+		return reservacion;
 	}
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
+	public void getReservacion(List<Reservacion> reservacion){
+		this.reservacion=reservacion;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	public float getPrecio() {
+		return precio;
+	}
+	public void setPrecio(float precio) {
+		this.precio = precio;
+	}
+	public String getDescripcionHab() {
+		return descripcionHab;
+	}
+	public void setDescripcionHab(String descripcionHab) {
+		this.descripcionHab = descripcionHab;
+	}
+	public String getMasInfoHab() {
+		return masInfoHab;
+	}
+	public void setMasInfoHab(String masInfoHab) {
+		this.masInfoHab = masInfoHab;
 	}
 
 	

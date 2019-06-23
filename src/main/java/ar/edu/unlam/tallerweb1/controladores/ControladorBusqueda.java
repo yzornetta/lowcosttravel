@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import ar.edu.unlam.tallerweb1.modelo.Cama;
 import ar.edu.unlam.tallerweb1.modelo.Ciudad;
+import ar.edu.unlam.tallerweb1.modelo.Habitacion;
 import ar.edu.unlam.tallerweb1.servicios.ServicioBuscar;
 
 @Controller
@@ -67,16 +67,19 @@ public class ControladorBusqueda {
 		
 		
 		ModelMap model = new ModelMap();
-		List<Cama> cama = servicioBuscar.consultarCiudad(ciudad,fechaIngresoD,fechaSalidaD);	
 		
-		if (cama.size()!= 0) {
+		
+		List<Habitacion> habitacion = servicioBuscar.consultarCiudad(ciudad,fechaIngresoD,fechaSalidaD);
+		
+		
+		if (habitacion.size()!= 0) {
 			
 			model.put("ciudad", ciudad);
-			model.put("cama", cama);
+			model.put("habitacion", habitacion);
 			return new ModelAndView("listado",model);
 				
 			} else {
-				model.put("error", "ciudad no disponible");
+				model.put("error", "Hospedaje no disponible");
 			}
 			return new ModelAndView("inicio", model);
 	

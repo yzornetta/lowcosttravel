@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import ar.edu.unlam.tallerweb1.modelo.Departamento;
+import ar.edu.unlam.tallerweb1.modelo.Habitacion;
 import ar.edu.unlam.tallerweb1.servicios.ServicioBuscarDetalle;
 
 @Controller
@@ -23,9 +23,9 @@ public class ControladorDetalleDepto {
 		
 		ModelMap modelo = new ModelMap();
 		
-		Departamento deptoSeleccionada = servicioBuscarDetalle.consultarDepartamentoDetalle(id);
+		Habitacion habSeleccionada = servicioBuscarDetalle.consultarDepartamentoDetalle(id);
 		
-		modelo.put("deptoSeleccionado", deptoSeleccionada);
+		modelo.put("habSeleccionada", habSeleccionada);
 		modelo.put("id", id);
 		return new ModelAndView("detalle", modelo);
 		

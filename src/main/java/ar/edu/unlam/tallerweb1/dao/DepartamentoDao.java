@@ -1,9 +1,9 @@
 package ar.edu.unlam.tallerweb1.dao;
 
-import ar.edu.unlam.tallerweb1.modelo.Departamento;
+import ar.edu.unlam.tallerweb1.modelo.Habitacion;
 
 public interface DepartamentoDao {
 	
-	Departamento consultarDepartamentoDetalle(Long id);
+	Habitacion consultarDepartamentoDetalle(Long id);
 
 }
