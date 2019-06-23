@@ -64,11 +64,13 @@
 <!-- what we Serve -->
 <section class="banner-bottom py-5" id="about">
 	<div class="container py-lg-5">
-		<h2 class="heading mb-sm-5 mb-4"> ${deptoSeleccionado.nombre}</h2>
+		<h2 class="heading mb-sm-5 mb-4"> ${habSeleccionada.descripcionHab}</h2>
 		<div class="row bottom-grids">
 			
 			<div class="col-lg-5">
-				<p class="mt-4">${deptoSeleccionado.masInfo}</p>
+				<p class="mt-4">${habSeleccionada.departamento.masInfo}</p>
+				<p class="mt-4"><span>Direccion: </span>${habSeleccionada.departamento.direccion.calle} ${habSeleccionada.departamento.direccion.numero}</p>
+				<p class="mt-4"><span>Precio por noche: $</span>${habSeleccionada.precio}</p>
 			</div>
 			<!-- <div class="col-lg-1 col-sm-4 col-5 ser-img">
 				<img src="images/s1.png" class="mt-4" alt="">

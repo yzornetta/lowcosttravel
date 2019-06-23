@@ -8,8 +8,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
 @Entity
 public class Reservacion {
 	
@@ -19,7 +17,7 @@ public class Reservacion {
 	private Date fechaIngreso;
 	private Date fechaSalida;
 	@ManyToOne
-	private Cama camaReservada;
+	private Habitacion habitacionReservada;
 	
 	public Long getId() {
 		return id;
@@ -41,11 +39,11 @@ public class Reservacion {
 		this.fechaSalida = fechaSalida;
 	}
 	
-	public Cama getCamaReservada() {
-		return camaReservada;
+	public Habitacion getHabReservada() {
+		return habitacionReservada;
 	}
-	public void setCamaReservada(Cama camaReservada) {
-		this.camaReservada = camaReservada;
+	public void setHabReservada(Habitacion habitacionReservada) {
+		this.habitacionReservada = habitacionReservada;
 	}
 	
 

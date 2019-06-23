@@ -1,8 +1,8 @@
 package ar.edu.unlam.tallerweb1.servicios;
 
-import ar.edu.unlam.tallerweb1.modelo.Departamento;
+import ar.edu.unlam.tallerweb1.modelo.Habitacion;
 
 public interface ServicioBuscarDetalle {
 
-	Departamento consultarDepartamentoDetalle(Long id);
+	Habitacion consultarDepartamentoDetalle(Long id);
 }

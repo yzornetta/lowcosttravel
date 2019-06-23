@@ -16,36 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `direccion`
+-- Table structure for table `usuario`
 --
 
-DROP TABLE IF EXISTS `direccion`;
+DROP TABLE IF EXISTS `usuario`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `direccion` (
+CREATE TABLE `usuario` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `barrio` varchar(255) DEFAULT NULL,
-  `calle` varchar(255) DEFAULT NULL,
-  `entreCalle1` varchar(255) DEFAULT NULL,
-  `entreCalle2` varchar(255) DEFAULT NULL,
-  `latitud` float NOT NULL,
-  `longitud` float NOT NULL,
-  `numero` int(11) DEFAULT NULL,
-  `ciudad_id` bigint(20) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `FKpiyo67yak2l613uqf0brnqe6j` (`ciudad_id`),
-  CONSTRAINT `FKpiyo67yak2l613uqf0brnqe6j` FOREIGN KEY (`ciudad_id`) REFERENCES `ciudad` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+  `email` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `rol` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `direccion`
+-- Dumping data for table `usuario`
 --
 
-LOCK TABLES `direccion` WRITE;
-/*!40000 ALTER TABLE `direccion` DISABLE KEYS */;
-INSERT INTO `direccion` VALUES (1,'Londres','Prescot',NULL,NULL,51.5214,-0.0750907,45,1),(2,'Londres','Piccadilly',NULL,NULL,51.5084,-0.144276,150,1),(3,'Londres','James\'s Pl,',NULL,NULL,51.5092,-0.147171,35,1);
-/*!40000 ALTER TABLE `direccion` ENABLE KEYS */;
+LOCK TABLES `usuario` WRITE;
+/*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+/*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -57,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-23 18:01:53
+-- Dump completed on 2019-06-23 18:01:50
