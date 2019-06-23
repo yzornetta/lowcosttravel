@@ -12,7 +12,7 @@ import ar.edu.unlam.tallerweb1.modelo.Ciudad;
 
 public class CiudadTest extends SpringTest {
 
-	@Test@Transactional
+	@Test@Transactional@Rollback
 	public void ciudadDaoTest() {
 		
 Session session = getSession();
