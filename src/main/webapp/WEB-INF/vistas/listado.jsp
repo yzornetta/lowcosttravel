@@ -100,6 +100,21 @@
 		  </div>
 		</div>
 		
+		<div class="container">
+		<form action="" method="post">
+		  <div class="form-row align-items-center">
+		    <div class="col-md-auto">
+      			<input type="number" class="form-control mb-2" id="inlineFormInput" placeholder="Precio minimo">
+		    </div>
+		    <div class="col-md-auto">
+		    <input type="number" class="form-control mb-2" id="inlineFormInputGroup" placeholder="Precio maximo">
+		    </div>
+		    <div class="col col-lg-3">
+		     <button type="button" class="btn btn-primary mb-2">Filtrar</button>
+		    </div>
+		  </div>
+		</form>
+		</div>
 		<br>
 		
 		<div class="container">
