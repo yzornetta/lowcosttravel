@@ -68,13 +68,26 @@ ul {
     padding: 0;
 }
 
+body {
+	padding-top: 6.75rem;
+}
+html.pagInicio body {
+	padding-top: 0;
+}
+
 /*-- header --*/
 
-header {
+body>header {
+    background-color: #7f7f7f;
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     padding: 15px 0;
 	z-index: 9;
+}
+html.pagInicio body>header {
+	background-color: transparent !important;
 }
 .right-p li ,.right-p li  a{
     display: inline-block;
@@ -819,7 +832,7 @@ h2.heading{
 		padding: 0vw 0vw 10vw 8vw;
 	} 
 	.banner {
-		background: url(../images/banner.jpg)no-repeat -130px 0px;
+		background: url(../images/banner.jpg) no-repeat -130px 0px;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
