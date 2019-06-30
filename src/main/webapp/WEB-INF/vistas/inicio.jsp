@@ -191,18 +191,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  
     var txtFechaIngreso = document.getElementById('fechaIngreso').value;
     var txtFechaSalida = document.getElementById('fechaSalida').value;
- 
-    var banderaRBTN = false;
+
  
     //Test campo obligatorio
     if(txtFechaIngreso == ""){
-      alert('ERROR: Debe ingresar una fecha');
+      alert('Ingresar fecha de ingreso');
       return false;
     }
  
     //Test edad
     if(txtFechaSalida == ""){
-      alert('ERROR: Debe ingresar una fecha');
+      alert('Ingresar fecha de salida');
       return false;
     }
  
