@@ -49,15 +49,6 @@ public class ControladorBusqueda {
 		
 		ModelMap model = new ModelMap();
 		
-			//if ((fechaIngreso.length()== 0)||(fechaSalida.length()== 0)) {
-			
-			//	model.put("error", "Fechas incorrectas");
-				//return new ModelAndView("inicio", model);
-			//}
-			
-	
-		
-
 		DateFormat fechaFormato = new SimpleDateFormat("dd/MM/yyyy");
 		Date fechaIngresoD = null;
 		try {
@@ -76,8 +67,7 @@ public class ControladorBusqueda {
 			e.printStackTrace();
 		}
 		
-				
-		
+
 		List<Habitacion> habitacion = servicioBuscar.consultarCiudad(ciudad,fechaIngresoD,fechaSalidaD,huespedes);
 		
 		

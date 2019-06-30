@@ -22,6 +22,8 @@ public class Habitacion {
 	private List<Cama> cama = new ArrayList<>();
 	@OneToMany(mappedBy = "habitacionReservada")
 	private List<Reservacion> reservacion;
+	@OneToMany(mappedBy = "habitacion")
+	private List<Foto> foto = new ArrayList<>();
 	private String status;
 	private float precio;
 	private String descripcionHab;
@@ -85,5 +87,11 @@ public class Habitacion {
 		this.huespedes = huespedes;
 	}
 
+	public List<Foto> getFoto(){
+		return foto;
+	}
+	public void getFoto(List<Foto> foto){
+		this.foto=foto;
+	}
 	
 }

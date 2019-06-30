@@ -91,7 +91,7 @@
 		    <div class="col-md-auto">
 		    </div>
 		    <div class="col col-lg-3">
-		    <b>Mostrar mapa?</b>
+		    <b>Mostrar Mapa</b>
 			<input type="checkbox" name="check" id="check" value="1" data-toggle="toggle" data-size="small" data-offstyle="secondary" onchange="javascript:showContent()" checked />
 		    </div>
 		  </div>
