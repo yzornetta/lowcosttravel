@@ -19,8 +19,8 @@ public class ServicioBuscarImpl implements ServicioBuscar {
 	private CiudadDao servicioCiudadDao;
 
 	@Override
-	public List<Habitacion> consultarCiudad (String ciudad, Date fechaIngreso, Date fechaSalida) {
-		return servicioCiudadDao.consultarCiudad(ciudad,fechaIngreso,fechaSalida);
+	public List<Habitacion> consultarCiudad (String ciudad, Date fechaIngreso, Date fechaSalida, int huespedes) {
+		return servicioCiudadDao.consultarCiudad(ciudad,fechaIngreso,fechaSalida,huespedes);
 	}
 
 }

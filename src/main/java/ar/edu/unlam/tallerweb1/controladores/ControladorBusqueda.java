@@ -44,7 +44,18 @@ public class ControladorBusqueda {
 	public ModelAndView validarBusqueda(@RequestParam(value="nombre")  String ciudad, 
 										@RequestParam(value="fechaIngreso") String fechaIngreso,
 										@RequestParam(value="fechaSalida")  String fechaSalida,
+										@RequestParam(value="huespedes")  int huespedes,
 										HttpServletRequest request) {
+		
+		ModelMap model = new ModelMap();
+		
+			//if ((fechaIngreso.length()== 0)||(fechaSalida.length()== 0)) {
+			
+			//	model.put("error", "Fechas incorrectas");
+				//return new ModelAndView("inicio", model);
+			//}
+			
+	
 		
 
 		DateFormat fechaFormato = new SimpleDateFormat("dd/MM/yyyy");
@@ -65,11 +76,9 @@ public class ControladorBusqueda {
 			e.printStackTrace();
 		}
 		
+				
 		
-		ModelMap model = new ModelMap();
-		
-		
-		List<Habitacion> habitacion = servicioBuscar.consultarCiudad(ciudad,fechaIngresoD,fechaSalidaD);
+		List<Habitacion> habitacion = servicioBuscar.consultarCiudad(ciudad,fechaIngresoD,fechaSalidaD,huespedes);
 		
 		
 		if (habitacion.size()!= 0) {
