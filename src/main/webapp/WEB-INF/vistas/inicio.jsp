@@ -1,18 +1,19 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
-<html lang="es" class="pagInicio">
+<html lang="en">
 <head>
 <title>Low Cost Travel</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Child Learn Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 
     <script>
         addEventListener("load", function () {
             setTimeout(hideURLbar, 0);
         }, false);
-
         function hideURLbar() {
             window.scrollTo(0, 1);
         }
@@ -36,15 +37,13 @@
 	<link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
 	<!-- //google fonts -->
 	
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  	<script src="js/jquery.ui.datepicker-es.js"></script>
-	
 </head>
 <body>
 
 <!-- header -->
 <header>
+	<div class="top-head container">		
+	</div>
 	<div class="container">
 		<!-- nav -->
 		<nav class="py-3 d-lg-flex">
@@ -57,6 +56,9 @@
 		</nav>
 		<!-- //nav -->
 	</div>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  	<script src="js/jquery.ui.datepicker-es.js"></script>
   	
 	<script>
   	$(function () {
@@ -112,8 +114,8 @@
 								<div class="container-fluid">
 									<div class="w3ls_banner_txt">
 										<h3 class="b-w3ltxt text-capitalize mt-md-4"></h3>
-										<h4 class="b-w3ltxt text-capitalize mt-md-2">T�mate un descanso en una ciudad de Europa</h4>
-										<p class="w3ls_pvt-title my-3">Encuentra un lugar para hospedarte evaluado con 5 estrellas de familias que ofrecen caracter�sticas b�sicas como cocina y televisi�n.</p>
+										<h4 class="b-w3ltxt text-capitalize mt-md-2">Tómate un descanso en una ciudad de Europa</h4>
+										<p class="w3ls_pvt-title my-3">Encuentra un lugar para hospedarte evaluado con 5 estrellas de familias que ofrecen características básicas como cocina y televisión.</p>
 										<!-- <a href="#about" class="btn btn-banner my-3">Read More</a> -->
 									</div>
 								</div>
@@ -123,7 +125,7 @@
 									<div class="w3ls_banner_txt">
 										<h3 class="b-w3ltxt text-capitalize mt-md-4"></h3>
 										<h4 class="b-w3ltxt text-capitalize mt-md-2">Alojamientos para tu tipo de viaje</h4>
-										<p class="w3ls_pvt-title my-3">Encuentra alojamientos con las mejores calificaciones y los servicios que t� necesitas</p>
+										<p class="w3ls_pvt-title my-3">Encuentra alojamientos con las mejores calificaciones y los servicios que tú necesitas</p>
 										<!-- <a href="#about" class="btn btn-banner my-3">Read More</a> -->
 									</div>
 								</div>
@@ -144,11 +146,18 @@
 						<div class="padding">
 							<!-- banner form -->
 												
-							<form action="validar-busqueda" method="POST" autocomplete="off">
+							<form action="validar-busqueda" method="POST" autocomplete="off" onsubmit="return validarFormulario()">
 								<h5 class="mb-3">Reserva alojamientos</h5>
 								<div class="form-style-w3ls">
-									<input placeholder="Ingresar ciudad"   id="nombre" name="nombre" type="text" />
-									<input placeholder="Ingresar huespedes (En construccion)"   id="huespedes" name="huespedes" type="text" disabled/>
+									<input placeholder="Ingresar ciudad"   id="nombre" name="nombre" type="text" required />
+									<select name="huespedes">
+									  <option id="huespedes" value="1">1 huesped</option>
+									  <option id="huespedes" value="2">2 huespedes</option>
+									  <option id="huespedes" value="3">3 huespedes</option>
+									  <option id="huespedes" value="4">4 huespedes</option>
+									  <option id="huespedes" value="5">5 huespedes</option>
+									  <option id="huespedes" value="6">6 huespedes</option>
+									</select>
 									<input placeholder="Fecha de ingreso"  type="text" id="fechaIngreso" name="fechaIngreso" readonly="readonly"/>								
 									<input placeholder="Fecha de salida"   type="text" id="fechaSalida" name="fechaSalida" readonly="readonly" disabled	/>
 									
@@ -156,7 +165,7 @@
 								</div>
 							</form>
 							
-							<%--Bloque que es visible si el elemento error no está vacío disabled disabled	--%>
+							<%--Bloque que es visible si el elemento error no estÃ¡ vacÃ­o disabled disabled	--%>
 							<c:if test="${not empty error}">
 			        			<h4>${error}</h4>
 		        			</c:if>	
@@ -173,3 +182,31 @@
 
 </body>
 </html>
+
+
+
+<script>
+    
+  function validarFormulario(){
+ 
+    var txtFechaIngreso = document.getElementById('fechaIngreso').value;
+    var txtFechaSalida = document.getElementById('fechaSalida').value;
+
+ 
+    //Test campo obligatorio
+    if(txtFechaIngreso == ""){
+      alert('Ingresar fecha de ingreso');
+      return false;
+    }
+ 
+    //Test edad
+    if(txtFechaSalida == ""){
+      alert('Ingresar fecha de salida');
+      return false;
+    }
+ 
+ 
+    return true;
+  }
+ 
+  </script>
