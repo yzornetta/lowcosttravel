@@ -111,8 +111,8 @@
 								<div class="container-fluid">
 									<div class="w3ls_banner_txt">
 										<h3 class="b-w3ltxt text-capitalize mt-md-4"></h3>
-										<h4 class="b-w3ltxt text-capitalize mt-md-2">T�mate un descanso en una ciudad de Europa</h4>
-										<p class="w3ls_pvt-title my-3">Encuentra un lugar para hospedarte evaluado con 5 estrellas de familias que ofrecen caracter�sticas b�sicas como cocina y televisi�n.</p>
+										<h4 class="b-w3ltxt text-capitalize mt-md-2">Tómate un descanso en una ciudad de Europa</h4>
+										<p class="w3ls_pvt-title my-3">Encuentra un lugar para hospedarte evaluado con 5 estrellas de familias que ofrecen características básicas como cocina y televisión.</p>
 										<!-- <a href="#about" class="btn btn-banner my-3">Read More</a> -->
 									</div>
 								</div>
@@ -122,7 +122,7 @@
 									<div class="w3ls_banner_txt">
 										<h3 class="b-w3ltxt text-capitalize mt-md-4"></h3>
 										<h4 class="b-w3ltxt text-capitalize mt-md-2">Alojamientos para tu tipo de viaje</h4>
-										<p class="w3ls_pvt-title my-3">Encuentra alojamientos con las mejores calificaciones y los servicios que t� necesitas</p>
+										<p class="w3ls_pvt-title my-3">Encuentra alojamientos con las mejores calificaciones y los servicios que tú necesitas</p>
 										<!-- <a href="#about" class="btn btn-banner my-3">Read More</a> -->
 									</div>
 								</div>
@@ -162,7 +162,7 @@
 								</div>
 							</form>
 							
-							<%--Bloque que es visible si el elemento error no está vacío disabled disabled	--%>
+							<%--Bloque que es visible si el elemento error no estÃ¡ vacÃ­o disabled disabled	--%>
 							<c:if test="${not empty error}">
 			        			<h4>${error}</h4>
 		        			</c:if>	
@@ -175,7 +175,7 @@
 		</div>
 	</div>
 </div>
-<!-- //banner -->
+<!-- // banner -->
 
 </body>
 </html>
