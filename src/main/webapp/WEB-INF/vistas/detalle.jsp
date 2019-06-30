@@ -1,7 +1,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <title>Low Cost Travel</title>
 
@@ -14,7 +14,7 @@
 
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8" />
+<meta charset="utf-8">
 
     <script>
         addEventListener("load", function () {

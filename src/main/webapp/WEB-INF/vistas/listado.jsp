@@ -1,9 +1,9 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-<title>Low Cost Travel</title>
+<title>Hospedajes en ${ciudad} - Low Cost Travel</title>
 
  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
    			integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -14,7 +14,7 @@
 
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8" />
+<meta charset="utf-8">
 
     <script>
         addEventListener("load", function () {
@@ -65,9 +65,6 @@
 
 <!-- header -->
 <header>
-	<div class="top-head container">
-		
-	</div>
 	<div class="container">
 		<!-- nav -->
 		<nav class="py-3 d-lg-flex">

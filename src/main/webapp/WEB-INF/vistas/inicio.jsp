@@ -1,14 +1,12 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" class="pagInicio">
 <head>
 <title>Low Cost Travel</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Child Learn Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<meta charset="utf-8">
 
     <script>
         addEventListener("load", function () {
@@ -37,13 +35,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
 	<!-- //google fonts -->
 	
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  	<script src="js/jquery.ui.datepicker-es.js"></script>
+	
 </head>
 <body>
 
 <!-- header -->
 <header>
-	<div class="top-head container">		
-	</div>
 	<div class="container">
 		<!-- nav -->
 		<nav class="py-3 d-lg-flex">
@@ -56,9 +56,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</nav>
 		<!-- //nav -->
 	</div>
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  	<script src="js/jquery.ui.datepicker-es.js"></script>
   	
 	<script>
   	$(function () {
@@ -114,8 +111,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="container-fluid">
 									<div class="w3ls_banner_txt">
 										<h3 class="b-w3ltxt text-capitalize mt-md-4"></h3>
-										<h4 class="b-w3ltxt text-capitalize mt-md-2">T�mate un descanso en una ciudad de Europa</h4>
-										<p class="w3ls_pvt-title my-3">Encuentra un lugar para hospedarte evaluado con 5 estrellas de familias que ofrecen caracter�sticas b�sicas como cocina y televisi�n.</p>
+										<h4 class="b-w3ltxt text-capitalize mt-md-2">Tómate un descanso en una ciudad de Europa</h4>
+										<p class="w3ls_pvt-title my-3">Encuentra un lugar para hospedarte evaluado con 5 estrellas de familias que ofrecen características básicas como cocina y televisión.</p>
 										<!-- <a href="#about" class="btn btn-banner my-3">Read More</a> -->
 									</div>
 								</div>
@@ -125,7 +122,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<div class="w3ls_banner_txt">
 										<h3 class="b-w3ltxt text-capitalize mt-md-4"></h3>
 										<h4 class="b-w3ltxt text-capitalize mt-md-2">Alojamientos para tu tipo de viaje</h4>
-										<p class="w3ls_pvt-title my-3">Encuentra alojamientos con las mejores calificaciones y los servicios que t� necesitas</p>
+										<p class="w3ls_pvt-title my-3">Encuentra alojamientos con las mejores calificaciones y los servicios que tú necesitas</p>
 										<!-- <a href="#about" class="btn btn-banner my-3">Read More</a> -->
 									</div>
 								</div>
@@ -165,7 +162,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 							</form>
 							
-							<%--Bloque que es visible si el elemento error no está vacío disabled disabled	--%>
+							<%--Bloque que es visible si el elemento error no estÃ¡ vacÃ­o disabled disabled	--%>
 							<c:if test="${not empty error}">
 			        			<h4>${error}</h4>
 		        			</c:if>	
@@ -178,7 +175,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 </div>
-<!-- //banner -->
+<!-- // banner -->
 
 </body>
 </html>
