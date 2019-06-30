@@ -25,7 +25,7 @@ public class CiudadDaoImpl implements CiudadDao {
 	@Inject
     private SessionFactory sessionFactory;
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	public List<Habitacion> consultarCiudad(String ciudad, Date fechaIngreso, Date fechaSalida, int huespedes) {
 

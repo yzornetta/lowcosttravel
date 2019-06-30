@@ -10,7 +10,8 @@
 <body>
 	<ul>
 <c:forEach items="${fotos}" var="fotos">
-		<li>${fotos.archivo}</li>
+		
+		<img src="${fotos.archivo}" alt="">
 </c:forEach>
 	</ul>
 </body>

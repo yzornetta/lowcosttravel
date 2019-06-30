@@ -4,6 +4,8 @@ import java.util.List;
 
 import ar.edu.unlam.tallerweb1.modelo.Foto;
 
-public interface ServicioFotosPorDepartamento {
-	List<Foto> consultarFotosPorDepartamento(Long id);
+public interface ServicioFotosPorHabitacion {
+	
+	List<Foto> consultarFotosPorHabitacion(Long id);
+
 }

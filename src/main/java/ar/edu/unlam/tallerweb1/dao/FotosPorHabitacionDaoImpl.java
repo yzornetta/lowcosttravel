@@ -11,16 +11,18 @@ import org.springframework.stereotype.Repository;
 
 import ar.edu.unlam.tallerweb1.modelo.Foto;
 
-@Repository("fotosPorDepartamentoDao")
-public class FotosPorDepartamentoDaoImpl implements FotosPorDepartamentoDao {
+@Repository("fotosPorHabitacionDao")
+public class FotosPorHabitacionDaoImpl implements FotosPorHabitacionDao{
+
 	@Inject
 	private SessionFactory sf;
 	@Override
-	public List<Foto> consultarFotosPorDepartamento(Long id) {
+	public List<Foto> consultarFotosPorHabitacion(Long id) {
 		final Session sesion = sf.getCurrentSession();
+		@SuppressWarnings("unchecked")
 		List<Foto> lista = sesion.createCriteria(Foto.class)
-				.createAlias("departamento", "dep")
-				.add(Restrictions.eq("dep.id", id))
+				.createAlias("habitacion", "hab")
+				.add(Restrictions.eq("hab.id", id))
 				.list();
 		return lista;
 	}

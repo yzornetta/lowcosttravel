@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+
 @Entity
 public class Foto {
 	@Id
@@ -13,7 +14,7 @@ public class Foto {
 	private Long id;
 	private String archivo;
 	@ManyToOne
-	private Departamento departamento;
+	private Habitacion habitacion;
 	public Long getId() {
 		return id;
 	}
@@ -26,11 +27,12 @@ public class Foto {
 	public void setArchivo(String archivo) {
 		this.archivo = archivo;
 	}
-	public Departamento getDepartamento() {
-		return departamento;
+	
+	public Habitacion getHabitacion() {
+		return habitacion;
 	}
-	public void setDepartamento(Departamento departamento) {
-		this.departamento = departamento;
+	public void setHabitacion(Habitacion habitacion) {
+		this.habitacion = habitacion;
 	}
 	
 }

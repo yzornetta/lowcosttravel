@@ -111,8 +111,8 @@
 								<div class="container-fluid">
 									<div class="w3ls_banner_txt">
 										<h3 class="b-w3ltxt text-capitalize mt-md-4"></h3>
-										<h4 class="b-w3ltxt text-capitalize mt-md-2">Tómate un descanso en una ciudad de Europa</h4>
-										<p class="w3ls_pvt-title my-3">Encuentra un lugar para hospedarte evaluado con 5 estrellas de familias que ofrecen características básicas como cocina y televisión.</p>
+										<h4 class="b-w3ltxt text-capitalize mt-md-2">Tomate un descanso en una ciudad de Europa</h4>
+										<p class="w3ls_pvt-title my-3">Encuentra un lugar para hospedarte evaluado con 5 estrellas de familias que ofrecen caracteristicas basicas como cocina y television.</p>
 										<!-- <a href="#about" class="btn btn-banner my-3">Read More</a> -->
 									</div>
 								</div>
@@ -122,7 +122,7 @@
 									<div class="w3ls_banner_txt">
 										<h3 class="b-w3ltxt text-capitalize mt-md-4"></h3>
 										<h4 class="b-w3ltxt text-capitalize mt-md-2">Alojamientos para tu tipo de viaje</h4>
-										<p class="w3ls_pvt-title my-3">Encuentra alojamientos con las mejores calificaciones y los servicios que tú necesitas</p>
+										<p class="w3ls_pvt-title my-3">Encuentra alojamientos con las mejores calificaciones y los servicios que tu necesitas</p>
 										<!-- <a href="#about" class="btn btn-banner my-3">Read More</a> -->
 									</div>
 								</div>
