@@ -107,7 +107,7 @@
 					
 					<div class="card-body">
 
-						<a href="/proyecto-limpio-spring/detalle?id=${habitacion.id}"  class="stretched-link" target="_blank" style="color:#000; text-decoration:none;">${habitacion.departamento.nombre}</a>
+						<a href="/proyecto-limpio-spring/detalle?id=${habitacion.id}"  class="stretched-link" target="_blank" style="color:#000; text-decoration:none"><h4>${habitacion.descripcionHab}</h4></a>
 						<p class="card-text">${habitacion.departamento.descripcion}</p>
 						<p class="card-text"><span>Precio por noche: $</span>${habitacion.precio}</p>
 						

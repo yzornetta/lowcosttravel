@@ -27,12 +27,13 @@ public class CiudadDaoImpl implements CiudadDao {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Habitacion> consultarCiudad(String ciudad, Date fechaIngreso, Date fechaSalida) {
+	public List<Habitacion> consultarCiudad(String ciudad, Date fechaIngreso, Date fechaSalida, int huespedes) {
 
 		
 		 final Session session = sessionFactory.getCurrentSession();
 		 
 		 List<Habitacion> listaHabCiudad = (List<Habitacion>) session.createCriteria(Habitacion.class)
+				 				.add(Restrictions.ge("huespedes", huespedes))
 				 				.createAlias("departamento", "dep")
 				 				.createAlias("dep.direccion", "dir")
 				 				.createAlias("dir.ciudad", "ciu")
