@@ -14,7 +14,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         addEventListener("load", function () {
             setTimeout(hideURLbar, 0);
         }, false);
-
         function hideURLbar() {
             window.scrollTo(0, 1);
         }
@@ -147,11 +146,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="padding">
 							<!-- banner form -->
 												
-							<form action="validar-busqueda" method="POST" autocomplete="off">
+							<form action="validar-busqueda" method="POST" autocomplete="off" onsubmit="return validarFormulario()">
 								<h5 class="mb-3">Reserva alojamientos</h5>
 								<div class="form-style-w3ls">
-									<input placeholder="Ingresar ciudad"   id="nombre" name="nombre" type="text" />
-									<input placeholder="Ingresar huespedes (En construccion)"   id="huespedes" name="huespedes" type="text" disabled/>
+									<input placeholder="Ingresar ciudad"   id="nombre" name="nombre" type="text" required />
+									<select name="huespedes">
+									  <option id="huespedes" value="1">1 huesped</option>
+									  <option id="huespedes" value="2">2 huespedes</option>
+									  <option id="huespedes" value="3">3 huespedes</option>
+									  <option id="huespedes" value="4">4 huespedes</option>
+									  <option id="huespedes" value="5">5 huespedes</option>
+									  <option id="huespedes" value="6">6 huespedes</option>
+									</select>
 									<input placeholder="Fecha de ingreso"  type="text" id="fechaIngreso" name="fechaIngreso" readonly="readonly"/>								
 									<input placeholder="Fecha de salida"   type="text" id="fechaSalida" name="fechaSalida" readonly="readonly" disabled	/>
 									
@@ -176,3 +182,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 </body>
 </html>
+
+
+
+<script>
+    
+  function validarFormulario(){
+ 
+    var txtFechaIngreso = document.getElementById('fechaIngreso').value;
+    var txtFechaSalida = document.getElementById('fechaSalida').value;
+ 
+    var banderaRBTN = false;
+ 
+    //Test campo obligatorio
+    if(txtFechaIngreso == ""){
+      alert('ERROR: Debe ingresar una fecha');
+      return false;
+    }
+ 
+    //Test edad
+    if(txtFechaSalida == ""){
+      alert('ERROR: Debe ingresar una fecha');
+      return false;
+    }
+ 
+ 
+    return true;
+  }
+ 
+  </script>

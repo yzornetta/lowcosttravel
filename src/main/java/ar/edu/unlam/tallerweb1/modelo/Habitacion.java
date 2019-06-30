@@ -26,6 +26,7 @@ public class Habitacion {
 	private float precio;
 	private String descripcionHab;
 	private String masInfoHab;
+	private int huespedes;
 	
 	
 	public Long getId(){
@@ -76,6 +77,12 @@ public class Habitacion {
 	}
 	public void setMasInfoHab(String masInfoHab) {
 		this.masInfoHab = masInfoHab;
+	}
+	public int getHuespedes() {
+		return huespedes;
+	}
+	public void setHuespedes(int huespedes) {
+		this.huespedes = huespedes;
 	}
 
 	

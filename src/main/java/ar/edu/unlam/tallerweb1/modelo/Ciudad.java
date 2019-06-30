@@ -1,7 +1,5 @@
 package ar.edu.unlam.tallerweb1.modelo;
 
-import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,8 +15,6 @@ public class Ciudad {
 	private Float latitud;
 	private Float longitud;
 
-	/*@ManyToOne
-	private Provincia provincia;*/
 	
 	public Long getId(){
 		return id;
@@ -34,12 +30,6 @@ public class Ciudad {
 	public void setNombre(String nombre){
 		this.nombre=nombre;
 	}
-/*	public Provincia getProvincia(){
-		return provincia;
-	}
-	public void setProvincia(Provincia provincia){
-		this.provincia=provincia;
-	}*/
 
 	public Float getLatitud() {
 		return latitud;
