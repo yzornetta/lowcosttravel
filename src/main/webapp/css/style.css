@@ -1,3 +1,5 @@
+@import url(//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext);
+
 /*--
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -106,10 +108,6 @@ html.pagInicio body>header {
 }
 
 /* Giving a background-color to the nav container. */
-nav { 
-	margin:0;
-	padding: 0;
-}
 #logo img, .footer-title img {
     border-radius: 50%;
     -webkit-border-radius: 50%;

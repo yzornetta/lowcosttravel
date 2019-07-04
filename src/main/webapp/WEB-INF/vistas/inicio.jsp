@@ -18,11 +18,10 @@
     </script>
 	
 	<!-- css files -->
-    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
-    <link href="css/style.css" rel='stylesheet' type='text/css' /><!-- custom css -->
-	<link href="css/css_slider.css" type="text/css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
+    <link href="css/style.css" rel='stylesheet'><!-- custom css -->
+	<link href="css/css_slider.css" rel="stylesheet" media="all">
     <link href="css/font-awesome.min.css" rel="stylesheet"><!-- fontawesome css -->
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- <link href="css/custom-calendario.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/flick/jquery-ui.min.css">
     <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
@@ -30,10 +29,6 @@
 
  
 	<!-- //css files -->
-		
-	<!-- google fonts -->
-	<link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
-	<!-- //google fonts -->
 	
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
