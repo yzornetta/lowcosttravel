@@ -2,6 +2,8 @@ package ar.edu.unlam.tallerweb1.servicios;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import ar.edu.unlam.tallerweb1.dao.UsuarioDao;
 import ar.edu.unlam.tallerweb1.modelo.Usuario;
 
 // Implelemtacion del Servicio de usuarios, la anotacion @Service indica a Spring que esta clase es un componente que debe
@@ -26,6 +28,11 @@ public class ServicioLoginImpl implements ServicioLogin {
 		if(pass.equals("test") && user.equals("test@test.com")) {
 			return true;
 		}else return false;
+		
+	}
+
+	public void setUsuarioDao(UsuarioDao dao) {
+		// TODO Auto-generated method stub
 		
 	}
 
