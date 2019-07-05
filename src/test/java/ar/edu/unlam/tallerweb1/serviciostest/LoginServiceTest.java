@@ -1,7 +1,9 @@
 package ar.edu.unlam.tallerweb1.serviciostest;
 
-import org.junit.Test;
+import static org.assertj.core.api.Assertions.*;
 import static org.mockito.Mockito.*;
+
+import org.junit.Test;
 
 import ar.edu.unlam.tallerweb1.dao.UsuarioDao;
 import ar.edu.unlam.tallerweb1.modelo.Usuario;
@@ -18,6 +20,9 @@ public class LoginServiceTest {
 		UsuarioDao dao = mock(UsuarioDao.class);
 		when(dao.consultarUsuario(u)).thenReturn(new Usuario());
 		sut.setUsuarioDao(dao);
-		//Usuario b = sut.consultarUsuario(u);
+		//
+		Usuario b = sut.consultarUsuario(u);
+		
+		assertThat(b).isNotNull();
 	}
 }

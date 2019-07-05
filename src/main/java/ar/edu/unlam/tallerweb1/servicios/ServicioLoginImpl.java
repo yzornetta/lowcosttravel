@@ -1,5 +1,7 @@
 package ar.edu.unlam.tallerweb1.servicios;
 
+import javax.inject.Inject;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,9 +18,11 @@ import ar.edu.unlam.tallerweb1.modelo.Usuario;
 @Transactional
 public class ServicioLoginImpl implements ServicioLogin {
 
+	@Inject
+	private UsuarioDao servicioLoginDao;
 	
 	@Override
-	public boolean consultarUsuario (Usuario usuario) {
+	/*public boolean consultarUsuario (Usuario usuario) {
 		
 		String pass = usuario.getPassword();
 		String user = usuario.getEmail();
@@ -29,11 +33,14 @@ public class ServicioLoginImpl implements ServicioLogin {
 			return true;
 		}else return false;
 		
+	}*/
+	public Usuario consultarUsuario (Usuario usuario) {
+		return servicioLoginDao.consultarUsuario(usuario);
 	}
 
 	public void setUsuarioDao(UsuarioDao dao) {
 		// TODO Auto-generated method stub
-		
+		servicioLoginDao = dao;
 	}
 
 }
