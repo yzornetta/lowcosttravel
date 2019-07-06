@@ -78,12 +78,12 @@ html.pagInicio body {
 /*-- header --*/
 
 body>header {
-    background-color: #7f7f7f;
+    background-color: #aaddbd;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 15px 0;
+    padding: 5px 0;
 	z-index: 9;
 }
 html.pagInicio body>header {
@@ -396,6 +396,7 @@ li > a:only-child:after { content: ''; }
     -ms-background-size: cover;
     background-size: cover;
 }
+
 .layer {
     background: rgba(0, 0, 0, 0.5);
 }
@@ -405,6 +406,10 @@ li > a:only-child:after { content: ''; }
     font-size: 15px;
 }
 .banner-text-w3pvt {
+    padding: 17vw 0 11vw;
+    box-sizing: border-box;
+}
+.banner-text-w3pvt2 {
     padding: 17vw 0 11vw;
     box-sizing: border-box;
 }
@@ -598,6 +603,17 @@ h2.heading{
 .our-services-img img {
     width: 68px;
 }
+
+.carrusel-img {
+    float: left;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-top: 1px;
+}
+.carrusel-img img {
+    width: 300px;
+}
+
 .our-services-text {
     padding-right: 10px;
 }
@@ -908,6 +924,9 @@ h2.heading{
 		padding: 0;
 	}
 	.csslider>.navigation {
+		left: -1% !important;
+	}
+	.csslider2>.navigation {
 		left: -1% !important;
 	}
 	.team-grid {

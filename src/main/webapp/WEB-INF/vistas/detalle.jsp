@@ -42,21 +42,15 @@
 
 <!-- header -->
 <header>
-	<div class="top-head container">
-		
-	</div>
+	
 	<div class="container">
-		<!-- nav -->
-		<nav class="py-3 d-lg-flex">
+
 			<div id="logo">
 				<h1> <a href="/proyecto-limpio-spring/inicio"><img src="images/icono.jpg" alt=""> Low Cost Travel </a></h1>
 			</div>
-			<label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
 			<input type="checkbox" id="drop" />
-			
-		</nav>
-		<!-- //nav -->
-	</div>
+
+
 </header>
 <!-- //header -->
 
