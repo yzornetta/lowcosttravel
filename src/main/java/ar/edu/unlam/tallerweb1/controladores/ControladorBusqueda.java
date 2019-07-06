@@ -90,5 +90,6 @@ public class ControladorBusqueda {
 		return new ModelAndView("listado");
 	}
 
-
+	
+	
 }
