@@ -115,7 +115,7 @@
 <br>
 <div class="containerDetalle">	
 <h2 class="heading mb-sm-5 mb-4"> Más hospedajes que pueden interesarte</h2>
-<div class="container">
+<div class="">
 	
 		<div class="row"> 
 			<div class="" id="card12">
