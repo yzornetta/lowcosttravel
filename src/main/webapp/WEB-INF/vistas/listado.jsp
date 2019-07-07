@@ -84,7 +84,7 @@
 		<div class="container">
 		  <div class="row">
 		    <div class="col">
-		      <h3 class="heading mb-sm-5 mb-4">Hospedajes en <span>${ciudad}</span></h3>
+		      <h3 class="heading mb-sm-5 mb-4">Hospedajes en <span class="ciudad">${ciudad}</span></h3>
 		    </div>
 		    <div class="col-md-auto">
 		    </div>
@@ -105,7 +105,7 @@
 					
 					<div class="card-body">
 
-						<a href="/proyecto-limpio-spring/detalle?id=${habitacion.id}"  class="stretched-link" target="_blank" style="color:#000; text-decoration:none"><h4>${habitacion.descripcionHab}</h4></a>	
+						<a href="/proyecto-limpio-spring/detalle?id=${habitacion.id}&ciudad=${ciudad}&fechaIngreso=${fechaIngreso}&fechaSalida=${fechaSalida}&huespedes=${huespedes}"  class="stretched-link" target="_blank" style="color:#000; text-decoration:none"><h4>${habitacion.descripcionHab}</h4></a>	
 						<p class="card-text">${habitacion.departamento.descripcion}</p>
 						<p class="card-text"><span>Precio por noche: $</span>${habitacion.precio}</p>
 						

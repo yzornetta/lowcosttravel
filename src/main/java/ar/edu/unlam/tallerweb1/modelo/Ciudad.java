@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Ciudad {
@@ -14,6 +15,8 @@ public class Ciudad {
 	private String nombre;
 	private Float latitud;
 	private Float longitud;
+	@ManyToOne
+	private Provincia provincia;
 
 	
 	public Long getId(){
@@ -47,5 +50,10 @@ public class Ciudad {
 		this.longitud = longitud;
 	}
 
-	
+	public Provincia getProvincia(){
+		return provincia;
+	}
+	public void setProvincia(Provincia provincia){
+		this.provincia=provincia;
+	}
 }

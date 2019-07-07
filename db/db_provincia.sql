@@ -16,33 +16,27 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `habitacion`
+-- Table structure for table `provincia`
 --
 
-DROP TABLE IF EXISTS `habitacion`;
+DROP TABLE IF EXISTS `provincia`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `habitacion` (
+CREATE TABLE `provincia` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `descripcionHab` varchar(255) DEFAULT NULL,
-  `masInfoHab` varchar(255) DEFAULT NULL,
-  `precio` float NOT NULL,
-  `status` varchar(255) DEFAULT NULL,
-  `departamento_id` bigint(20) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `FK2ohnxd1j8lbdluk6v94f0i4gl` (`departamento_id`),
-  CONSTRAINT `FK2ohnxd1j8lbdluk6v94f0i4gl` FOREIGN KEY (`departamento_id`) REFERENCES `departamento` (`id`)
+  `nombre` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `habitacion`
+-- Dumping data for table `provincia`
 --
 
-LOCK TABLES `habitacion` WRITE;
-/*!40000 ALTER TABLE `habitacion` DISABLE KEYS */;
-INSERT INTO `habitacion` VALUES (1,'Encantadora habitación doble en zona tranquila y agradable',NULL,950,NULL,1),(2,'Habitación limpia fresca y comoda',NULL,1000,NULL,2),(3,'Acogedor dormitorio doble en Wembley',NULL,900,NULL,3);
-/*!40000 ALTER TABLE `habitacion` ENABLE KEYS */;
+LOCK TABLES `provincia` WRITE;
+/*!40000 ALTER TABLE `provincia` DISABLE KEYS */;
+INSERT INTO `provincia` VALUES (1,'Londres'),(3,'Londres');
+/*!40000 ALTER TABLE `provincia` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -54,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-23 18:01:52
+-- Dump completed on 2019-07-07 12:22:28

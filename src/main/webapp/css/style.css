@@ -581,6 +581,12 @@ h2.heading{
     font-weight: 600;
 }
 
+.ciudad{
+    text-transform: capitalize;
+}
+
+
+
 /*-- banner bottom --*/
 
 

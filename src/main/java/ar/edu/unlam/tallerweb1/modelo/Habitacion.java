@@ -18,8 +18,6 @@ public class Habitacion {
 	private Long id;
 	@ManyToOne
 	private Departamento departamento;
-	@OneToMany(mappedBy = "habitacion")
-	private List<Cama> cama = new ArrayList<>();
 	@OneToMany(mappedBy = "habitacionReservada")
 	private List<Reservacion> reservacion;
 	@OneToMany(mappedBy = "habitacion")
@@ -43,13 +41,7 @@ public class Habitacion {
 	public void setDepartamento(Departamento departamento){
 		this.departamento=departamento;
 	}
-	public List<Cama> getCama(){
-		return cama;
-	}
-	public void setCama(List<Cama> cama){
-		this.cama=cama;
-	}
-	
+
 	public List<Reservacion> getReservacion(){
 		return reservacion;
 	}

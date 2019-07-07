@@ -39,7 +39,6 @@ public class DepartamentoTest extends SpringTest {
 		session.save(londresDir);
 		
 		Departamento londDepto = new Departamento();
-		londDepto.setNombre("Artistic room - Amazing view");
 		londDepto.setDescripcion("Este es un apartamento en la planta superior con excelentes vistas de la ciudad desde el balcón.");
 		londDepto.setMasInfo("Este es un apartamento en la planta superior con excelentes vistas de la ciudad desde el balcón. El apartamento está situado en el borde del centro de Londres (zona 2) Las paredes del apartamento están cubiertas de obras de arte y los huéspedes están siempre sorprendidos por el estilo interesante del lugar. Venga a ver la pared de invitados llena de fotos polaroid de la gente increíble que se han quedado en nuestra casa. Lo más importante soy muy sociable, amable y siempre interesado en conocer gente nueva. Paso mucho tiempo mostrando invitados");
 		londDepto.setDireccion(londresDir);
@@ -53,7 +52,7 @@ public class DepartamentoTest extends SpringTest {
 					
 		
 		Departamento deptoBuscado = session.get(Departamento.class,londDepto.getId());
-		assertThat(deptoBuscado.getNombre()).isEqualTo("Artistic room - Amazing view");							
+		assertThat(deptoBuscado).isNotNull();
 	}
 	
 }
