@@ -66,8 +66,11 @@
 	</div>
 		
   </div>
-
+<br>
+<br>
+<br>
 <div class="col-lg-5">
+<h3 class="heading mb-sm-5 mb-4"> Características</h3>
 				<p class="mt-4">${habSeleccionada.departamento.masInfo}</p>
 				<p class="mt-4"><span>Direccion: </span>${habSeleccionada.departamento.direccion.calle} ${habSeleccionada.departamento.direccion.numero}</p>
 				<p class="mt-4"><span>Precio por noche: $</span>${habSeleccionada.precio}</p>
@@ -86,7 +89,7 @@
 					
 					<div class="card-body">
 
-						<a href="/proyecto-limpio-spring/detalle?id=${habSimilares.id}&ciudad=${ciudad}&fechaIngreso=${fechaIngreso}&fechaSalida=${fechaSalida}&huespedes=${huespedes}"  class="stretched-link" target="_blank" style="color:#000; text-decoration:none"><h4>${habSimilares.descripcionHab}</h4></a>	
+						<a href="/proyecto-limpio-spring/detalle?id=${habSimilares.id}&ciudad=${habSimilares.departamento.direccion.ciudad.nombre}&fechaIngreso=${fechaIngreso}&fechaSalida=${fechaSalida}&huespedes=${huespedes}"  class="stretched-link" target="_blank" style="color:#000; text-decoration:none"><h4>${habSimilares.descripcionHab}</h4></a>	
 						<p class="card-text">${habSimilares.departamento.descripcion}</p>
 						<p class="card-text"><span>Precio por noche: $</span>${habSimilares.precio}</p>
 						
