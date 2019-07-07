@@ -476,6 +476,25 @@ h4.b-w3ltxt {
     -ms-transition: 0.5s all;
     transition: 0.5s all;
 }
+
+.form-style-w3ls button.btn2 {
+    color: #fff;
+    background: #aaddbd;
+    border: none;
+    padding: 14px 0;
+    outline: none;
+	border-radius: 0;
+    width: 100%;
+    font-size: 15px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+}
+
 .form-style-w3ls input[type="submit"]:hover {
     background: #dc3545;
 }
@@ -483,6 +502,12 @@ h4.b-w3ltxt {
     padding: 2.5em;
 	background: #fff;
 }
+
+.padding2 {
+    padding: 0;
+	background: #fff;
+}
+
 .form-style-w3ls span {
     font-size: 13px;
     color: #666;
