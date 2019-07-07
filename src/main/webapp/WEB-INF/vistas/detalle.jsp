@@ -23,7 +23,7 @@
 			</div>
 	</header>
 
-			
+<div class="containerDetalle">			
   <h2 class="heading mb-sm-5 mb-4"> ${habSeleccionada.descripcionHab}</h2>
   <div class="container">
 
@@ -69,16 +69,51 @@
 <br>
 <br>
 <br>
-<div class="col-lg-5">
-<h3 class="heading mb-sm-5 mb-4"> Características</h3>
+
+<div class="" id="home">
+	<div class="">
+		<div class="row">
+			<div class="col-lg-5">
+				<h3 class="heading"> Características</h3>
 				<p class="mt-4">${habSeleccionada.departamento.masInfo}</p>
 				<p class="mt-4"><span>Direccion: </span>${habSeleccionada.departamento.direccion.calle} ${habSeleccionada.departamento.direccion.numero}</p>
 				<p class="mt-4"><span>Precio por noche: $</span>${habSeleccionada.precio}</p>
-</div>
+			</div>
 
+			<div class="col-lg-5">
+					<div class="">
+						<div class="padding2">
+							<!-- banner form -->
+												
+							<form action="" method="POST" autocomplete="off" onsubmit="return validarFormulario()">
+								<h5 class="mb-3">Reserva este alojamiento</h5>
+								<div class="form-style-w3ls">
+									<span>Ciudad<span>
+									<input placeholder="${habSeleccionada.departamento.direccion.ciudad.nombre}"   id="nombre" name="nombre" type="text" readonly="readonly" />
+									<span>Cantidad de huespedes</span>
+									<input placeholder="${huespedes}"  id="huespedes" name="huespedes" type="text" readonly="readonly"  />
+									<span>Fecha de ingreso</span>
+									<input placeholder="${fechaIngreso}"  type="text" id="fechaIngreso" name="fechaIngreso" readonly="readonly"/>								
+									<span>Fecha de salida</span>
+									<input placeholder="${fechaSalida}"   type="text" id="fechaSalida" name="fechaSalida" readonly="readonly" />
+									
+									<button class="btn2 btn-lg btn-primary btn-block" Type="Submit">Reservar</button>
+								</div>
+							</form>
+							
+							
+							<!-- //banner form -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 <br>
 <br>
 <br>
+<div class="containerDetalle">	
 <h2 class="heading mb-sm-5 mb-4"> Más hospedajes que pueden interesarte</h2>
 <div class="container">
 	
@@ -124,9 +159,9 @@
 				</c:forEach>
 			</div>
 		</div>
-	</div>
-			
-
+	</div>	
+</div>
+		
 </body>
 
 </html>
