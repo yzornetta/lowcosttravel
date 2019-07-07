@@ -16,31 +16,37 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `reservacion`
+-- Table structure for table `habitacion`
 --
 
-DROP TABLE IF EXISTS `reservacion`;
+DROP TABLE IF EXISTS `habitacion`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `reservacion` (
+CREATE TABLE `habitacion` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `fechaIngreso` datetime DEFAULT NULL,
-  `fechaSalida` datetime DEFAULT NULL,
-  `habitacionReservada_id` bigint(20) DEFAULT NULL,
+  `descripcionHab` varchar(255) DEFAULT NULL,
+  `masInfoHab` varchar(255) DEFAULT NULL,
+  `precio` float NOT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  `departamento_id` bigint(20) DEFAULT NULL,
+  `huespedes` int(11) NOT NULL,
+  `foto_id` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `FK31brb4c1kpmamlrbk99gj2p2t` (`habitacionReservada_id`),
-  CONSTRAINT `FK31brb4c1kpmamlrbk99gj2p2t` FOREIGN KEY (`habitacionReservada_id`) REFERENCES `habitacion` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+  KEY `FK2ohnxd1j8lbdluk6v94f0i4gl` (`departamento_id`),
+  KEY `FK44exl18t6skf0qya9xkr58xjp` (`foto_id`),
+  CONSTRAINT `FK44exl18t6skf0qya9xkr58xjp` FOREIGN KEY (`foto_id`) REFERENCES `foto` (`id`),
+  CONSTRAINT `FK2ohnxd1j8lbdluk6v94f0i4gl` FOREIGN KEY (`departamento_id`) REFERENCES `departamento` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `reservacion`
+-- Dumping data for table `habitacion`
 --
 
-LOCK TABLES `reservacion` WRITE;
-/*!40000 ALTER TABLE `reservacion` DISABLE KEYS */;
-INSERT INTO `reservacion` VALUES (1,'2019-11-01 00:00:00','2019-11-08 00:00:00',1),(2,'2019-11-01 00:00:00','2019-11-21 00:00:00',2);
-/*!40000 ALTER TABLE `reservacion` ENABLE KEYS */;
+LOCK TABLES `habitacion` WRITE;
+/*!40000 ALTER TABLE `habitacion` DISABLE KEYS */;
+INSERT INTO `habitacion` VALUES (1,'Encantadora habitación doble en zona tranquila y agradable',NULL,950,'',1,1,1),(2,'Habitación limpia fresca y comoda',NULL,1000,'',2,2,2),(3,'Acogedor dormitorio doble en Wembley',NULL,900,NULL,3,8,3),(4,'Habitación enorme en el área de Canary Wharf con balcón',NULL,750,NULL,10,2,4),(5,'Una habitación doble luminosa, el mejor sistema de transporte',NULL,750,NULL,11,3,5),(6,'Lugar perfecto cerca de Tower Bridge',NULL,750,NULL,12,6,6);
+/*!40000 ALTER TABLE `habitacion` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -52,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-23 18:01:49
+-- Dump completed on 2019-07-07 12:22:32

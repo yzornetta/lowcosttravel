@@ -16,28 +16,34 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `usuario`
+-- Table structure for table `direccion`
 --
 
-DROP TABLE IF EXISTS `usuario`;
+DROP TABLE IF EXISTS `direccion`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `usuario` (
+CREATE TABLE `direccion` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `email` varchar(255) DEFAULT NULL,
-  `password` varchar(255) DEFAULT NULL,
-  `rol` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `barrio` varchar(255) DEFAULT NULL,
+  `calle` varchar(255) DEFAULT NULL,
+  `latitud` float NOT NULL,
+  `longitud` float NOT NULL,
+  `numero` int(11) DEFAULT NULL,
+  `ciudad_id` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKpiyo67yak2l613uqf0brnqe6j` (`ciudad_id`),
+  CONSTRAINT `FKpiyo67yak2l613uqf0brnqe6j` FOREIGN KEY (`ciudad_id`) REFERENCES `ciudad` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `usuario`
+-- Dumping data for table `direccion`
 --
 
-LOCK TABLES `usuario` WRITE;
-/*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-/*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
+LOCK TABLES `direccion` WRITE;
+/*!40000 ALTER TABLE `direccion` DISABLE KEYS */;
+INSERT INTO `direccion` VALUES (1,'Londres','Prescot',51.5214,-0.0750907,45,1),(2,'Londres','Piccadilly',51.5084,-0.144276,150,1),(3,'Londres','James\'s Pl,',51.5092,-0.147171,35,1),(11,'Tower Hamlets','Westferry Circus',51.5072,-0.0341515,46,10),(12,'Westminster','John Islip St',51.4978,-0.15225,30,11),(13,'Southwark','Borough High St',51.5028,-0.0964928,165,12);
+/*!40000 ALTER TABLE `direccion` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -49,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-23 18:01:50
+-- Dump completed on 2019-07-07 12:22:33

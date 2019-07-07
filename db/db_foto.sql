@@ -16,36 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `direccion`
+-- Table structure for table `foto`
 --
 
-DROP TABLE IF EXISTS `direccion`;
+DROP TABLE IF EXISTS `foto`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `direccion` (
+CREATE TABLE `foto` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `barrio` varchar(255) DEFAULT NULL,
-  `calle` varchar(255) DEFAULT NULL,
-  `entreCalle1` varchar(255) DEFAULT NULL,
-  `entreCalle2` varchar(255) DEFAULT NULL,
-  `latitud` float NOT NULL,
-  `longitud` float NOT NULL,
-  `numero` int(11) DEFAULT NULL,
-  `ciudad_id` bigint(20) DEFAULT NULL,
+  `archivo` varchar(255) DEFAULT NULL,
+  `habitacion_id` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `FKpiyo67yak2l613uqf0brnqe6j` (`ciudad_id`),
-  CONSTRAINT `FKpiyo67yak2l613uqf0brnqe6j` FOREIGN KEY (`ciudad_id`) REFERENCES `ciudad` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+  KEY `FK7tekjsk2u1kqn6wy2potsepht` (`habitacion_id`),
+  CONSTRAINT `FK7tekjsk2u1kqn6wy2potsepht` FOREIGN KEY (`habitacion_id`) REFERENCES `habitacion` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `direccion`
+-- Dumping data for table `foto`
 --
 
-LOCK TABLES `direccion` WRITE;
-/*!40000 ALTER TABLE `direccion` DISABLE KEYS */;
-INSERT INTO `direccion` VALUES (1,'Londres','Prescot',NULL,NULL,51.5214,-0.0750907,45,1),(2,'Londres','Piccadilly',NULL,NULL,51.5084,-0.144276,150,1),(3,'Londres','James\'s Pl,',NULL,NULL,51.5092,-0.147171,35,1);
-/*!40000 ALTER TABLE `direccion` ENABLE KEYS */;
+LOCK TABLES `foto` WRITE;
+/*!40000 ALTER TABLE `foto` DISABLE KEYS */;
+INSERT INTO `foto` VALUES (1,'images/habitaciones/1/',1),(2,'images/habitaciones/2/',2),(3,'images/habitaciones/3/',3),(4,'images/habitaciones/4/',4),(5,'images/habitaciones/5/',5),(6,'images/habitaciones/6/',6);
+/*!40000 ALTER TABLE `foto` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -57,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-23 18:01:53
+-- Dump completed on 2019-07-07 12:22:27

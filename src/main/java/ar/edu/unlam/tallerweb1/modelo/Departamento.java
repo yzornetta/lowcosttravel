@@ -19,7 +19,6 @@ public class Departamento {
 	private Long id;
 	@OneToOne
 	private Direccion direccion;
-	private String nombre;
 	private String descripcion;
 	@Column(columnDefinition="LONGTEXT")
 	private String masInfo;
@@ -47,12 +46,6 @@ public class Departamento {
 		this.habitacion=habitacion;
 	}
 	
-	public String getNombre() {
-		return nombre;
-	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
 	public String getDescripcion() {
 		return descripcion;
 	}
