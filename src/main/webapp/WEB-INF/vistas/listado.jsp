@@ -79,7 +79,7 @@
 <!-- //header -->
 
 <!-- other services -->
-<section class=" id="why">
+<section class="" id="why">
 	<div class="">
 		<div class="container">
 		  <div class="row">

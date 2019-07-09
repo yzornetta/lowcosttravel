@@ -1,6 +1,5 @@
 package ar.edu.unlam.tallerweb1.persistencia;
 
-import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 import org.junit.Test;

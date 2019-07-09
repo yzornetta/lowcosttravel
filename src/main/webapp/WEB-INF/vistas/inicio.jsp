@@ -34,6 +34,32 @@
   	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   	<script src="js/jquery.ui.datepicker-es.js"></script>
 	
+<script>
+    
+  function validarFormulario(){
+ 
+    var txtFechaIngreso = document.getElementById('fechaIngreso').value;
+    var txtFechaSalida = document.getElementById('fechaSalida').value;
+
+ 
+    //Test campo obligatorio
+    if(txtFechaIngreso == ""){
+      alert('Ingresar fecha de ingreso');
+      return false;
+    }
+ 
+    //Test edad
+    if(txtFechaSalida == ""){
+      alert('Ingresar fecha de salida');
+      return false;
+    }
+ 
+ 
+    return true;
+  }
+ 
+  </script>
+
 </head>
 <body>
 
@@ -174,31 +200,3 @@
 
 </body>
 </html>
-
-
-
-<script>
-    
-  function validarFormulario(){
- 
-    var txtFechaIngreso = document.getElementById('fechaIngreso').value;
-    var txtFechaSalida = document.getElementById('fechaSalida').value;
-
- 
-    //Test campo obligatorio
-    if(txtFechaIngreso == ""){
-      alert('Ingresar fecha de ingreso');
-      return false;
-    }
- 
-    //Test edad
-    if(txtFechaSalida == ""){
-      alert('Ingresar fecha de salida');
-      return false;
-    }
- 
- 
-    return true;
-  }
- 
-  </script>

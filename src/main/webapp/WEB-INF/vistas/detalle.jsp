@@ -89,7 +89,7 @@
 							<form action="" method="POST" autocomplete="off" onsubmit="return validarFormulario()">
 								<h5 class="mb-3">Reserva este alojamiento</h5>
 								<div class="form-style-w3ls">
-									<span>Ciudad<span>
+									<span>Ciudad</span>
 									<input placeholder="${habSeleccionada.departamento.direccion.ciudad.nombre}"   id="nombre" name="nombre" type="text" readonly="readonly" />
 									<span>Cantidad de huespedes</span>
 									<input placeholder="${huespedes}"  id="huespedes" name="huespedes" type="text" readonly="readonly"  />
