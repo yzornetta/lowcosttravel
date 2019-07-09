@@ -74,6 +74,9 @@ public class ControladorBusqueda {
 		if (habitacion.size()!= 0) {
 			
 			model.put("ciudad", ciudad);
+			model.put("fechaIngreso", fechaIngreso);
+			model.put("fechaSalida", fechaSalida);
+			model.put("huespedes", huespedes);
 			model.put("habitacion", habitacion);
 			return new ModelAndView("listado",model);
 				
@@ -90,5 +93,6 @@ public class ControladorBusqueda {
 		return new ModelAndView("listado");
 	}
 
-
+	
+	
 }

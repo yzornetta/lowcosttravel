@@ -14,8 +14,6 @@ public class Direccion {
 	private Long id;
 	private String calle;
 	private Integer numero;
-	private String entreCalle1;
-	private String entreCalle2;
 	private String barrio;
 	private float latitud;
 	private float longitud;
@@ -40,18 +38,7 @@ public class Direccion {
 	public void setNumero(Integer numero) {
 		this.numero = numero;
 	}
-	public String getEntreCalle1() {
-		return entreCalle1;
-	}
-	public void setEntreCalle1(String entreCalle1) {
-		this.entreCalle1 = entreCalle1;
-	}
-	public String getEntreCalle2() {
-		return entreCalle2;
-	}
-	public void setEntreCalle2(String entreCalle2) {
-		this.entreCalle2 = entreCalle2;
-	}
+
 	public String getBarrio() {
 		return barrio;
 	}

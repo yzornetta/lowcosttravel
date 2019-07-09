@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>Hospedajes en ${ciudad} - Low Cost Travel</title>
+<title>Low Cost Travel</title>
 
  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
    			integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -45,6 +45,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
     <link href="css/style.css" rel='stylesheet' type='text/css' /><!-- custom css -->
 	<link href="css/css_slider.css" type="text/css" rel="stylesheet" media="all">
+	<link href="css/css_slider2.css" type="text/css" rel="stylesheet" media="all">
     <link href="css/font-awesome.min.css" rel="stylesheet"><!-- fontawesome css -->
 	<!-- //css files -->
 	
@@ -66,27 +67,24 @@
 <!-- header -->
 <header>
 	<div class="container">
-		<!-- nav -->
-		<nav class="py-3 d-lg-flex">
+
 			<div id="logo">
 				<h1><a href="/proyecto-limpio-spring/inicio"><img src="images/icono.jpg" alt="">Low Cost Travel</a></h1>
 			</div>
-			<label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
-			<input type="checkbox" id="drop" />
 			
-		</nav>
-		<!-- //nav -->
+			<input type="checkbox" id="drop" />
+
 	</div>
 </header>
 <!-- //header -->
 
 <!-- other services -->
-<section class="other_services py-5" id="why">
-	<div class="container py-lg-5 py-3">
+<section class=" id="why">
+	<div class="">
 		<div class="container">
 		  <div class="row">
 		    <div class="col">
-		      <h3 class="heading mb-sm-5 mb-4">Hospedajes en <span>${ciudad}</span></h3>
+		      <h3 class="heading mb-sm-5 mb-4">Hospedajes en <span class="ciudad">${ciudad}</span></h3>
 		    </div>
 		    <div class="col-md-auto">
 		    </div>
@@ -98,7 +96,7 @@
 		</div>
 		
 		<br>
-		
+	<div class="">		
 		<div class="container">
 		<div class="row"> 
 			<div class="col-12 col-lg-6" id="card12">
@@ -107,9 +105,35 @@
 					
 					<div class="card-body">
 
-						<a href="/proyecto-limpio-spring/detalle?id=${habitacion.id}"  class="stretched-link" target="_blank" style="color:#000; text-decoration:none"><h4>${habitacion.descripcionHab}</h4></a>
+						<a href="/proyecto-limpio-spring/detalle?id=${habitacion.id}&ciudad=${ciudad}&fechaIngreso=${fechaIngreso}&fechaSalida=${fechaSalida}&huespedes=${huespedes}"  class="stretched-link" target="_blank" style="color:#000; text-decoration:none"><h4>${habitacion.descripcionHab}</h4></a>	
 						<p class="card-text">${habitacion.departamento.descripcion}</p>
 						<p class="card-text"><span>Precio por noche: $</span>${habitacion.precio}</p>
+						
+						<div class="csslider2" id="slider1"> <!-- "csslider" -->
+						<input type="radio" name="slides" checked="checked" id="slides_1${habitacion.id}" />
+						<input type="radio" name="slides" id="slides_2${habitacion.id}" />
+						<input type="radio" name="slides" id="slides_3${habitacion.id}" />
+						<ul class="">
+							<li>
+										<div class="carrusel-img"><img src="images/habitaciones/${habitacion.id}/1.PNG" class="" alt="/proyecto-limpio-spring/detalle?id=${habitacion.id}"></div>
+							</li>
+							<li>
+										<div class="carrusel-img"><img src="images/habitaciones/${habitacion.id}/2.PNG" class="" alt="/proyecto-limpio-spring/detalle?id=${habitacion.id}"></div>
+							</li>
+							<li>
+										<div class="carrusel-img"><img src="images/habitaciones/${habitacion.id}/3.PNG" class="" alt="/proyecto-limpio-spring/detalle?id=${habitacion.id}"></div>
+									
+							</li>
+						</ul>
+						<div class="navigation">
+							<div>
+								<label for="slides_1${habitacion.id}"></label>
+								<label for="slides_2${habitacion.id}"></label>
+								<label for="slides_3${habitacion.id}"></label>
+							</div>
+						</div>
+					</div>
+						
 						
 					</div>
 				</div><br>
@@ -120,7 +144,8 @@
 			</div>
 		</div>
 	</div>
-	</div>
+   </div>
+</div>
 </section>
 <!-- //other services -->
 

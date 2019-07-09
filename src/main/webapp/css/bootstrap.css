@@ -561,6 +561,14 @@ pre code {
   margin-left: auto;
 }
 
+.containerDetalle {
+  width: 90%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
@@ -8432,7 +8440,7 @@ button.bg-dark:focus {
   }
   .pt-lg-5,
   .py-lg-5 {
-    padding-top: 3rem !important;
+    padding-top: 1rem !important;
   }
   .pr-lg-5,
   .px-lg-5 {
@@ -8440,7 +8448,7 @@ button.bg-dark:focus {
   }
   .pb-lg-5,
   .py-lg-5 {
-    padding-bottom: 3rem !important;
+    padding-bottom: 1rem !important;
   }
   .pl-lg-5,
   .px-lg-5 {
@@ -8949,10 +8957,10 @@ a.text-dark:hover, a.text-dark:focus {
     size: a3;
   }
   body {
-    min-width: 992px !important;
+    min-width: 592px !important;
   }
   .container {
-    min-width: 992px !important;
+    min-width: 592px !important;
   }
   .navbar {
     display: none;
