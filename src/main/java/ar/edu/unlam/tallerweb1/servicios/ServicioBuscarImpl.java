@@ -22,5 +22,11 @@ public class ServicioBuscarImpl implements ServicioBuscar {
 	public List<Habitacion> consultarCiudad (String ciudad, Date fechaIngreso, Date fechaSalida, int huespedes) {
 		return servicioCiudadDao.consultarCiudad(ciudad,fechaIngreso,fechaSalida,huespedes);
 	}
+	
+	@Override
+	public List<Habitacion> consultarCiudadConPrecio(String ciudad, Date fechaIngreso, Date fechaSalida,
+			String precioMin, String precioMax, int huespedes) {
+		return servicioCiudadDao.consultarCiudadConPrecio(ciudad,fechaIngreso,fechaSalida, precioMin, precioMax, huespedes);
+	}
 
 }
