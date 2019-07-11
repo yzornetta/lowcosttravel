@@ -87,6 +87,65 @@ public class ControladorBusqueda {
 	
 		}
 	
+	@RequestMapping(path = "/validar-busqueda-precio", method = RequestMethod.POST)
+	public ModelAndView validarBusquedaPrecio(@RequestParam(value="ciudad")  String ciudad, 
+										@RequestParam(value="fechaIngreso") String fechaIngreso,
+										@RequestParam(value="fechaSalida")  String fechaSalida,
+										@RequestParam(value="precioMin")  String precioMin, 
+										@RequestParam(value="precioMax") String precioMax,
+										@RequestParam(value="huespedes")  int huespedes,
+										HttpServletRequest request) {
+		
+
+		DateFormat fechaFormato = new SimpleDateFormat("dd/MM/yyyy");
+		Date fechaIngresoD = null;
+		try {
+			fechaIngresoD = fechaFormato.parse(fechaIngreso);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		DateFormat fechaFormato2 = new SimpleDateFormat("dd/MM/yyyy");
+		Date fechaSalidaD = null;
+		try {
+			fechaSalidaD = fechaFormato2.parse(fechaSalida);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		ModelMap model = new ModelMap();
+		
+		
+		List<Habitacion> habitacion = servicioBuscar.consultarCiudadConPrecio(ciudad,fechaIngresoD,fechaSalidaD, precioMin, precioMax, huespedes);
+		
+		
+		if (habitacion.size()!= 0) {
+			
+			model.put("ciudad", ciudad);
+			model.put("habitacion", habitacion);
+			model.put("fechaIngreso", fechaIngreso);
+			model.put("fechaSalida", fechaSalida);
+			model.put("precioMin", precioMin);
+			model.put("precioMax", precioMax);
+			model.put("huespedes", huespedes);
+			return new ModelAndView("listado",model);
+				
+			} else {
+				model.put("error", "Hospedaje no disponible");
+			}
+			model.put("ciudad", ciudad);
+			model.put("habitacion", habitacion);
+			model.put("fechaIngreso", fechaIngreso);
+			model.put("fechaSalida", fechaSalida);
+			model.put("precioMin", precioMin);
+			model.put("precioMax", precioMax);
+			model.put("huespedes", huespedes);
+			return new ModelAndView("listado", model);
+	
+		}
 
 	@RequestMapping(path = "/listado", method = RequestMethod.GET)
 	public ModelAndView irAResultado() {

@@ -66,21 +66,24 @@
 
 <!-- header -->
 <header>
+	<div class="top-head container">
+		
+	</div>
 	<div class="container">
-
+		<nav class="py-3 d-lg-flex">
 			<div id="logo">
 				<h1><a href="/proyecto-limpio-spring/inicio"><img src="images/icono.jpg" alt="">Low Cost Travel</a></h1>
 			</div>
-			
+			<label for="drop" class="toggle"><span class="fa fa-bars"></span></label>			
 			<input type="checkbox" id="drop" />
-
+		</nav>
 	</div>
 </header>
 <!-- //header -->
 
 <!-- other services -->
-<section class=" id="why">
-	<div class="">
+<section class="other_services py-5" id="why">
+	<div class="container py-lg-5 py-3">
 		<div class="container">
 		  <div class="row">
 		    <div class="col">
@@ -89,17 +92,54 @@
 		    <div class="col-md-auto">
 		    </div>
 		    <div class="col col-lg-3">
-		    <b>Mostrar Mapa</b>
+		    <b>Mostrar Mapa?</b>
 			<input type="checkbox" name="check" id="check" value="1" data-toggle="toggle" data-size="small" data-offstyle="secondary" onchange="javascript:showContent()" checked />
-		    </div>
+			</div>
 		  </div>
 		</div>
 		
-		<br>
-	<div class="">		
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-md-auto">
+				<button type="button" class="btn btn-info mb-2" data-toggle="collapse" data-target="#formPrecio">Filtrar por Precio</button>
+				</div>
+			</div>
+		</div>
+		
+		<div id="formPrecio" class="collapse">
+		<div class="container">
+		<form action="validar-busqueda-precio" method="POST">
+		  <div class="form-row align-items-center">
+		    <div class="col-md-auto">
+      			<input type="number" class="form-control mb-2" id="precioMin" name="precioMin" placeholder="Precio minimo" required="required">
+		    </div>
+		    <div class="col-md-auto">
+		    <input type="number" class="form-control mb-2" id="precioMax" name="precioMax" placeholder="Precio maximo" required="required">
+		    </div>
+		    <input type="hidden" class="" id="ciudad" name="ciudad" value="${ciudad}">
+		    <input type="hidden" class="" id="fechaIngreso" name="fechaIngreso" value="${fechaIngreso}">
+		    <input type="hidden" class="" id="fechaSalida" name="fechaSalida" value="${fechaSalida}">
+		    <input type="hidden" class="" id="huespedes" name="huespedes" value="${huespedes}">
+		    <div class="col col-lg-3">
+		     <button type="submit" id="filtro-precio" class="btn btn-primary mb-2">Aplicar</button>
+		    </div>
+		  </div>
+		</form>
+		</div>
+		</div>
+		<hr>
+				
 		<div class="container">
 		<div class="row"> 
 			<div class="col-12 col-lg-6" id="card12">
+				<c:if test="${not empty error}">
+						<div class="alert alert-danger" role="alert">
+  						<h4 class="alert-heading">Intente nuevamente!</h4>
+			        	<h4>${error}</h4>
+			        	<hr>
+  						<p class="mb-0">No se encuentran hospedajes en ese rango de precio.</p>
+						</div>
+		        </c:if>
 				<c:forEach items="${habitacion}" var="habitacion">
 				<div class="card">
 					
@@ -145,7 +185,6 @@
 		</div>
 	</div>
    </div>
-</div>
 </section>
 <!-- //other services -->
 
