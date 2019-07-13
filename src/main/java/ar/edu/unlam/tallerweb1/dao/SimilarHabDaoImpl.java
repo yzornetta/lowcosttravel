@@ -15,7 +15,6 @@ import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
 import ar.edu.unlam.tallerweb1.modelo.Habitacion;
-import ar.edu.unlam.tallerweb1.modelo.Provincia;
 
 @Repository("similarHabDao")
 public class SimilarHabDaoImpl implements SimilarHabDao{
@@ -30,17 +29,16 @@ public class SimilarHabDaoImpl implements SimilarHabDao{
 		
 		 final Session session = sessionFactory.getCurrentSession();
 		 
-		 Provincia provincia = (Provincia) session.createCriteria(Provincia.class)
-				 			.createAlias("ciudad","ciu")
-				 			.add(Restrictions.eq("ciu.nombre",ciudad))
-		 					.uniqueResult();
+		 SQLQuery provinciaQuery = session.createSQLQuery("SELECT po.nombre FROM ciudad as ciu JOIN provincia as po ON ciu.provincia_id = po.id WHERE ciu.nombre='"+ciudad+"'");
+		 String provincia = (String)provinciaQuery.uniqueResult();
 		 
 		 List<Habitacion> listaHabPronvincia = (List<Habitacion>) session.createCriteria(Habitacion.class)
 				 				.add(Restrictions.ge("huespedes", huespedes))
 				 				.createAlias("departamento", "dep")
 				 				.createAlias("dep.direccion", "dir")
 				 				.createAlias("dir.ciudad", "ciu")
-				 				.add(Restrictions.eq("ciu.provincia", provincia))
+				 				.createAlias("ciu.provincia", "prov")
+				 				.add(Restrictions.eq("prov.nombre", provincia))
 				 				.add(Restrictions.ne("ciu.nombre",ciudad))
 								.list();
 		 
