@@ -85,17 +85,20 @@
 						<div class="padding2">
 							<!-- banner form -->
 												
-							<form action="" method="POST" autocomplete="off" onsubmit="return validarFormulario()">
+							<form action="datos-pago" method="POST" >
 								<h5 class="mb-3">Reserva este alojamiento</h5>
 								<div class="form-style-w3ls">
-									<span>Ciudad<span>
-									<input placeholder="${habSeleccionada.departamento.direccion.ciudad.nombre}"   id="nombre" name="nombre" type="text" readonly="readonly" />
+									<span>Ciudad</span>
+									<input value="${habSeleccionada.departamento.direccion.ciudad.nombre}"  id="ciudad" name="ciudad" type="text" readonly="readonly" />
 									<span>Cantidad de huespedes</span>
-									<input placeholder="${huespedes}"  id="huespedes" name="huespedes" type="text" readonly="readonly"  />
+									<input value="${huespedes}" id="huespedes" name="huespedes" type="text" readonly="readonly"  />
 									<span>Fecha de ingreso</span>
-									<input placeholder="${fechaIngreso}"  type="text" id="fechaIngreso" name="fechaIngreso" readonly="readonly"/>								
+									<input value="${fechaIngreso}" type="text" id="fechaIngreso" name="fechaIngreso" readonly="readonly"/>								
 									<span>Fecha de salida</span>
-									<input placeholder="${fechaSalida}"   type="text" id="fechaSalida" name="fechaSalida" readonly="readonly" />
+									<input value="${fechaSalida}"  type="text" id="fechaSalida" name="fechaSalida" readonly="readonly" />
+									<input type="hidden" id="id" name="id" value="${habSeleccionada.id}"/>
+									<input type="hidden" id="nombre" name="nombre" value="${habSeleccionada.descripcionHab}"/>
+									
 									
 									<button class="btn2 btn-lg btn-primary btn-block" Type="Submit">Reservar</button>
 								</div>
