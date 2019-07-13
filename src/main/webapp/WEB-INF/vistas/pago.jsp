@@ -100,12 +100,10 @@
 			<div class="col-lg-5">
 					<div class="">
 						<div class="padding2">
-							<!-- banner form -->
-												
-							<form action="" method="">
+							
 								<h5 class="mb-3">${nombre}</h5>
 								<div class="form-style-w3ls">
-									<span>Ciudad: ${ciudad} <span>
+									<span>Ciudad: ${ciudad} </span>
 									<br>
 									<span>Cantidad de huespedes: ${huespedes}</span>
 									<br>
@@ -114,7 +112,6 @@
 									<span>Fecha de salida: ${fechaSalida}</span>
 
 								</div>
-							</form>
 							
 						</div>
 					</div>
@@ -126,11 +123,11 @@
 								
 								<div class="form-style-w3ls">
 								<h5 class="mb-3">Ingresar datos de pago y contacto</h5>
-									<span>Nombre<span>
+									<span>Nombre</span>
 									<input placeholder="Ingresar nombre titular"  id="nom" name="nom" type="text" required/>
-									<span>Apellido<span>
+									<span>Apellido</span>
 									<input placeholder="Ingresar apellido titular"  id="ape" name="ape" type="text" required/>
-									<span>Tipo de tarjeta<span>
+									<span>Tipo de tarjeta</span>
 									<select tabindex="11" id="CardType" name="CardType">
 									  <option value="AmEx">American Express</option>
 									  <option value="MasterCard">MasterCard</option>
@@ -394,8 +391,6 @@
 								</div>
 							</form>
 							
-							
-							<!-- //banner form -->
 						</div>
 					</div>
 				</div>
