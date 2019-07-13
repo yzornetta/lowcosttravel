@@ -1,6 +1,6 @@
 package ar.edu.unlam.tallerweb1.persistencia;
 
-import org.hibernate.SQLQuery;
+//import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 import org.junit.Test;
@@ -75,8 +75,8 @@ public class BuscarHabitacionTest extends SpringTest{
 		session.save(londReservado2);
 
 		String ciudad="Reino Unido";
-		String fechaIngresoS="2019/11/12";
-		String fechaSalidaS="2019/11/22";
+		//String fechaIngresoS="2019/11/12";
+		//String fechaSalidaS="2019/11/22";
 		
 		@SuppressWarnings("unchecked")
 		List<Habitacion> listaHabCiudad = (List<Habitacion>) session.createCriteria(Habitacion.class)

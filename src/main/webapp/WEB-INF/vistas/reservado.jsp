@@ -34,18 +34,15 @@
 					<div class="">
 						<div class="padding2">
 							<!-- banner form -->
-												
-							<form action="" method="">
 								<h5 class="mb-3">Gracias ${nombre}</h5>
 								<div class="form-style-w3ls">
-									<span>Tu reserva quedo completa para las siguientes fechas: <span>
+									<span>Tu reserva quedo completa para las siguientes fechas: </span>
 									<br>
 									<span>Llegada: ${fechaIngreso}</span>
 									<br>
 									<span>Salida: ${fechaSalida}</span>
 
 								</div>
-							</form>
 							
 						</div>
 					</div>

@@ -4,7 +4,6 @@ import java.math.BigInteger;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -23,7 +22,6 @@ public class SimilarHabDaoImpl implements SimilarHabDao {
 	@Inject
 	private SessionFactory sessionFactory;
 
-	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	public List<Habitacion> consultarHabitacionSimilar(String ciudad, Date fechaIngreso, Date fechaSalida,
 			int huespedes) {
@@ -33,6 +31,7 @@ public class SimilarHabDaoImpl implements SimilarHabDao {
 		SQLQuery provinciaQuery = session.createSQLQuery("SELECT po.nombre FROM ciudad as ciu JOIN provincia as po ON ciu.provincia_id = po.id WHERE ciu.nombre='"+ ciudad + "'");
 		String provincia = (String) provinciaQuery.uniqueResult();
 
+		@SuppressWarnings("unchecked")
 		List<Habitacion> listaHabPronvincia = (List<Habitacion>) session.createCriteria(Habitacion.class)
 				.add(Restrictions.ge("huespedes", huespedes)).createAlias("departamento", "dep")
 				.createAlias("dep.direccion", "dir").createAlias("dir.ciudad", "ciu")
@@ -43,12 +42,9 @@ public class SimilarHabDaoImpl implements SimilarHabDao {
 		String fechaIngresoS = sdf.format(fechaIngreso);
 		String fechaSalidaS = sdf.format(fechaSalida);
 
-		SQLQuery query = session.createSQLQuery(
-				"SELECT ha.id FROM habitacion as ha JOIN reservacion as re ON re.habitacionReservada_id = ha.id WHERE '"
-						+ fechaIngresoS + "' BETWEEN fechaIngreso AND fechaSalida or '" + fechaSalidaS
-						+ "' BETWEEN fechaIngreso AND fechaSalida or '" + fechaIngresoS + "' < fechaIngreso AND '"
-						+ fechaSalidaS + "' > fechaSalida");
-		// query.addEntity(Habitacion.class);
+		SQLQuery query = session.createSQLQuery("SELECT ha.id FROM habitacion as ha JOIN reservacion as re ON re.habitacionReservada_id = ha.id WHERE '" + fechaIngresoS + "' BETWEEN fechaIngreso AND fechaSalida or '" + fechaSalidaS	+ "' BETWEEN fechaIngreso AND fechaSalida or '" + fechaIngresoS + "' < fechaIngreso AND '" + fechaSalidaS + "' > fechaSalida");
+
+		@SuppressWarnings("unchecked")
 		List<BigInteger> listaHabReservadasQuery = query.list();
 
 		List<Habitacion> listaHabSimilares = new ArrayList<>();
