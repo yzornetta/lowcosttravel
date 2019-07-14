@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.google.gson.Gson;
+
 import ar.edu.unlam.tallerweb1.modelo.Ciudad;
 import ar.edu.unlam.tallerweb1.modelo.Habitacion;
 import ar.edu.unlam.tallerweb1.servicios.ServicioBuscar;
@@ -66,13 +68,12 @@ public class ControladorBusqueda {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 
 		List<Habitacion> habitacion = servicioBuscar.consultarCiudad(ciudad,fechaIngresoD,fechaSalidaD,huespedes);
 		
-		
 		if (habitacion.size()!= 0) {
-			
+			Gson parser = new Gson();
+			model.put("json", parser.toJson(habitacion));
 			model.put("ciudad", ciudad);
 			model.put("fechaIngreso", fechaIngreso);
 			model.put("fechaSalida", fechaSalida);
@@ -123,7 +124,8 @@ public class ControladorBusqueda {
 		
 		
 		if (habitacion.size()!= 0) {
-			
+			Gson parser = new Gson();
+			model.put("json", parser.toJson(habitacion));			
 			model.put("ciudad", ciudad);
 			model.put("habitacion", habitacion);
 			model.put("fechaIngreso", fechaIngreso);
@@ -136,6 +138,8 @@ public class ControladorBusqueda {
 			} else {
 				model.put("error", "Hospedaje no disponible");
 			}
+			Gson parser = new Gson();
+			model.put("json", parser.toJson(habitacion));
 			model.put("ciudad", ciudad);
 			model.put("habitacion", habitacion);
 			model.put("fechaIngreso", fechaIngreso);

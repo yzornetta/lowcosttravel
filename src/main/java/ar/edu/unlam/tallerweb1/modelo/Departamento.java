@@ -10,8 +10,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.Transient;
+import javax.xml.bind.annotation.XmlRootElement;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
+@XmlRootElement
 public class Departamento {
 
 	@Id
@@ -22,7 +27,8 @@ public class Departamento {
 	private String descripcion;
 	@Column(columnDefinition="LONGTEXT")
 	private String masInfo;
-	@OneToMany(mappedBy = "departamento")
+//	@OneToMany(mappedBy = "departamento")
+	@Transient
 	private List<Habitacion> habitacion = new ArrayList<>();
 	
 	public Long getId(){
@@ -52,6 +58,7 @@ public class Departamento {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
+	@JsonIgnore
 	public String getMasInfo() {
 		return masInfo;
 	}

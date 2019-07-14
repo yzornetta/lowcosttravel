@@ -8,6 +8,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Transient;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Provincia {
@@ -16,7 +19,8 @@ public class Provincia {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	private String nombre;
-	@OneToMany(mappedBy = "provincia")
+//	@OneToMany(mappedBy = "provincia")
+	@Transient
 	private List<Ciudad> ciudad = new ArrayList<>();
 	
 	public Long getId(){

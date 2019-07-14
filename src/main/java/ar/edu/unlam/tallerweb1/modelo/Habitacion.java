@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Transient;
 
 @Entity
 public class Habitacion {
@@ -18,9 +19,11 @@ public class Habitacion {
 	private Long id;
 	@ManyToOne
 	private Departamento departamento;
-	@OneToMany(mappedBy = "habitacionReservada")
+	//@OneToMany(mappedBy = "habitacionReservada")
+	@Transient
 	private List<Reservacion> reservacion;
-	@OneToMany(mappedBy = "habitacion")
+//	@OneToMany(mappedBy = "habitacion")
+	@Transient
 	private List<Foto> foto = new ArrayList<>();
 	private String status;
 	private float precio;
