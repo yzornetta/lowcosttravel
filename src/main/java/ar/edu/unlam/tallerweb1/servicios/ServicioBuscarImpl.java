@@ -28,5 +28,13 @@ public class ServicioBuscarImpl implements ServicioBuscar {
 			String precioMin, String precioMax, int huespedes) {
 		return servicioCiudadDao.consultarCiudadConPrecio(ciudad,fechaIngreso,fechaSalida, precioMin, precioMax, huespedes);
 	}
+	
+////////////////////////////////////////////////////////Mockito///////////////////////////////////////////////////////////////////
+
+	public void setCiudadDao(CiudadDao dao) {
+		// TODO Auto-generated method stub
+		this.servicioCiudadDao=dao;
+		
+	}
 
 }
