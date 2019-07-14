@@ -19,6 +19,8 @@ public class Habitacion {
 	private String descripcionHab;
 	private String masInfoHab;
 	private int huespedes;
+	@ManyToOne
+	private Usuario anfitrion;
 	
 	
 	public Long getId(){
@@ -63,6 +65,13 @@ public class Habitacion {
 	}
 	public void setHuespedes(int huespedes) {
 		this.huespedes = huespedes;
+	}
+	
+	public Usuario getAnfitrion() {
+		return anfitrion;
+	}
+	public void setAnfitrion(Usuario anfitrion) {
+		this.anfitrion = anfitrion;
 	}
 
 	

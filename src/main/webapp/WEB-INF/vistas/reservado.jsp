@@ -12,7 +12,8 @@
       <link href="css/css_my_slider.css" rel='stylesheet' type='text/css' />
 	  <link href="css/bootstrap.css" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
       <link href="css/style.css" rel='stylesheet' type='text/css' /><!-- custom css -->
-      <link href="css/css_slider2.css" type="text/css" rel="stylesheet" media="all">      
+      <link href="css/css_slider2.css" type="text/css" rel="stylesheet" media="all">
+      <script src="https://www.braemoor.co.uk/software/_private/creditcard.js"></script>
   
 </head>
 
@@ -33,16 +34,46 @@
 			<div class="col-lg-5">
 					<div class="">
 						<div class="padding2">
-							<!-- banner form -->
-								<h5 class="mb-3">Gracias ${nombre}</h5>
-								<div class="form-style-w3ls">
-									<span>Tu reserva quedo completa para las siguientes fechas: </span>
+							
+									<h5 class="mb-3">Gracias ${nombre} ${apellido} , tu reserva quedo completa!</h5>
+									<img src="images/habitaciones/${id}/1.PNG" class="" alt="">
+									<br><br><br>
+									<span>${nombreHab} </span>
 									<br>
-									<span>Llegada: ${fechaIngreso}</span>
+									<span>Direccion: ${direccionCalle} ${direccionNum} </span>
 									<br>
-									<span>Salida: ${fechaSalida}</span>
+									<span>Ciudad: ${ciudad} </span>
+									<br>
+									<span>Cantidad de huespedes: ${huespedes} </span>
+									<br>
+									<span>Fecha de ingreso:${fechaIngreso}</span>
+									<br>
+									<span>Fecha de salida:${fechaSalida}</span>
 
+								
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-5">
+					<div class="">
+						<div class="padding2">			
+							<form action="inicio" method="">
+								
+								<div class="form-style-w3ls">
+								<h5 class="mb-3">Datos de contacto del anfitrion</h5>
+									<span>Nombre</span>
+									<input value="${nomAnfitrion}"  id="nom" name="nom" type="text" readonly/>
+									<span>Apellido</span>
+									<input placeholder="" value="${apeAnfitrion}" id="ape" name="ape" type="text" readonly/>
+									<span>Email</span>
+									<input placeholder="" value="${emailAnfitrion}" id="email" name="email" type="text" readonly/>									
+									<span>Telefono</span>
+									<input placeholder="" value="${celAnfitrion}" id="cel" name="cel" type="text" readonly/>								
+									<button class="btn2 btn-lg btn-primary btn-block" Type="Submit">Iniciar una nueva busqueda</button>
+									
 								</div>
+							</form>
 							
 						</div>
 					</div>

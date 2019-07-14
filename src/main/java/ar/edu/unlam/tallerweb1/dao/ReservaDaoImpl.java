@@ -20,7 +20,7 @@ public class ReservaDaoImpl implements ReservaDao {
     private SessionFactory sessionFactory;
 	
 	@Override
-	public void guardarReserva(Date fechaIngresoD, Date fechaSalidaD, Long id, String nombre, String apellido, String cardType, Long cardNum, String vencimiento, int clave, String pais, String email, Long cel) {
+	public Reservacion guardarReserva(Date fechaIngresoD, Date fechaSalidaD, Long id, String nombre, String apellido, String cardType, Long cardNum, String vencimiento, int clave, String pais, String email, Long cel) {
 		
 		final Session session = sessionFactory.getCurrentSession();
 		
@@ -36,16 +36,18 @@ public class ReservaDaoImpl implements ReservaDao {
 		usuario.setCel(cel);
 		session.save(usuario);
 		
-		Habitacion habitacionReservada = (Habitacion) session.createCriteria(Habitacion.class)
+		Habitacion habitacion = (Habitacion) session.createCriteria(Habitacion.class)
 										.add(Restrictions.eq("id", id))
 										.uniqueResult();
 		
 		Reservacion reservacion = new Reservacion();
-		reservacion.setHabReservada(habitacionReservada);
 		reservacion.setFechaIngreso(fechaIngresoD);
 		reservacion.setFechaSalida(fechaSalidaD);
 		reservacion.setUsuario(usuario);
+		reservacion.setHabReservada(habitacion);
 		session.save(reservacion);
+		
+		return reservacion;
 	}
 
 }

@@ -101,17 +101,18 @@
 					<div class="">
 						<div class="padding2">
 							
-								<h5 class="mb-3">${nombre}</h5>
-								<div class="form-style-w3ls">
+									<h5 class="mb-3">${nombre}</h5>
+									<img src="images/habitaciones/${id}/1.PNG" class="" alt="">
+									<br><br><br>
 									<span>Ciudad: ${ciudad} </span>
 									<br>
-									<span>Cantidad de huespedes: ${huespedes}</span>
+									<span>Cantidad de huespedes: ${huespedes} </span>
 									<br>
-									<span>Fecha de ingreso: ${fechaIngreso}</span>
+									<span>Fecha de ingreso:${fechaIngreso}</span>
 									<br>
-									<span>Fecha de salida: ${fechaSalida}</span>
+									<span>Fecha de salida:${fechaSalida}</span>
 
-								</div>
+								
 							
 						</div>
 					</div>

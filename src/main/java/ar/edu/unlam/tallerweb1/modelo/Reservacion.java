@@ -17,7 +17,7 @@ public class Reservacion {
 	private Date fechaIngreso;
 	private Date fechaSalida;
 	@ManyToOne
-	private Habitacion habitacionReservada;
+	private Habitacion habitacion;
 	@ManyToOne
 	private Usuario usuario;
 	
@@ -42,10 +42,10 @@ public class Reservacion {
 	}
 	
 	public Habitacion getHabReservada() {
-		return habitacionReservada;
+		return habitacion;
 	}
-	public void setHabReservada(Habitacion habitacionReservada) {
-		this.habitacionReservada = habitacionReservada;
+	public void setHabReservada(Habitacion habitacion) {
+		this.habitacion = habitacion;
 	}
 	
 	public Usuario getUsuario() {
