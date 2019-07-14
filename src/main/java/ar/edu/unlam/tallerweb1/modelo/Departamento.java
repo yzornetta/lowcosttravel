@@ -1,14 +1,11 @@
 package ar.edu.unlam.tallerweb1.modelo;
 
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Transient;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -27,9 +24,7 @@ public class Departamento {
 	private String descripcion;
 	@Column(columnDefinition="LONGTEXT")
 	private String masInfo;
-//	@OneToMany(mappedBy = "departamento")
-	@Transient
-	private List<Habitacion> habitacion = new ArrayList<>();
+
 	
 	public Long getId(){
 		return id;
@@ -43,13 +38,6 @@ public class Departamento {
 	}
 	public void setDireccion(Direccion direccion){
 		this.direccion=direccion;
-	}
-	
-	public List<Habitacion> getHabitacion(){
-		return habitacion;
-	}
-	public void setHabitacion(List<Habitacion> habitacion){
-		this.habitacion=habitacion;
 	}
 	
 	public String getDescripcion() {

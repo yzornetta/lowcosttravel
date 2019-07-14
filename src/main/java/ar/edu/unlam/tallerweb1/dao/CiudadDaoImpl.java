@@ -1,9 +1,9 @@
 package ar.edu.unlam.tallerweb1.dao;
 
+import java.math.BigInteger;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -20,19 +20,19 @@ import ar.edu.unlam.tallerweb1.modelo.Habitacion;
 @Repository("ciudadDao")
 public class CiudadDaoImpl implements CiudadDao {
 
-	
-	
+
 	@Inject
     private SessionFactory sessionFactory;
 
-	@SuppressWarnings({ "unchecked", "rawtypes" })
+
 	@Override
 	public List<Habitacion> consultarCiudad(String ciudad, Date fechaIngreso, Date fechaSalida, int huespedes) {
 
 		
 		 final Session session = sessionFactory.getCurrentSession();
 		 
-		 List<Habitacion> listaHabCiudad = (List<Habitacion>) session.createCriteria(Habitacion.class)
+		 @SuppressWarnings("unchecked")
+		List<Habitacion> listaHabCiudad = (List<Habitacion>) session.createCriteria(Habitacion.class)
 				 				.add(Restrictions.ge("huespedes", huespedes))
 				 				.createAlias("departamento", "dep")
 				 				.createAlias("dep.direccion", "dir")
@@ -46,34 +46,24 @@ public class CiudadDaoImpl implements CiudadDao {
 		 
 		 
 		 SQLQuery query = session.createSQLQuery("SELECT ha.id FROM habitacion as ha JOIN reservacion as re ON re.habitacionReservada_id = ha.id WHERE '"+ fechaIngresoS +"' BETWEEN fechaIngreso AND fechaSalida or '"+ fechaSalidaS +"' BETWEEN fechaIngreso AND fechaSalida or '"+ fechaIngresoS +"' < fechaIngreso AND '"+ fechaSalidaS +"' > fechaSalida");
-		 query.addEntity(Habitacion.class);		 
-		 List listaHabReservadasQuery = query.list(); 
 		 
+		 @SuppressWarnings("unchecked")
+		List<BigInteger> listaHabReservadasQuery = query.list(); 
+	 
+		 List<Habitacion> listaHabDisponibles = new ArrayList<>(); 
 		 
-		 List<Habitacion> listaHabReservadas = new ArrayList<>();
-		 
-		 for (Iterator iterator = listaHabReservadasQuery.iterator(); iterator.hasNext();){
-			 Habitacion habitaciones = (Habitacion) iterator.next();
-			 listaHabReservadas.add(habitaciones);
+		 for (Habitacion i : listaHabCiudad) {	 
 			 
-		 }
-		 
-		 List<Habitacion> listaHabDisponibles = new ArrayList<>();
-		 
-		 
-		 for (Habitacion i : listaHabCiudad) {
-			 
-			 
-			for (Habitacion y : listaHabReservadas) {
+			for (BigInteger y : listaHabReservadasQuery) {
 				 
-				 if(i.getId()==y.getId()) {
+				 if(i.getId()==y.longValue()) {
 						
 					 i.setStatus("Ocupado");	
 				 }
 					 	 
 			 }
 			
-			if(i.getStatus()!="Ocupado" || listaHabReservadas.size()==0) {
+			if(i.getStatus()!="Ocupado" || listaHabReservadasQuery.size()==0) {
 				
 				listaHabDisponibles.add(i); 
 			}		 
@@ -91,6 +81,7 @@ public class CiudadDaoImpl implements CiudadDao {
 		float min = Float.parseFloat(precioMin);
 		float max = Float.parseFloat(precioMax);
 		
+		@SuppressWarnings("unchecked")
 		List<Habitacion> listaHabCiudad = (List<Habitacion>) session.createCriteria(Habitacion.class)
 					.add(Restrictions.ge("huespedes", huespedes))
 					.add(Restrictions.ge("precio", min))
@@ -105,18 +96,10 @@ public class CiudadDaoImpl implements CiudadDao {
 		 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		 String fechaIngresoS = sdf.format(fechaIngreso);
 		 String fechaSalidaS = sdf.format(fechaSalida);
-		 SQLQuery query = session.createSQLQuery("SELECT ha.id FROM habitacion as ha JOIN reservacion as re ON re.habitacionReservada_id = ha.id WHERE '"+ fechaIngresoS +"' BETWEEN fechaIngreso AND fechaSalida or '"+ fechaSalidaS +"' BETWEEN fechaIngreso AND fechaSalida or '"+ fechaIngresoS +"' < fechaIngreso AND '"+ fechaSalidaS +"' > fechaSalida");
-		 query.addEntity(Habitacion.class);		 
-		 List listaHabReservadasQuery = query.list(); 
+		 SQLQuery query = session.createSQLQuery("SELECT ha.id FROM habitacion as ha JOIN reservacion as re ON re.habitacionReservada_id = ha.id WHERE '"+ fechaIngresoS +"' BETWEEN fechaIngreso AND fechaSalida or '"+ fechaSalidaS +"' BETWEEN fechaIngreso AND fechaSalida or '"+ fechaIngresoS +"' < fechaIngreso AND '"+ fechaSalidaS +"' > fechaSalida");	 
+		 @SuppressWarnings("unchecked")
+		 List<BigInteger> listaHabReservadasQuery = query.list(); 
 		 
-		 
-		 List<Habitacion> listaHabReservadas = new ArrayList<>();
-		 
-		 for (Iterator iterator = listaHabReservadasQuery.iterator(); iterator.hasNext();){
-			 Habitacion habitaciones = (Habitacion) iterator.next();
-			 listaHabReservadas.add(habitaciones);
-			 
-		 }
 		 
 		 List<Habitacion> listaHabDisponibles = new ArrayList<>();
 		 
@@ -124,16 +107,16 @@ public class CiudadDaoImpl implements CiudadDao {
 		 for (Habitacion i : listaHabCiudad) {
 			 
 			 
-			for (Habitacion y : listaHabReservadas) {
+			for (BigInteger y : listaHabReservadasQuery) {
 				 
-				 if(i.getId()==y.getId()) {
+				 if(i.getId()==y.longValue()) {
 						
 					 i.setStatus("Ocupado");	
 				 }
 					 	 
 			 }
 			
-			if(i.getStatus()!="Ocupado" || listaHabReservadas.size()==0) {
+			if(i.getStatus()!="Ocupado" || listaHabReservadasQuery.size()==0) {
 				
 				listaHabDisponibles.add(i); 
 			}		 

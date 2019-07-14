@@ -1,15 +1,11 @@
 package ar.edu.unlam.tallerweb1.modelo;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Transient;
+
 
 @Entity
 public class Habitacion {
@@ -19,12 +15,7 @@ public class Habitacion {
 	private Long id;
 	@ManyToOne
 	private Departamento departamento;
-	//@OneToMany(mappedBy = "habitacionReservada")
-	@Transient
-	private List<Reservacion> reservacion;
-//	@OneToMany(mappedBy = "habitacion")
-	@Transient
-	private List<Foto> foto = new ArrayList<>();
+
 	private String status;
 	private float precio;
 	private String descripcionHab;
@@ -45,12 +36,6 @@ public class Habitacion {
 		this.departamento=departamento;
 	}
 
-	public List<Reservacion> getReservacion(){
-		return reservacion;
-	}
-	public void getReservacion(List<Reservacion> reservacion){
-		this.reservacion=reservacion;
-	}
 	public String getStatus() {
 		return status;
 	}
@@ -82,11 +67,5 @@ public class Habitacion {
 		this.huespedes = huespedes;
 	}
 
-	public List<Foto> getFoto(){
-		return foto;
-	}
-	public void getFoto(List<Foto> foto){
-		this.foto=foto;
-	}
 	
 }

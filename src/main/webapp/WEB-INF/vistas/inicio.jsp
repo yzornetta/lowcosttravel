@@ -79,6 +79,31 @@
   	
   	});	
   	</script>
+  	<script>
+    
+  function validarFormulario(){
+ 
+    var txtFechaIngreso = document.getElementById('fechaIngreso').value;
+    var txtFechaSalida = document.getElementById('fechaSalida').value;
+
+ 
+    //Test campo obligatorio
+    if(txtFechaIngreso == ""){
+      alert('Ingresar fecha de ingreso');
+      return false;
+    }
+ 
+    //Test edad
+    if(txtFechaSalida == ""){
+      alert('Ingresar fecha de salida');
+      return false;
+    }
+ 
+ 
+    return true;
+  }
+ 
+  </script>
   	
   	
 </header>
@@ -179,31 +204,3 @@
 
 </body>
 </html>
-
-
-
-<script>
-    
-  function validarFormulario(){
- 
-    var txtFechaIngreso = document.getElementById('fechaIngreso').value;
-    var txtFechaSalida = document.getElementById('fechaSalida').value;
-
- 
-    //Test campo obligatorio
-    if(txtFechaIngreso == ""){
-      alert('Ingresar fecha de ingreso');
-      return false;
-    }
- 
-    //Test edad
-    if(txtFechaSalida == ""){
-      alert('Ingresar fecha de salida');
-      return false;
-    }
- 
- 
-    return true;
-  }
- 
-  </script>
