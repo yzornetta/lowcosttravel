@@ -152,6 +152,13 @@ public class ControladorBusqueda {
 		return new ModelAndView("listado");
 	}
 
+///////////////////////////////////////////////MOCKITO/////////////////////////////////////////////////////////	
+	
+	public void setServicioBuscar(ServicioBuscar servicioBuscar) {
+		// TODO Auto-generated method stub
+		this.servicioBuscar=servicioBuscar;
+	}
+
 	
 	
 }
