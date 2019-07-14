@@ -40,7 +40,7 @@ public class ControladorBusqueda {
 		return new ModelAndView("inicio", modelo);
 	}
 	
-	@RequestMapping(path = "/validar-busqueda", method = RequestMethod.POST)
+	@RequestMapping(path = "/validar-busqueda", method = RequestMethod.GET)
 	public ModelAndView validarBusqueda(@RequestParam(value="nombre")  String ciudad, 
 										@RequestParam(value="fechaIngreso") String fechaIngreso,
 										@RequestParam(value="fechaSalida")  String fechaSalida,

@@ -85,7 +85,7 @@
 						<div class="padding2">
 							<!-- banner form -->
 												
-							<form action="datos-pago" method="POST" >
+							<form action="datos-pago" method="GET" >
 								<h5 class="mb-3">Reserva este alojamiento</h5>
 								<div class="form-style-w3ls">
 									<span>Ciudad</span>
