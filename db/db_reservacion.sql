@@ -26,14 +26,14 @@ CREATE TABLE `reservacion` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `fechaIngreso` datetime DEFAULT NULL,
   `fechaSalida` datetime DEFAULT NULL,
-  `habitacionReservada_id` bigint(20) DEFAULT NULL,
   `usuario_id` bigint(20) DEFAULT NULL,
+  `habitacion_id` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `FK31brb4c1kpmamlrbk99gj2p2t` (`habitacionReservada_id`),
   KEY `FKkst9sm17nl264vdegox0n1p58` (`usuario_id`),
-  CONSTRAINT `FKkst9sm17nl264vdegox0n1p58` FOREIGN KEY (`usuario_id`) REFERENCES `usuario` (`id`),
-  CONSTRAINT `FK31brb4c1kpmamlrbk99gj2p2t` FOREIGN KEY (`habitacionReservada_id`) REFERENCES `habitacion` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+  KEY `FKf0sqb418vhlmscr9k8orhv5yi` (`habitacion_id`),
+  CONSTRAINT `FKf0sqb418vhlmscr9k8orhv5yi` FOREIGN KEY (`habitacion_id`) REFERENCES `habitacion` (`id`),
+  CONSTRAINT `FKkst9sm17nl264vdegox0n1p58` FOREIGN KEY (`usuario_id`) REFERENCES `usuario` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `reservacion` (
 
 LOCK TABLES `reservacion` WRITE;
 /*!40000 ALTER TABLE `reservacion` DISABLE KEYS */;
-INSERT INTO `reservacion` VALUES (1,'2019-11-01 00:00:00','2019-11-08 00:00:00',1,1),(2,'2019-11-01 00:00:00','2019-11-21 00:00:00',2,1),(11,'2019-11-15 00:00:00','2019-11-30 00:00:00',3,1),(18,'2019-08-01 00:00:00','2019-08-08 00:00:00',4,2);
+INSERT INTO `reservacion` VALUES (1,'2019-11-01 00:00:00','2019-11-08 00:00:00',1,1),(2,'2019-11-01 00:00:00','2019-11-21 00:00:00',1,2),(11,'2019-11-15 00:00:00','2019-11-30 00:00:00',1,3);
 /*!40000 ALTER TABLE `reservacion` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-07-13 21:23:27
+-- Dump completed on 2019-07-14  9:59:00
