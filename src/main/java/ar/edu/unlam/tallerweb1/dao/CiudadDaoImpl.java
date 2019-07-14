@@ -45,7 +45,7 @@ public class CiudadDaoImpl implements CiudadDao {
 		 String fechaSalidaS = sdf.format(fechaSalida);
 		 
 		 
-		 SQLQuery query = session.createSQLQuery("SELECT ha.id FROM habitacion as ha JOIN reservacion as re ON re.habitacionReservada_id = ha.id WHERE '"+ fechaIngresoS +"' BETWEEN fechaIngreso AND fechaSalida or '"+ fechaSalidaS +"' BETWEEN fechaIngreso AND fechaSalida or '"+ fechaIngresoS +"' < fechaIngreso AND '"+ fechaSalidaS +"' > fechaSalida");
+		 SQLQuery query = session.createSQLQuery("SELECT ha.id FROM habitacion as ha JOIN reservacion as re ON re.habitacion_id = ha.id WHERE '"+ fechaIngresoS +"' BETWEEN fechaIngreso AND fechaSalida or '"+ fechaSalidaS +"' BETWEEN fechaIngreso AND fechaSalida or '"+ fechaIngresoS +"' < fechaIngreso AND '"+ fechaSalidaS +"' > fechaSalida");
 		 
 		 @SuppressWarnings("unchecked")
 		List<BigInteger> listaHabReservadasQuery = query.list(); 
@@ -96,7 +96,7 @@ public class CiudadDaoImpl implements CiudadDao {
 		 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		 String fechaIngresoS = sdf.format(fechaIngreso);
 		 String fechaSalidaS = sdf.format(fechaSalida);
-		 SQLQuery query = session.createSQLQuery("SELECT ha.id FROM habitacion as ha JOIN reservacion as re ON re.habitacionReservada_id = ha.id WHERE '"+ fechaIngresoS +"' BETWEEN fechaIngreso AND fechaSalida or '"+ fechaSalidaS +"' BETWEEN fechaIngreso AND fechaSalida or '"+ fechaIngresoS +"' < fechaIngreso AND '"+ fechaSalidaS +"' > fechaSalida");	 
+		 SQLQuery query = session.createSQLQuery("SELECT ha.id FROM habitacion as ha JOIN reservacion as re ON re.habitacion_id = ha.id WHERE '"+ fechaIngresoS +"' BETWEEN fechaIngreso AND fechaSalida or '"+ fechaSalidaS +"' BETWEEN fechaIngreso AND fechaSalida or '"+ fechaIngresoS +"' < fechaIngreso AND '"+ fechaSalidaS +"' > fechaSalida");	 
 		 @SuppressWarnings("unchecked")
 		 List<BigInteger> listaHabReservadasQuery = query.list(); 
 		 

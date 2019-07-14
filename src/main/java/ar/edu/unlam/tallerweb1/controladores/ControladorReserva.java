@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import ar.edu.unlam.tallerweb1.modelo.Reservacion;
 import ar.edu.unlam.tallerweb1.servicios.ServicioReserva;
 
 @Controller
@@ -77,8 +78,16 @@ public class ControladorReserva {
 				e.printStackTrace();
 		}
 		
-		servicioReserva.guardarReserva(fechaIngresoD,fechaSalidaD,id,nombre,apellido,cardType,cardNum,vencimiento,clave,pais,email,cel);
+		Reservacion reserva = servicioReserva.guardarReserva(fechaIngresoD,fechaSalidaD,id,nombre,apellido,cardType,cardNum,vencimiento,clave,pais,email,cel);
 		
+		String direccionCalle = reserva.getHabReservada().getDepartamento().getDireccion().getCalle();
+		int direccionNum = reserva.getHabReservada().getDepartamento().getDireccion().getNumero();
+		String ciudad = reserva.getHabReservada().getDepartamento().getDireccion().getCiudad().getNombre();
+		int huespedes = reserva.getHabReservada().getHuespedes();
+		String nomAnfitrion = reserva.getHabReservada().getAnfitrion().getNombre();
+		String apeAnfitrion = reserva.getHabReservada().getAnfitrion().getApellido();
+		String emailAnfitrion = reserva.getHabReservada().getAnfitrion().getEmail();
+		Long celAnfitrion = reserva.getHabReservada().getAnfitrion().getCel();
 		
 		ModelMap model = new ModelMap();
 		model.put("id", id);
@@ -86,6 +95,15 @@ public class ControladorReserva {
 		model.put("fechaSalida", fechaSalida);
 		model.put("nombreHab", nombreHab);
 		model.put("nombre", nombre);
+		model.put("apellido", apellido);
+		model.put("nomAnfitrion", nomAnfitrion);
+		model.put("apeAnfitrion", apeAnfitrion);
+		model.put("emailAnfitrion", emailAnfitrion);
+		model.put("celAnfitrion", celAnfitrion);
+		model.put("direccionCalle", direccionCalle);
+		model.put("direccionNum", direccionNum);
+		model.put("ciudad", ciudad);
+		model.put("huespedes", huespedes);
 		return new ModelAndView("reservado", model);
 		
 	}
