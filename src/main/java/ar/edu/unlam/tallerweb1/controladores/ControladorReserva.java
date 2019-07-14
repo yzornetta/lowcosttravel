@@ -23,7 +23,7 @@ public class ControladorReserva {
 
 	@Inject ServicioReserva servicioReserva;
 	
-	@RequestMapping(path = "/datos-pago", method = RequestMethod.POST)
+	@RequestMapping(path = "/datos-pago", method = RequestMethod.GET)
 	public ModelAndView irAPago(@RequestParam(value="id") Long id, 
 								   @RequestParam(value="fechaIngreso") String fechaIngreso, 
 								   @RequestParam(value="fechaSalida") String fechaSalida,

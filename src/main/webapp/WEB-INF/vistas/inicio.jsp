@@ -168,7 +168,7 @@
 						<div class="padding">
 							<!-- banner form -->
 												
-							<form action="validar-busqueda" method="POST" autocomplete="off" onsubmit="return validarFormulario()">
+							<form action="validar-busqueda" method="GET" autocomplete="off" onsubmit="return validarFormulario()">
 								<h5 class="mb-3">Reserva alojamientos</h5>
 								<div class="form-style-w3ls">
 									<input placeholder="Ingresar ciudad"   id="nombre" name="nombre" type="text" required />
