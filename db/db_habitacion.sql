@@ -34,9 +34,9 @@ CREATE TABLE `habitacion` (
   PRIMARY KEY (`id`),
   KEY `FK2ohnxd1j8lbdluk6v94f0i4gl` (`departamento_id`),
   KEY `FK44exl18t6skf0qya9xkr58xjp` (`foto_id`),
-  CONSTRAINT `FK44exl18t6skf0qya9xkr58xjp` FOREIGN KEY (`foto_id`) REFERENCES `foto` (`id`),
-  CONSTRAINT `FK2ohnxd1j8lbdluk6v94f0i4gl` FOREIGN KEY (`departamento_id`) REFERENCES `departamento` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+  CONSTRAINT `FK2ohnxd1j8lbdluk6v94f0i4gl` FOREIGN KEY (`departamento_id`) REFERENCES `departamento` (`id`),
+  CONSTRAINT `FK44exl18t6skf0qya9xkr58xjp` FOREIGN KEY (`foto_id`) REFERENCES `foto` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -45,7 +45,7 @@ CREATE TABLE `habitacion` (
 
 LOCK TABLES `habitacion` WRITE;
 /*!40000 ALTER TABLE `habitacion` DISABLE KEYS */;
-INSERT INTO `habitacion` VALUES (1,'Encantadora habitación doble en zona tranquila y agradable',NULL,950,'',1,1,1),(2,'Habitación limpia fresca y comoda',NULL,1000,'',2,2,2),(3,'Acogedor dormitorio doble en Wembley',NULL,900,NULL,3,8,3),(4,'Habitación enorme en el área de Canary Wharf con balcón',NULL,750,NULL,10,2,4),(5,'Una habitación doble luminosa, el mejor sistema de transporte',NULL,750,NULL,11,3,5),(6,'Lugar perfecto cerca de Tower Bridge',NULL,750,NULL,12,6,6);
+INSERT INTO `habitacion` VALUES (1,'Encantadora habitación doble en zona tranquila y agradable',NULL,950,'Ocupado',1,2,1),(2,'Habitación limpia fresca y comoda',NULL,1000,'Ocupado',2,2,2),(3,'Acogedor dormitorio doble en Wembley',NULL,900,'Ocupado',3,8,3),(4,'Habitación enorme en el área de Canary Wharf con balcón',NULL,750,NULL,10,2,4),(5,'Una habitación doble luminosa, el mejor sistema de transporte',NULL,500,NULL,11,3,5),(6,'Lugar perfecto cerca de Tower Bridge',NULL,600,NULL,12,6,6);
 /*!40000 ALTER TABLE `habitacion` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -58,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-07-07 12:22:32
+-- Dump completed on 2019-07-13 21:23:22

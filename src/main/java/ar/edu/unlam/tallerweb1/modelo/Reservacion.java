@@ -18,6 +18,8 @@ public class Reservacion {
 	private Date fechaSalida;
 	@ManyToOne
 	private Habitacion habitacionReservada;
+	@ManyToOne
+	private Usuario usuario;
 	
 	public Long getId() {
 		return id;
@@ -46,5 +48,12 @@ public class Reservacion {
 		this.habitacionReservada = habitacionReservada;
 	}
 	
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
 
 }
