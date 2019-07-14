@@ -31,26 +31,7 @@ public class ControladorReserva {
 								   @RequestParam(value="huespedes")  int huespedes,
 								   HttpServletRequest request) {
 	
-		DateFormat fechaFormato = new SimpleDateFormat("dd/MM/yyyy");
-		Date fechaIngresoD = null;
-		try {
-			fechaIngresoD = fechaFormato.parse(fechaIngreso);
-		} catch (ParseException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-		}
-			
-		DateFormat fechaFormato2 = new SimpleDateFormat("dd/MM/yyyy");
-		Date fechaSalidaD = null;
-		try {
-				fechaSalidaD = fechaFormato2.parse(fechaSalida);
-		} catch (ParseException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-		}
-		
-		servicioReserva.guardarReserva(fechaIngresoD,fechaSalidaD,id);
-		
+
 		ModelMap model = new ModelMap();
 		model.put("id", id);
 		model.put("fechaIngreso", fechaIngreso);
@@ -75,8 +56,29 @@ public class ControladorReserva {
 										    @RequestParam(value="clave") int clave,
 										    @RequestParam(value="pais") String pais,
 										    @RequestParam(value="email") String email,
-										    @RequestParam(value="cel") String cel,
+										    @RequestParam(value="cel") Long cel,
 										    HttpServletRequest request) {
+		
+		DateFormat fechaFormato = new SimpleDateFormat("dd/MM/yyyy");
+		Date fechaIngresoD = null;
+		try {
+			fechaIngresoD = fechaFormato.parse(fechaIngreso);
+		} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+		}
+			
+		DateFormat fechaFormato2 = new SimpleDateFormat("dd/MM/yyyy");
+		Date fechaSalidaD = null;
+		try {
+				fechaSalidaD = fechaFormato2.parse(fechaSalida);
+		} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+		}
+		
+		servicioReserva.guardarReserva(fechaIngresoD,fechaSalidaD,id,nombre,apellido,cardType,cardNum,vencimiento,clave,pais,email,cel);
+		
 		
 		ModelMap model = new ModelMap();
 		model.put("id", id);

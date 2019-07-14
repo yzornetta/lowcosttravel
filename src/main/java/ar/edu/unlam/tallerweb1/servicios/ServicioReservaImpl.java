@@ -16,8 +16,8 @@ public class ServicioReservaImpl implements ServicioReserva {
 	@Inject ReservaDao servicioReservaDao;
 	
 	@Override
-	public void guardarReserva(Date fechaIngresoD, Date fechaSalidaD, Long id) {
-		servicioReservaDao.guardarReserva(fechaIngresoD, fechaSalidaD, id);
+	public void guardarReserva(Date fechaIngresoD, Date fechaSalidaD, Long id, String nombre, String apellido, String cardType, Long cardNum, String vencimiento, int clave, String pais, String email, Long cel) {
+		servicioReservaDao.guardarReserva(fechaIngresoD, fechaSalidaD, id, nombre, apellido, cardType, cardNum, vencimiento, clave, pais, email, cel);
 	}
 
 }
