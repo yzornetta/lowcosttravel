@@ -6,13 +6,11 @@ import java.util.List;
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import ar.edu.unlam.tallerweb1.dao.SimilarHabDao;
 import ar.edu.unlam.tallerweb1.modelo.Habitacion;
 
 @Service("servicioBuscarSimilares")
-@Transactional
 public class ServicioBuscarSimilaresImpl implements ServicioBuscarSimilares{
 	
 	@Inject
