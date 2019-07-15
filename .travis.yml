@@ -1,2 +1,8 @@
-language: java
-Jdk: oraclejdk8
+language:
+      - java
+services:
+      - mysql
+jdk:
+      - oraclejdk8
+script:
+      - mvn clean test
