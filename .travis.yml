@@ -3,4 +3,4 @@ language:
 services:
       - mysql
 jdk:
-      - oraclejdk9
+      - oraclejdk8
