@@ -24,7 +24,7 @@ Session session = getSession();
 		session.save(londres);
 
 		Ciudad ciudadBuscada = session.get(Ciudad.class,londres.getId());
-		assertThat(ciudadBuscada.getNombre()).isEqualTo("Londress");
+		assertThat(ciudadBuscada.getNombre()).isEqualTo("Londres");
 		
 	}
 }
