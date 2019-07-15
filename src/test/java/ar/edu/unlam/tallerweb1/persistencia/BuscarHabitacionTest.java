@@ -22,7 +22,7 @@ import java.util.List;
 
 public class BuscarHabitacionTest extends SpringTest{
 	
-	@Test@Transactional@Rollback(true)
+	@Test@Transactional@Rollback
 	public void habitacionDaoTest() throws ParseException {
 		
 		Session session = getSession();
