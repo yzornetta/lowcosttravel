@@ -3,6 +3,6 @@ language:
 services:
       - mysql
 jdk:
-      - oraclejdk8
+      - oraclejdk9
 script:
       - mvn clean test
