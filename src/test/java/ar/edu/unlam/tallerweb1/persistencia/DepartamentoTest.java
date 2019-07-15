@@ -18,7 +18,7 @@ import java.text.ParseException;
 
 public class DepartamentoTest extends SpringTest {
 
-	@Test@Transactional@Rollback(true)
+	@Test@Transactional@Rollback
 	public void departamentoDaoTest() throws ParseException {
 		
 		Session session = getSession();
