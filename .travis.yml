@@ -4,5 +4,3 @@ services:
       - mysql
 jdk:
       - oraclejdk9
-script:
-      - mvn clean test
