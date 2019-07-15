@@ -32,7 +32,7 @@ public class ControladorTest {
 		
 		ModelAndView modelAndView = sut.validarBusqueda(ciudad, fechaIngreso, fechaSalida, huespedes, request);
 		
-		assertThat(modelAndView.getModel().get("error")).isEqualTo("Hospedaje no disponibles");
+		assertThat(modelAndView.getModel().get("error")).isEqualTo("Hospedaje no disponible");
 	}
 
 }
