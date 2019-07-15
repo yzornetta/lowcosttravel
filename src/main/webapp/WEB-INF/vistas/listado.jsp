@@ -38,7 +38,8 @@
             element.style.display='none';
             card.className="col-12 col-lg-12"        
         }
-    }
+    }    
+    
 	</script>
 	
 	<!-- css files -->
@@ -108,7 +109,7 @@
 		
 		<div id="formPrecio" class="collapse">
 		<div class="container">
-		<form action="validar-busqueda-precio" method="POST">
+		<form action="validar-busqueda-precio" method="GET">
 		  <div class="form-row align-items-center">
 		    <div class="col-md-auto">
       			<input type="number" class="form-control mb-2" id="precioMin" name="precioMin" placeholder="Precio minimo" required="required">
@@ -145,7 +146,7 @@
 					
 					<div class="card-body">
 
-						<a href="/proyecto-limpio-spring/detalle?id=${habitacion.id}&ciudad=${ciudad}&fechaIngreso=${fechaIngreso}&fechaSalida=${fechaSalida}&huespedes=${huespedes}"  class="stretched-link" target="_blank" style="color:#000; text-decoration:none"><h4>${habitacion.descripcionHab}</h4></a>	
+						<a href="/proyecto-limpio-spring/detalle?id=${habitacion.id}&ciudad=${ciudad}&fechaIngreso=${fechaIngreso}&fechaSalida=${fechaSalida}&huespedes=${huespedes}"  class="stretched-link" target="_blank" style="color:#000; text-decoration:none" onclick="funcionResaltar(${habitacion.id})"><h4>${habitacion.descripcionHab}</h4></a>	
 						<p class="card-text">${habitacion.departamento.descripcion}</p>
 						<p class="card-text"><span>Precio por noche: $</span>${habitacion.precio}</p>
 						
@@ -187,11 +188,29 @@
    </div>
 </section>
 <!-- //other services -->
+<script>
+		var jsonHab = ${json};
+		var mymap = L.map('mapid').setView([jsonHab[0]['departamento']['direccion']['ciudad']['latitud'], jsonHab[0]['departamento']['direccion']['ciudad']['longitud']], 11);
+		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+			maxZoom: 18,
+			attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+				'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+				'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+			id: 'mapbox.streets'
+		}).addTo(mymap);
+		for (var i = (jsonHab.length-1); i >= 0; i--) {
+			var maker = L.marker([jsonHab[i]['departamento']['direccion']['latitud'], jsonHab[i]['departamento']['direccion']['longitud']]).addTo(mymap).bindPopup(jsonHab[i]['departamento']['descripcion']+"<br>"+"Precio: $"+jsonHab[i]['precio']).openPopup();
+		}
+		var popup = L.popup();
+		
+		function funcionResaltar(id){
+			marker.bindPopup(popupContent).openPopup();;
+		}
 
-
-		<script src="js/mapa.js"></script>
+</script>
 		<script src="js/jquery-1.11.3.min.js" ></script>
 		<script src="js/bootstrap.min.js" type="text/javascript"></script>
-
+		
+	
 </body>
 </html>
