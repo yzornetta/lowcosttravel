@@ -1,6 +1,5 @@
 package ar.edu.unlam.tallerweb1.persistencia;
 
-//import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 import org.junit.Test;
@@ -44,7 +43,6 @@ public class BuscarHabitacionTest extends SpringTest{
 		
 		Departamento londDepto = new Departamento();
 		londDepto.setDescripcion("Este es un apartamento en la planta superior con excelentes vistas de la ciudad desde el balcón.");
-		londDepto.setMasInfo("Este es un apartamento en la planta superior con excelentes vistas de la ciudad desde el balcón. El apartamento está situado en el borde del centro de Londres (zona 2) Las paredes del apartamento están cubiertas de obras de arte y los huéspedes están siempre sorprendidos por el estilo interesante del lugar. Venga a ver la pared de invitados llena de fotos polaroid de la gente increíble que se han quedado en nuestra casa. Lo más importante soy muy sociable, amable y siempre interesado en conocer gente nueva. Paso mucho tiempo mostrando invitados");
 		londDepto.setDireccion(londresDir);
 		session.save(londDepto);
 		
@@ -75,8 +73,6 @@ public class BuscarHabitacionTest extends SpringTest{
 		session.save(londReservado2);
 
 		String ciudad="Reino Unido";
-		//String fechaIngresoS="2019/11/12";
-		//String fechaSalidaS="2019/11/22";
 		
 		@SuppressWarnings("unchecked")
 		List<Habitacion> listaHabCiudad = (List<Habitacion>) session.createCriteria(Habitacion.class)
@@ -87,13 +83,7 @@ public class BuscarHabitacionTest extends SpringTest{
 				.list();
 		
 		assertThat(listaHabCiudad.size()).isEqualTo(2);
-		
-		// SQLQuery query = session.createSQLQuery("SELECT ha.id FROM habitacion as ha JOIN reservacion as re ON re.habitacionReservada_id = ha.id WHERE '"+ fechaIngresoS +"' BETWEEN fechaIngreso AND fechaSalida or '"+ fechaSalidaS +"' BETWEEN fechaIngreso AND fechaSalida or '"+ fechaIngresoS +"' < fechaIngreso AND '"+ fechaSalidaS +"' > fechaSalida");
-		 //query.addEntity(Habitacion.class);		 
-		 //List listaHabReservadasQuery = query.list(); 
-		
-		 //assertThat(listaHabReservadasQuery.size()).isEqualTo(1); //Este test solo funciona si tenemos la bd limpia
-		 								
+			
 	}
 
 }
