@@ -1,7 +1,5 @@
 package ar.edu.unlam.tallerweb1.modelo;
 
-
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,7 +15,6 @@ public class Departamento {
 	@OneToOne
 	private Direccion direccion;
 	private String descripcion;
-	@Column(columnDefinition="LONGTEXT")
 	private String masInfo;
 
 	
