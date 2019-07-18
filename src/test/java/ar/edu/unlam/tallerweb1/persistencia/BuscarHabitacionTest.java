@@ -83,6 +83,12 @@ public class BuscarHabitacionTest extends SpringTest{
 				.list();
 		
 		assertThat(listaHabCiudad.size()).isEqualTo(2);
+		
+		@SuppressWarnings("unchecked")
+		List<Reservacion> listaHabReservadas = (List<Reservacion>) session.createCriteria(Reservacion.class)
+											.list();
+		
+		assertThat(listaHabReservadas.size()).isEqualTo(2);
 			
 	}
 
