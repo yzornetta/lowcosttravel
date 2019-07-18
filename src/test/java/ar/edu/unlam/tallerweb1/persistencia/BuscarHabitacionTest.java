@@ -88,7 +88,7 @@ public class BuscarHabitacionTest extends SpringTest{
 		List<Reservacion> listaHabReservadas = (List<Reservacion>) session.createCriteria(Reservacion.class)
 											.list();
 		
-		assertThat(listaHabReservadas.size()).isEqualTo(12);
+		assertThat(listaHabReservadas.size()).isEqualTo(2);
 			
 	}
 
